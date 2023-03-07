@@ -1,80 +1,63 @@
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
+html,body, #app{
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: auto;
 }
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
-body {
+div.slide{
+  min-width: 100%;
+  min-height: 100%;
+  font-size: 3em;
   margin: 0;
   display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: antiquewhite;
 }
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+div.slide h1{
+  font-size: 1.5em;
+  font-family: sans-serif;
 }
-
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
+div.slide div.two-columns{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+div.slide div.two-columns ul{
+  max-width: 40%;
+}
+div.slide pre{
+  font-family: monospace;
   font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
 }
-button:hover {
-  border-color: #646cff;
+div.slide code{
+  background-color: black;
+  padding: 0 0.5em;
 }
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+div.slide em{
+  font-style: normal;
+  font-family: sans-serif;
 }
-
-.card {
-  padding: 2em;
+.counterexample{
+  color: red;
+  background-color: black;
+  padding: 0 0.5em;
+  text-decoration: line-through;
 }
-
-#app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+.omit{
+  color: gray;
 }
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+div.slide td{
+  padding: 0 1em;
+  border: black solid 2px;
+}
+table{
+  border-collapse: collapse;
+  padding: 0 1em;
+}
+div.slide ul,div.slide ol{
+  max-width: 80%;
 }
