@@ -123,9 +123,17 @@
     <h1>浮点类型</h1>
     <ul>
       <li>表示数学的小数</li>
-      <li>数据类型为<code>float</code>（精度与范围适中）或<code>double</code>（精度与范围较大）</li>
+      <li>数据类型为<code>float</code>，<code>double</code>、<code>long double</code></li>
       <li>浮点数常量默认为<code>double</code>，在末尾加上<code>f</code>或<code>F</code>才是<code>float</code></li>
       <li>精度与范围<em>不能兼顾</em>，精度&leftrightarrow;范围</li>
+    </ul>
+  </div>
+  <div class="slide">
+    <h1>浮点数常量</h1>
+    <ul>
+      <li>小数形式：2736.676</li>
+      <li>指数形式：2.736676e3</li>
+      <li><code>float</code>类型能提供小数点后六七位的精度</li>
     </ul>
   </div>
   <div class="slide">
@@ -147,11 +155,49 @@
     </ul>
   </div>
   <div class="slide">
+    <h1>赋值运算的常见错误</h1>
+    <ul>
+      <li>把 = 当做等号，在C语言中，等号是<code>==</code></li>
+      <li>赋值符号的左右颠倒，如<code>1 = a</code></li>
+      <li>忘记在语句末尾加分号，例如<code>a=a+1</code></li>
+      <li>赋值符号的左边不表示某个变量，例如<code>a+1=b+1</code></li>
+    </ul>
+  </div>
+  <div class="slide">
     <h1>交换变量的值</h1>
     <pre><code>int t = a;
 a = b;
 b = t;</code></pre>
     <p>联想：一瓶酒与一瓶水如何交换？需要借助第三个瓶子</p>
+  </div>
+  <div class="slide">
+    <h1>四则运算</h1>
+    <ol>
+      <li>左变量/常量 运算符（+-*/） 右变量/常量</li>
+      <li>左右的类型相同么？如果是，跳过第3步</li>
+      <li>如果左右的类型不同，转换其中一个类型为另一个</li>
+      <li>运算结果在类型的范围内么？如果不是，转到5</li>
+      <li>如果运算结果超过<em>类型的范围</em>，会产生<em>不可预料的后果</em></li>
+    </ol>
+  </div>
+  <div class="slide">
+    <h1>整数的除法（/）与取余（%）</h1>
+    <table>
+      <tr><td>5/3==1</td><td>5%3==2</td></tr>
+      <tr><td>-5/3==-1</td><td>-5%3==-2</td></tr>
+      <tr><td>5/-3==-1</td><td>5%-3==2</td></tr>
+      <tr><td>-5/-3==1</td><td>-5%-3==-2</td></tr>
+    </table>
+    <em>取余（%）的正负取决于被除数</em>
+  </div>
+  <div class="slide">
+    <h1>类型转换</h1>
+    <ol>
+      <li>转换<em>值的类型</em>而不是<em>变量的类型</em></li>
+      <li>整数类型&rightarrow;float&rightarrow;double&rightarrow;long double</li>
+      <li>如果两边都是signed或都是unsigned，char&rightarrow;short&rightarrow;int&rightarrow;long&rightarrow;long long</li>
+      <li></li>
+    </ol>
   </div>
 </template>
 
