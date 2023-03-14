@@ -7,7 +7,7 @@
 
 <script lang="ts" setup>
 import {ref} from "vue";
-
+import random from 'random';
 const name=ref("名字");
 const names=["陈海明",
   "陈嘉炜",
@@ -55,7 +55,7 @@ const names=["陈海明",
   "郑通叶",
   "周汝承",
 ];
-import random from 'random';
+
 
 function choose(){
   name.value=names[random.int(0, names.length-1)];
