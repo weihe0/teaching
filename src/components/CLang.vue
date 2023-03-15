@@ -176,8 +176,9 @@ b = t;</code></pre>
       <li>左变量/常量 运算符（+-*/） 右变量/常量</li>
       <li>左右的类型相同么？如果是，跳过第3步</li>
       <li>如果左右的类型不同，转换其中一个类型为另一个</li>
-      <li>运算结果在类型的范围内么？如果不是，转到5</li>
-      <li>如果运算结果超过<em>类型的范围</em>，会产生<em>不可预料的后果</em></li>
+      <li>运算结果在类型的范围内么？如果超范围，转到5</li>
+      <li>如果是unsigned超范围，那么新结果 = 原结果 % (unsigned的最大值 + 1)</li>
+      <li>如果是signed超范围，<em>结果不可预料</em></li>
     </ol>
   </div>
   <div class="slide">
@@ -191,12 +192,44 @@ b = t;</code></pre>
     <em>取余（%）的正负取决于被除数</em>
   </div>
   <div class="slide">
-    <h1>类型转换</h1>
+    <h1>隐式类型转换</h1>
     <ol>
       <li>转换<em>值的类型</em>而不是<em>变量的类型</em></li>
       <li>整数类型&rightarrow;float&rightarrow;double&rightarrow;long double</li>
-      <li>如果两边都是signed或都是unsigned，char&rightarrow;short&rightarrow;int&rightarrow;long&rightarrow;long long</li>
-      <li></li>
+      <li>signed&circledcirc;signed或unsigned&circledcirc;unsigned，char&rightarrow;short&rightarrow;int&rightarrow;long&rightarrow;long long</li>
+      <li>signed&circledcirc;unsigned</li>
+      <ol>
+        <li>如果signed的范围 &gt; unsigned的范围，unsigned&rightarrow;signed</li>
+        <li>否则，signed转unsigned。<em>如果signed是负数，那么转换后的数 = unsigned的最大值 + 1 - 负数的绝对值</em></li>
+      </ol>
+    </ol>
+  </div>
+  <div class="slide">
+    <h1>强制类型转换运算符</h1>
+    <ul>
+      <li>语法：<code>(类型名)变量</code>或<code>(类型名)(表达式)</code></li>
+      <li><code>(类型名)</code>的优先级<em>高于</em>二元运算符（+-*/%等等）</li>
+      <li>举例<code>int a=2; float b=1.6; int c=a+(int)b;</code></li>
+      <li>问题：如何将<code>a+b</code>的结果转换为int？&#x1F914;</li>
+    </ul>
+  </div>
+  <div class="slide">
+    <h1>赋值运算的强制类型转换</h1>
+    <ul>
+      <li>赋值符号右边的值的类型<em>强制转换</em>为左边的类型</li>
+      <li>举例<code>int a; a=1.6;</code>效果是<code>a==1</code></li>
+      <li>浮点数&rightarrow;整数，截取整数部分，<em>不是四舍五入</em></li>
+      <li>unsigned大范围&rightarrow;小范围，大数 % (小范围最大值 + 1)</li>
+      <li>signed大范围&rightarrow;小范围，<em>结果不可预料，谨慎使用</em></li>
+    </ul>
+  </div>
+  <div class="slide">
+    <h1>类型的推荐做法</h1>
+    <ol>
+      <li>尽量不要混用不同类型</li>
+      <li>如要混用不同类型，尽量保证一种类型的范围<em>完全包含</em>另一种类型</li>
+      <li>无必要不使用unsigned类型</li>
+      <li>必须使用unsigned类型时，unsigned&circledcirc;unsigned，或者，unsigned&rightarrow;更大的signed</li>
     </ol>
   </div>
 </template>
