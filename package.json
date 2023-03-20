@@ -9,14 +9,9 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@babylonjs/core": "^5.50.1",
     "@highlightjs/vue-plugin": "^2.1.0",
-    "@pixi/app": "^7.2.0",
-    "@pixi/core": "^7.2.0",
-    "@pixi/display": "^7.2.0",
-    "@pixi/graphics": "^7.2.0",
-    "@pixi/ticker": "^7.2.0",
     "highlight.js": "^11.7.0",
+    "mathlive": "^0.89.4",
     "random": "^4.1.0",
     "vue": "^3.2.45",
     "vue-router": "^4.1.6"

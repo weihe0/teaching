@@ -232,14 +232,68 @@ b = t;</code></pre>
       <li>必须使用unsigned类型时，unsigned&circledcirc;unsigned，或者，unsigned&rightarrow;更大的signed</li>
     </ol>
   </div>
+  <div class="slide">
+    <h1>unsigned的运算原理</h1>
+    <canvas width="960" height="540" ref="unsigned_clock"></canvas>
+    <div>
+      <input type="number" v-model="n"/>
+      <button @click="run">运行</button>
+    </div>
+
+  </div>
+
 </template>
 
-<script lang="ts">
-export default {
-  name: "CLang"
+<script setup lang="ts">
+import {onMounted, ref} from "vue";
+
+const unsigned_clock=ref<HTMLCanvasElement|null>(null);
+let c:CanvasRenderingContext2D;
+onMounted(()=>{
+  c=unsigned_clock.value!.getContext("2d")!;
+  c.translate(c.canvas.width/2,c.canvas.height/2);
+  c.font="1em Arial"
+  let angle=-Math.PI/2;
+  const radius=200;
+  for(let i=0;i<16;i++){
+    let text=i<10 ? `${i} ` : `${i}`;
+    c.fillText(text, radius*Math.cos(angle)-c.measureText(text).width/2, radius*Math.sin(angle));
+    angle += Math.PI/8;
+  }
+  c.moveTo(0,0);
+  c.lineTo(0,-150);
+  c.lineWidth=2;
+  c.stroke();
+})
+let n=ref(0);
+
+function run(){
+  if(n.value>=0){
+    n.value %= 16;
+  }else{
+    n.value = n.value % 16 + 16;
+  }
+  c.strokeStyle="antiquewhite";
+  c.stroke();
+  c.beginPath();
+  c.strokeStyle="black";
+  c.moveTo(0,0);
+  const pointer_angle=-Math.PI/2+n.value*Math.PI/8;
+  c.lineTo(150*Math.cos(pointer_angle), 150*Math.sin(pointer_angle));
+  c.stroke();
 }
+
+
 </script>
 
 <style scoped>
-
+button{
+  width: 80px;
+  height: 40px;
+}
+input{
+  height: 40px;
+  width: 80px;
+  font-size: 1em;
+}
 </style>
