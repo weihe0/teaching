@@ -1,6 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
+  '@babylonjs/core': ^5.51.0
   '@highlightjs/vue-plugin': ^2.1.0
   '@vitejs/plugin-vue': ^4.0.0
   highlight.js: ^11.7.0
@@ -13,6 +14,7 @@ specifiers:
   vue-tsc: ^1.0.24
 
 dependencies:
+  '@babylonjs/core': 5.51.0
   '@highlightjs/vue-plugin': 2.1.0_jsvakxz56e7tk77soxhxnrhzhm
   highlight.js: 11.7.0
   mathlive: 0.89.4
@@ -50,6 +52,10 @@ packages:
       '@babel/helper-string-parser': 7.19.4
       '@babel/helper-validator-identifier': 7.19.1
       to-fast-properties: r2.cnpmjs.org/to-fast-properties/2.0.0
+
+  /@babylonjs/core/5.51.0:
+    resolution: {integrity: sha512-MIbUD6HdlhNCBaBHlWE06LS25eH649EQQcpINNhlIYTvoaTVQAa3O/M2zpbiZoGESnWO8LSfQYTWc370AWcbCQ==}
+    dev: false
 
   /@esbuild/android-arm/0.16.17:
     resolution: {integrity: sha512-N9x1CMXVhtWEAMS7pNNONyA14f71VPQN9Cnavj1XQh6T7bskqiLLrSca4O0Vr8Wdcga943eThxnVp3JLnBMYtw==}

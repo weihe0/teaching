@@ -68,7 +68,7 @@
     </a>
   </div>
   <div class="slide">
-    <h1>大数据</h1>
+    <h1>项目四 大数据</h1>
     <ul>
       <li>理解大数据</li>
       <li>大数据的应用领域</li>
@@ -82,6 +82,15 @@
       <li>Variety：种类多</li>
       <li>Velocity：速度快</li>
       <li>Veracity：真实度高</li>
+    </ul>
+  </div>
+  <div class="slide">
+    <h1>真假大数据</h1>
+    <ul>
+      <li>某某县房地产大数据</li>
+      <li>行业企业大数据</li>
+      <li><a href="https://www.thepaper.cn/newsDetail_forward_5980996" target="_blank">上海战“疫”精准防疫，大数据如何大显身手？</a> </li>
+      <li><a href="https://xueqiu.com/4548706173/245054081" target="_blank">3月21日大数据复盘：82%个股上涨 成交额0.89万亿</a> </li>
     </ul>
   </div>
   <div class="slide">
@@ -120,6 +129,63 @@
     <ul>
       <li>成本壁垒：手机或购买数据的成本高，处理流程复杂，存储与计算成本高</li>
       <li>信息交流壁垒：政府、企业之间存在信息壁垒</li>
+    </ul>
+  </div>
+  <div class="slide">
+    <h1>认识大数据时代</h1>
+    <ul>
+      <li>数据成为生产要素</li>
+      <li>数据成为为时代发展的“新石油”</li>
+      <li>市场将重组</li>
+      <li>数据服务业将影响国家竞争力</li>
+    </ul>
+  </div>
+  <div class="slide">
+    <h1>大数据与社会生活</h1>
+    <ul>
+      <li>大数据提升政府的服务能力</li>
+      <li>凭借对数据的有效分析来治理国家</li>
+      <li>消除部门间的数据隔阂，为顶层设计提供建议</li>
+    </ul>
+  </div>
+  <div class="slide">
+    <h1>大数据与伦理</h1>
+    <ul>
+      <li>谁先拥有大数据，谁就能够在竞争中处于优势地位</li>
+      <li>网络变得不再虚拟</li>
+      <li>数据交易的灰色地带</li>
+    </ul>
+  </div>
+  <div class="slide">
+    <h1>大数据思维的特点</h1>
+    <ul>
+      <li>量化一切的认知思维</li>
+      <li>如何量化？给数据贴标签</li>
+    </ul>
+    <img src="../assets/word-net.jpg" alt="词云" />
+  </div>
+  <div class="slide">
+    <h1>数据驱动的决策思维</h1>
+    <ul>
+      <li>数据&rightarrow;信息&rightarrow;决策</li>
+      <li>决策举例：
+        <ul>
+          <li>专升本、考研还是找工作？</li>
+          <li>什么发展方向有前景？</li>
+          <li>个人最适合哪个方向？</li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+  <div class="slide">
+    <h1>大数据的应用</h1>
+    <ul>
+      <li>医疗大数据：建立针对疾病以及病人特点的治疗方案</li>
+      <li>生命大数据：对自身和生物体进行基因分析</li>
+      <li>金融大数据：精准营销、风险管控、决策支持、产品设计</li>
+      <li>零售大数据：精准营销、进货管理</li>
+      <li>教育大数据：分析学生的行为与成绩，及教师的教学效果</li>
+      <li>交通大数据：了解通行密度，规划交通路线</li>
     </ul>
   </div>
 </template>
