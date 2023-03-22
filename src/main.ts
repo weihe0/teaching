@@ -10,10 +10,12 @@ import AI from './components/AI.vue'
 import CLang from "./components/CLang.vue";
 import lottery from "./components/lottery.vue";
 import BasicElectrical from "./components/BasicElectrical.vue";
+import Home from "./components/Home.vue";
 
 const app=createApp(App);
 const routes = [
-    { path: '/', component: CLang, },
+    {path: '/',component: Home},
+    { path: '/clang', component: CLang, },
     { path: '/ai', component: AI, },
     { path: '/electrical', component: BasicElectrical},
     {path: '/lottery',component: lottery}

@@ -5,7 +5,7 @@ specifiers:
   '@highlightjs/vue-plugin': ^2.1.0
   '@vitejs/plugin-vue': ^4.0.0
   highlight.js: ^11.7.0
-  mathlive: ^0.89.4
+  mathjax: ^3.2.2
   random: ^4.1.0
   typescript: ^4.9.3
   vite: ^4.1.0
@@ -17,7 +17,7 @@ dependencies:
   '@babylonjs/core': 5.51.0
   '@highlightjs/vue-plugin': 2.1.0_jsvakxz56e7tk77soxhxnrhzhm
   highlight.js: 11.7.0
-  mathlive: 0.89.4
+  mathjax: 3.2.2
   random: 4.1.0
   vue: 3.2.47
   vue-router: 4.1.6_vue@3.2.47
@@ -449,9 +449,8 @@ packages:
     dependencies:
       sourcemap-codec: r2.cnpmjs.org/sourcemap-codec/1.4.8
 
-  /mathlive/0.89.4:
-    resolution: {integrity: sha512-mvWDdUOkhWKPXxQRKWbLFHARAnA81WSq5LB1d06nXcvIgGx3SiGdfmAGteFLkObWRFFVPlS44T0IWIQOchL8jg==}
-    engines: {node: '>=16.14.2', npm: '>=8.5.0'}
+  /mathjax/3.2.2:
+    resolution: {integrity: sha512-Bt+SSVU8eBG27zChVewOicYs7Xsdt40qm4+UpHyX7k0/O9NliPc+x77k1/FEsPsjKPZGJvtRZM1vO+geW0OhGw==}
     dev: false
 
   /minimatch/6.2.0:
