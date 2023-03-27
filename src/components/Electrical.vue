@@ -79,7 +79,6 @@
 
 <script setup lang="ts">
 import {onMounted, ref} from "vue";
-import renderMathInElement from "katex/contrib/auto-render";
 import "katex/dist/katex.css"
 import {renderMathInDocument} from "mathlive";
 const graph = ref<HTMLCanvasElement | null>(null);
