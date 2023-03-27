@@ -1,3 +1,4 @@
+<!--
 <template>
 <ol id="homework">
   <li>设\(\theta=\frac{\pi}{4}\)，计算\(e^{i\theta}\)，要算出结果中的所有三角函数值</li>
@@ -37,3 +38,4 @@ onMounted(()=>{
   margin: 1em 0;
 }
 </style>
+-->

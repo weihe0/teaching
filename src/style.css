@@ -4,7 +4,7 @@ html,body, #app{
   height: 100%;
   overflow: auto;
 }
-div.slide{
+.slide{
   min-width: 100%;
   min-height: 100%;
   font-size: 3em;

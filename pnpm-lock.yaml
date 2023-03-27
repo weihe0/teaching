@@ -5,8 +5,8 @@ specifiers:
   '@highlightjs/vue-plugin': ^2.1.0
   '@vitejs/plugin-vue': ^4.0.0
   highlight.js: ^11.7.0
-  mathjax: ^3.2.2
-  mathlive: ^0.90.4
+  katex: ^0.16.4
+  mathlive: ^0.90.7
   random: ^4.1.0
   typescript: ^4.9.3
   vite: ^4.1.0
@@ -18,8 +18,8 @@ dependencies:
   '@babylonjs/core': 5.51.0
   '@highlightjs/vue-plugin': 2.1.0_jsvakxz56e7tk77soxhxnrhzhm
   highlight.js: 11.7.0
-  mathjax: 3.2.2
-  mathlive: 0.90.4
+  katex: 0.16.4
+  mathlive: 0.90.7
   random: 4.1.0
   vue: 3.2.47
   vue-router: 4.1.6_vue@3.2.47
@@ -394,6 +394,11 @@ packages:
   /@vue/shared/3.2.47:
     resolution: {integrity: sha512-BHGyyGN3Q97EZx0taMQ+OLNuZcW3d37ZEVmEAyeoA9ERdGvm9Irc/0Fua8SNyOtV1w6BS4q25wbMzJujO9HIfQ==}
 
+  /commander/8.3.0:
+    resolution: {integrity: sha512-OkTL9umf+He2DZkUq8f8J9of7yL6RJKI24dVITBmNfZBmri9zYZQrKkuXiKhyfPSu8tUhnVBB1iKXevvnlR4Ww==}
+    engines: {node: '>= 12'}
+    dev: false
+
   /csstype/2.6.21:
     resolution: {integrity: sha512-Z1PhmomIfypOpoMjRQB70jfvy/wxT50qW08YXO5lMIJkrdq4yOTR+AW7FqutScmB9NkLwxo+jU+kZLbofZZq/w==}
 
@@ -446,17 +451,20 @@ packages:
       has: r2.cnpmjs.org/has/1.0.3
     dev: true
 
+  /katex/0.16.4:
+    resolution: {integrity: sha512-WudRKUj8yyBeVDI4aYMNxhx5Vhh2PjpzQw1GRu/LVGqL4m1AxwD1GcUp0IMbdJaf5zsjtj8ghP0DOQRYhroNkw==}
+    hasBin: true
+    dependencies:
+      commander: 8.3.0
+    dev: false
+
   /magic-string/0.25.9:
     resolution: {integrity: sha512-RmF0AsMzgt25qzqqLc1+MbHmhdx0ojF2Fvs4XnOqz2ZOBXzzkEwc/dJQZCYHAn7v1jbVOjAZfK8msRn4BxO4VQ==}
     dependencies:
       sourcemap-codec: r2.cnpmjs.org/sourcemap-codec/1.4.8
 
-  /mathjax/3.2.2:
-    resolution: {integrity: sha512-Bt+SSVU8eBG27zChVewOicYs7Xsdt40qm4+UpHyX7k0/O9NliPc+x77k1/FEsPsjKPZGJvtRZM1vO+geW0OhGw==}
-    dev: false
-
-  /mathlive/0.90.4:
-    resolution: {integrity: sha512-gkv/lZgRG+LTx1K7f9By/SiwnlPNCeHM6YcA/cbUVQyyU4rYB6W2LFaQuDk2c93maRfqjidgO/U2LFAoq3k9gg==}
+  /mathlive/0.90.7:
+    resolution: {integrity: sha512-pvhK6k9GeFtrMnFUlelV6RpMfITCF1x30KRrvLwFYLm4vmwIH5vToz9T4WbOiljgziSYJ9XXCrmHVHnG9+g0ew==}
     engines: {node: '>=16.14.2', npm: '>=8.5.0'}
     dev: false
 
