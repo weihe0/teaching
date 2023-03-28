@@ -39,8 +39,8 @@ button {
 </style>
 
 <script setup lang="ts">
-const props = defineProps<{ title: String }>();
 import {ref} from "vue";
+const props = defineProps<{ title: String }>();
 
 const name = ref("名字");
 const names = ["陈海明",

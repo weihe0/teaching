@@ -4,7 +4,6 @@ specifiers:
   '@vitejs/plugin-vue': ^4.0.0
   katex: ^0.16.4
   mathlive: ^0.90.7
-  random: ^4.1.0
   typescript: ^4.9.3
   vite: ^4.1.0
   vue: ^3.2.45
@@ -14,7 +13,6 @@ specifiers:
 dependencies:
   katex: 0.16.4
   mathlive: 0.90.7
-  random: 4.1.0
   vue: 3.2.47
   vue-router: 4.1.6_vue@3.2.47
 
@@ -467,13 +465,6 @@ packages:
       picocolors: r2.cnpmjs.org/picocolors/1.0.0
       source-map-js: 1.0.2
 
-  /random/4.1.0:
-    resolution: {integrity: sha512-6Ajb7XmMSE9EFAMGC3kg9mvE7fGlBip25mYYuSMzw/uUSrmGilvZo2qwX3RnTRjwXkwkS+4swse9otZ92VjAtQ==}
-    engines: {node: '>=14'}
-    dependencies:
-      seedrandom: 3.0.5
-    dev: false
-
   /resolve/1.22.1:
     resolution: {integrity: sha512-nBpuuYuY5jFsli/JIs1oldw6fOQCBioohqWZg/2hiaOybXOft4lonv85uDOKXdf8rhyK159cxU5cDcK/NKk8zw==}
     hasBin: true
@@ -490,10 +481,6 @@ packages:
     optionalDependencies:
       fsevents: 2.3.2
     dev: true
-
-  /seedrandom/3.0.5:
-    resolution: {integrity: sha512-8OwmbklUNzwezjGInmZ+2clQmExQPvomqjL7LFqOYqtmuxRgQYqOD3mHaU+MvZn5FLUeVxVfQjwLZW/n/JFuqg==}
-    dev: false
 
   /source-map-js/1.0.2:
     resolution: {integrity: sha512-R0XvVJ9WusLiqTCEiGCmICCMplcCkIwwR11mOSD9CR5u+IXYdiseeEuXCVAjS54zqwkLcPNnmU4OeJ6tUrWhDw==}

@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "katex": "^0.16.4",
     "mathlive": "^0.90.7",
     "vue": "^3.2.45",
     "vue-router": "^4.1.6"
