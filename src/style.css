@@ -1,61 +1,8 @@
-html,body, #app{
+body{
   margin: 0;
   padding: 0;
-  height: 100%;
-  overflow: auto;
-  display: flex;
 }
-.slide{
-  min-width: 100%;
-  min-height: 100%;
-  font-size: 3em;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: antiquewhite;
-}
-div.slide h1{
-  font-size: 1.5em;
+em{
   font-family: sans-serif;
-}
-div.slide div.two-columns{
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  align-items: center;
-}
-div.slide div.two-columns ul{
-  max-width: 40%;
-}
-div.slide pre{
-  font-family: monospace;
-  font-size: 1em;
-}
-
-div.slide em{
   font-style: normal;
-  font-family: sans-serif;
-}
-.counterexample{
-  color: red;
-  background-color: black;
-  padding: 0 0.5em;
-  text-decoration: line-through;
-}
-.omit{
-  color: gray;
-}
-div.slide td{
-  padding: 0 1em;
-  border: black solid 2px;
-}
-table{
-  border-collapse: collapse;
-  padding: 0 1em;
-}
-div.slide ul,div.slide ol{
-  max-width: 80%;
 }
