@@ -9,9 +9,6 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@babylonjs/core": "^5.51.0",
-    "@highlightjs/vue-plugin": "^2.1.0",
-    "highlight.js": "^11.7.0",
     "katex": "^0.16.4",
     "mathlive": "^0.90.7",
     "random": "^4.1.0",
