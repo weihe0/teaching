@@ -10,6 +10,7 @@ import Data from "./clang/Data.vue";
 import IO from "./clang/IO.vue";
 import SmartHome from "./ai/SmartHome.vue";
 import Condition from "./clang/Condition.vue";
+import Series from "./electrical/Series.vue";
 
 const app=createApp(App);
 const routes = [
@@ -21,6 +22,7 @@ const routes = [
     { path: '/ai', component: AI, },
     {path: '/ai/smart-home', component: SmartHome},
     { path: '/electrical', component: Electrical},
+    {path: '/electrical/series', component: Series},
 ]
 
 const router = createRouter({
