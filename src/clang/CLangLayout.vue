@@ -16,7 +16,7 @@
           <router-link to="/clang/expression">第7章 运算符与表达式</router-link>
         </li>
         <li>
-          <router-link to="/clang/branch">第8章 分支结构</router-link>
+          <router-link to="/clang/condition">第8章 条件判断语句</router-link>
         </li>
       </ul>
     </nav>

@@ -149,6 +149,53 @@ b = t;</code></pre>
       <p>输入一个摄氏温度\(c\)，得到华氏温度，再输入一个华氏温度\(f\)，得到摄氏温度</p>
       <p>如果程序正确，那么当\(c=20\)时，\(f={{9/5*20+32}}\)，当\(f=68\)时，\(c={{5/9*(68-32)}}\)</p>
     </CSlide>
+      <CSlide title="关系运算符">
+          <div style="padding: 1em 0">
+          <code>int a = <input type="number" v-model="relative_argument.a"/>;
+              int b = <input type="number" v-model="relative_argument.b"/>;</code></div>
+          <table class="relative">
+              <thead><tr><td>表达式</td><td>值</td><td>表达式</td><td>值</td></tr></thead>
+              <tbody>
+              <tr><td><code>a&gt;b</code></td><td>{{ relative_argument.gt }}</td>
+                  <td><code>a&lt;b</code></td><td>{{ relative_argument.lt }}</td>
+              </tr>
+              <tr><td><code>a&gt;=b</code></td><td>{{ relative_argument.gte }}</td>
+                  <td><code>a&lt;=b</code></td><td>{{ relative_argument.lte }}</td>
+              </tr>
+              <tr><td><code>a==b</code></td><td>{{ relative_argument.eq }}</td>
+                  <td><code>a!=b</code></td><td>{{ relative_argument.neq }}</td>
+              </tr>
+              </tbody>
+          </table>
+      </CSlide>
+      <CSlide title="逻辑运算符">
+          <div style="padding: 1em 0">
+              <code>int a = <input type="number" v-model="logic_argument.a"/>;<br/>
+                  int b = <input type="number" v-model="logic_argument.b"/>;<br/>
+                  int c = <input type="number" v-model="logic_argument.c" />;
+              </code></div>
+          <table class="relative">
+              <thead><tr><td>表达式</td><td>值</td></tr></thead>
+              <tbody>
+              <tr><td><code>a&&b</code></td><td>{{ logic_argument.and }}</td></tr>
+              <tr><td><code>a||b</code></td><td>{{ logic_argument.or }}</td></tr>
+              <tr><td><code>!c</code></td><td>{{ logic_argument.not }}</td></tr>
+              </tbody>
+          </table>
+      </CSlide>
+      <CSlide title="注意事项">
+          <pre><code>int a = 3;
+int b = 4;
+int c = 5;</code></pre>
+          <ul>
+              <li><code>a &gt; b && <span style="color: gray">b &gt; c</span></code>中，由于<code>&&</code>前面已经计算为假，
+              后面<em>不执行</em></li>
+              <li><code>a &lt; b || <span style="color: gray">b &lt; c</span> </code>，由于<code>||</code>前面已经计算为真，
+              后面<em>不执行</em></li>
+              <li>提问：<code>a > b && (c = 1);</code>执行后，<code>c</code>的值为多少？&#x1F914</li>
+          </ul>
+
+      </CSlide>
   </CLangLayout>
 </template>
 
@@ -170,12 +217,27 @@ input {
   width: 80px;
   font-size: 1em;
 }
+code{
+    background: black;
+    color: white;
+}
+code input[type="number"]{
+    font-size: 0.8em;
+}
+table.relative td{
+    min-width: 4em;
+    border: solid black 2px;
+    text-align: center;
+}
+table.relative{
+    border-collapse: collapse;
+}
 </style>
 
 <script setup lang="ts">
 import CSlide from "./CSlide.vue";
 import CLangLayout from "./CLangLayout.vue";
-import {onMounted, onUpdated, ref} from "vue";
+import {onMounted, onUpdated, reactive, ref, watchEffect} from "vue";
 import {renderMathInDocument} from "mathlive";
 const current=ref(0);
 const unsigned_clock = ref<HTMLCanvasElement | null>(null);
@@ -214,5 +276,23 @@ function run() {
   c.lineTo(150 * Math.cos(pointer_angle), 150 * Math.sin(pointer_angle));
   c.stroke();
 }
-
+const relative_argument=reactive({
+    a: 0, b:0, gt:0, lt:0, gte: 0, lte:0, eq:0, neq:0
+});
+watchEffect(()=>{
+    relative_argument.gt = relative_argument.a > relative_argument.b ? 1 : 0;
+    relative_argument.lt = relative_argument.a < relative_argument.b ? 1 : 0;
+    relative_argument.gte = relative_argument.a >= relative_argument.b ? 1 : 0;
+    relative_argument.lte = relative_argument.a <= relative_argument.b ? 1 : 0;
+    relative_argument.eq = relative_argument.a === relative_argument.b ? 1 : 0;
+    relative_argument.neq = relative_argument.a !== relative_argument.b ? 1 : 0;
+})
+const logic_argument=reactive({
+    a:0,b:0,c:0,and:0,or:0,not:0
+});
+watchEffect(()=>{
+    logic_argument.and = logic_argument.a && logic_argument.b ? 1 : 0;
+    logic_argument.or = logic_argument.a || logic_argument.b ? 1 : 0;
+    logic_argument.not = !logic_argument.c ? 1 : 0;
+})
 </script>

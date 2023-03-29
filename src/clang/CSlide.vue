@@ -13,7 +13,7 @@
 
 <style scoped>
 section {
-  height: 100vh;
+  min-height: 100vh;
   background-color: antiquewhite;
   display: grid;
   grid-template-rows: 4em auto 2em;
