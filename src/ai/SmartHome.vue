@@ -24,7 +24,6 @@
       <li><dfn>智能单品</dfn>：智能冰箱、智能空调、智能洗衣机、路由器、电视盒子、摄像头</li>
       <li><dfn>不同产品的联动</dfn>：信息互通共享</li>
       <li><dfn>智能系统集成</dfn>：不同类产品直接的融合和交互</li>
-      <li><dfn>智能单品</dfn>：智能冰箱、智能空调、智能洗衣机、路由器、电视盒子、摄像头</li>
     </ol>
   </Slide>
   <Slide title="智能系统集成示意图">
@@ -47,6 +46,7 @@
     <ul>
       <li>自我反应、调节、控制</li>
       <li>自动调节光线强度、空气湿度、室温</li>
+        <li><em>按时自动开合窗帘</em></li>
     </ul>
   </Slide>
   <Slide title="智能空调">
@@ -57,6 +57,33 @@
       <li>空调状态&rightarrow;终端</li>
     </ul>
   </Slide>
+    <Slide title="灯光控制">
+        <ul>
+            <li>调节各种场景的灯光：聚会、睡觉、看电视</li>
+            <li>有利于防盗</li>
+            <li>有利于节约能源</li>
+        </ul>
+    </Slide>
+    <Slide title="背景音乐控制">
+        <ul>
+            <li>打破空间限制</li>
+            <li>音源丰富</li>
+            <li>调节家庭环境气氛</li>
+        </ul>
+    </Slide>
+    <Slide title="智能锁">
+        <li>出门无需带钥匙</li>
+        <li>保护隐私安全</li>
+        <li>操作简单易懂</li>
+        <li>外观简单大方</li>
+    </Slide>
+    <Slide title="实际产品">
+        <li><a href="https://item.jd.com/100004676756.html">智能音箱</a></li>
+        <li><a href="https://item.jd.com/100037767981.html">智能冰箱</a></li>
+        <li><a href="https://item.jd.com/100048765169.html">智能门锁</a></li>
+        <li><a href="https://item.jd.com/100014743067.html">智能窗帘</a></li>
+        <li><a href="https://item.jd.com/100002439574.html">智能床头灯</a></li>
+    </Slide>
 </AILayout>
 </template>
 
