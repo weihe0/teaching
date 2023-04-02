@@ -15,6 +15,7 @@ import Series from "./electrical/Series.vue";
 const app=createApp(App);
 const routes = [
     {path: '/',component: Home},
+    {path: '/clang', component: Data},
     {path: '/clang/expression', component: Expression},
     {path: '/clang/data', component: Data},
     {path: '/clang/io', component: IO},
