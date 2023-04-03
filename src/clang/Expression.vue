@@ -238,7 +238,7 @@ table.relative{
 import CSlide from "./CSlide.vue";
 import CLangLayout from "./CLangLayout.vue";
 import {onMounted, onUpdated, reactive, ref, watchEffect} from "vue";
-import {renderMathInDocument} from "mathlive";
+import renderMathInElement from "katex/contrib/auto-render";
 const current=ref(0);
 const unsigned_clock = ref<HTMLCanvasElement | null>(null);
 let c: CanvasRenderingContext2D;
@@ -257,7 +257,7 @@ onMounted(() => {
   c.lineTo(0, -150);
   c.lineWidth = 2;
   c.stroke();
-  renderMathInDocument();
+  renderMathInElement(document.body);
 })
 let n = ref(0);
 

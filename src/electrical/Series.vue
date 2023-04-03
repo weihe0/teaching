@@ -124,11 +124,10 @@
 <script setup lang="ts">
 import Slide from "../components/Slide.vue";
 import {onMounted, onUpdated, ref} from "vue";
-import {renderMathInDocument} from "mathlive";
 import ElectricalLayout from "./ElectricalLayout.vue";
-
-onMounted(() => {
-    renderMathInDocument();
+import renderMathInElement from "katex/contrib/auto-render";
+onMounted(()=>{
+    renderMathInElement(document.body);
 })
 const sqrt2partial = ref("0");
 const sqrt_animation = (function* () {

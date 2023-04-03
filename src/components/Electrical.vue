@@ -80,7 +80,6 @@
 <script setup lang="ts">
 import {onMounted, ref} from "vue";
 import "katex/dist/katex.css"
-import {renderMathInDocument} from "mathlive";
 const graph = ref<HTMLCanvasElement | null>(null);
 const curve = ref<HTMLCanvasElement | null>(null);
 const lemniscate=ref<HTMLCanvasElement | null>(null);
@@ -92,7 +91,6 @@ let c4: CanvasRenderingContext2D;
 const real=ref(2);
 const imaginary=ref(3);
 onMounted(() => {
-  renderMathInDocument();
   c = graph.value!.getContext('2d')!;
   plot();
   let anime_number=animate_number();
