@@ -1,7 +1,13 @@
+<script setup lang="ts">
+const props=defineProps<{title:String}>();
+</script>
+
 <template>
     <section>
-        <h1>{{props.title}}</h1>
-        <div>
+        <div class="title">
+          <h1>{{props.title}}</h1>
+        </div>
+        <div class="body">
             <slot />
         </div>
     </section>
@@ -10,20 +16,19 @@
 <style scoped>
 section{
     width: 100%;
-    display: grid;
-    grid-template-rows: 4em auto;
-    font-size: 200%;
+    height: 100%;
+    display: none;
+    grid-template-rows: 2em auto;
+    overflow: hidden;
 }
-h1{
-    place-self: center;
+.title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: solid white 1px;
 }
-div{
-    place-content: center;
-    margin: 2em;
+.body{
+    display: flex;
+    justify-content: center;
 }
 </style>
-
-<script setup lang="ts">
-const props=defineProps<{title:String}>();
-</script>
-

@@ -9,7 +9,6 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "bootstrap": "^5.2.3",
     "katex": "^0.16.4",
     "vue": "^3.2.45",
     "vue-router": "^4.1.6"
