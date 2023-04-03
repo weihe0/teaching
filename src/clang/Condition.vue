@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import CSlide from "./CSlide.vue";
 import CLangLayout from "./CLangLayout.vue";
-import {onMounted, ref, watch, watchEffect} from "vue";
-const iSelection=ref(6);
+import {onMounted, ref, watch} from "vue";
+const iSelection=ref(1);
 const lineExecutable=ref([false,false,false,false,false,false,false,false]);
 const line=ref(-1);
 watch(line,(l,ol)=>{

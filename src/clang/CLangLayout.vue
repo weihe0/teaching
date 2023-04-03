@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import {onMounted, onUnmounted, ref, watch, watchEffect} from "vue";
 const show=ref(false);
-let index=ref(4);
+let index=ref(0);
 let numSlides=0;
 const slideArea=ref<HTMLElement|null>(null);
 onMounted(()=>{
