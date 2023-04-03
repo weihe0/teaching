@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import {onMounted, ref, watch, watchEffect} from "vue";
+import {onMounted, onUnmounted, ref, watch, watchEffect} from "vue";
 const show=ref(false);
-let index=ref(0);
+let index=ref(4);
 let numSlides=0;
 const slideArea=ref<HTMLElement|null>(null);
 onMounted(()=>{
@@ -29,6 +29,34 @@ watch(index,(i, o)=>{
         newSlide.style.display="grid";
     }
 })
+const name = ref("名字");
+const names = ["陈海明", "陈嘉炜", "陈雨婷", "冯永康", "高鸿键", "高嘉林", "关劲贤", "官志标",
+    "黄鑫", "李灿", "李佳勇", "李文翔", "李文岳", "梁梓健", "林春学", "林家荣", "林凯丰", "林乔方",
+    "刘泰延", "龙国宏", "罗凯然", "聂志恒", "冉斌斌", "陕千熙", "沈雁楠", "苏润达", "苏鑫乐", "孙华鑫",
+    "谭媚", "谭云鹏", "王宏伟", "王开新", "王意园", "吴媚", "吴沛钢", "伍诗琪", "萧坚裕", "叶浩", "张安",
+    "张锦波", "张鹏娟", "张赟", "赵允涛", "郑通叶", "周汝承",
+];
+const lotteryProcess = (function *(){
+    let a= new Uint8Array(64);
+    while(true){
+        crypto.getRandomValues(a);
+        for(let i=0;i<a.length;i++){
+            name.value=names[a[i] % names.length];
+            yield ;
+        }
+    }
+})();
+let id=0;
+function startLottery(){
+    id=setInterval(()=>{
+        lotteryProcess.next();
+    }, 100);
+}
+function stopLottery(){
+    clearInterval(id);
+    id=0;
+}
+
 </script>
 
 <template>
@@ -67,16 +95,26 @@ watch(index,(i, o)=>{
             <slot/>
         </main>
         <div class="control">
+            <div class="first">
             <button @click="previous">
                 <svg width="64px" height="32px" viewBox="0 0 64 32">
                     <polyline points="0 32, 32 0, 64 32"/>
                 </svg>
             </button>
+            </div>
+            <div class="second">
             <button @click="next">
                 <svg width="64px" height="32px" viewBox="0 0 64 32">
                     <polyline points="0 0, 32 32, 64 0"/>
                 </svg>
             </button>
+                <div class="lottery">
+                    <span>{{name}}</span>
+                    <button @mouseenter="startLottery"
+                    @mouseleave="stopLottery"
+                    >摇人</button>
+                </div>
+            </div>
         </div>
     </div>
 </template>
@@ -121,12 +159,42 @@ main{
     place-self: center;
 }
 .control{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+.first{
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-end;
+    padding: 1em 0;
 }
-.control button{
-    margin: 4em 0;
+.second{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em 0;
+    font-size: 80%;
+}
+.lottery{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 3em;
+}
+.lottery > span{
+    font-size: 80%;
+    margin-bottom: 0.5em;
+}
+.lottery > button{
+    background-color: skyblue;
+    width: 100%;
+    border-radius: 8px;
+    font-size: 80%;
+}
+.lottery > button:hover{
+    background-color: deepskyblue;
+    cursor: grab;
 }
 button{
     border: none;
