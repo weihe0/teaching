@@ -11,7 +11,7 @@ import Condition from "./clang/Condition.vue";
 import Series from "./electrical/Series.vue";
 import katex from "katex";
 import "katex/dist/katex.css";
-import Residue from "./electrical/Residue.vue";
+import Residue from "./electrical/residue/Residue.vue";
 import Fundamental from "./clang/Fundamental.vue";
 import Loop from "./clang/loop/Loop.vue";
 

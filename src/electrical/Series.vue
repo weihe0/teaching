@@ -1,5 +1,5 @@
 <template>
-    <ElectricalLayout>
+    <ElectricalLayoutLagacy>
         <Slide title="问题引出：根号2等于多少？">
             <div id="sqrt2">
                 <p style="word-break: break-all">{{ sqrt2partial }}</p>
@@ -118,13 +118,13 @@
                 <li><a href="https://www.bilibili.com/video/BV1P14y1W7pJ" target="_blank">泰勒公式的形象解释</a></li>
             </ul>
         </Slide>
-    </ElectricalLayout>
+    </ElectricalLayoutLagacy>
 </template>
 
 <script setup lang="ts">
 import Slide from "../components/Slide.vue";
 import {onMounted, onUpdated, ref} from "vue";
-import ElectricalLayout from "./ElectricalLayout.vue";
+import ElectricalLayoutLagacy from "./ElectricalLayoutLagacy.vue";
 import renderMathInElement from "katex/contrib/auto-render";
 onMounted(()=>{
     renderMathInElement(document.body);

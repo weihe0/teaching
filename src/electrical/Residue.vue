@@ -1,5 +1,5 @@
 <template>
-    <ElectricalLayout>
+    <ElectricalLayoutLagacy>
         <ESlide title="留数">
             <ul>
                 <li><span v-katex>a^2+b^2</span></li>
@@ -13,11 +13,11 @@
                 <li>第一条</li>
             </ul>
         </ESlide>
-    </ElectricalLayout>
+    </ElectricalLayoutLagacy>
 </template>
 
 <script setup lang="ts">
-import ElectricalLayout from "./ElectricalLayout.vue";
+import ElectricalLayoutLagacy from "./ElectricalLayoutLagacy.vue";
 import ESlide from "./ESlide.vue";
 </script>
 
