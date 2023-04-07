@@ -18,6 +18,7 @@ section{
     width: 100%;
     display: grid;
     grid-template-rows: 2em auto;
+    grid-gap: 1em;
     overflow: hidden;
 }
 .title{

@@ -14,6 +14,7 @@ import "katex/dist/katex.css";
 import Residue from "./electrical/residue/Residue.vue";
 import Fundamental from "./clang/Fundamental.vue";
 import Loop from "./clang/loop/Loop.vue";
+import Transport from "./ai/transport/Transport.vue";
 
 const app=createApp(App);
 const routes = [
@@ -25,6 +26,7 @@ const routes = [
     {path: '/clang/condition', component: Condition},
     {path: '/clang/loop',component: Loop},
     { path: '/ai', component: SmartHome, },
+    {path: '/ai/transport',component: Transport},
     {path: '/ai/smart-home', component: SmartHome},
     {path: '/electrical/series', component: Series},
     {path: '/electrical/residue',component: Residue}
@@ -42,5 +44,6 @@ app.directive("katex",{
         }
     }
 });
+
 app.use(router);
 app.mount('#app');
