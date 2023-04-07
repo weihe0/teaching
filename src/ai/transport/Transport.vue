@@ -123,7 +123,7 @@ nav > button{
     grid-gap: 1em;
     background-color: antiquewhite;
     height: 100vh;
-    font-size: xxx-large;
+    font-size: xx-large;
 }
 main{
     max-height: 100vh;
