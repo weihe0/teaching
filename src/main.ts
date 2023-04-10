@@ -15,6 +15,7 @@ import Residue from "./electrical/residue/Residue.vue";
 import Fundamental from "./clang/Fundamental.vue";
 import Loop from "./clang/loop/Loop.vue";
 import Transport from "./ai/transport/Transport.vue";
+import EHomework2 from "./electrical/EHomework2.vue";
 
 const app=createApp(App);
 const routes = [
@@ -29,7 +30,8 @@ const routes = [
     {path: '/ai/transport',component: Transport},
     {path: '/ai/smart-home', component: SmartHome},
     {path: '/electrical/series', component: Series},
-    {path: '/electrical/residue',component: Residue}
+    {path: '/electrical/residue',component: Residue},
+    {path:'/electrical/homework-2',component: EHomework2}
 ]
 
 const router = createRouter({
