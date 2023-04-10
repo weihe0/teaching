@@ -1,3 +1,4 @@
+<!--
 <script setup lang="ts">
 import {onMounted, onUnmounted, ref, watch, watchEffect} from "vue";
 const show=ref(false);
@@ -5,7 +6,7 @@ const show=ref(false);
 const index=ref(0);
 function previous(){
     if(index.value-1>=0){
-        index.value--;
+        index.value&#45;&#45;;
     }
 }
 function next(){
@@ -199,3 +200,4 @@ svg:hover{
     cursor: pointer;
 }
 </style>
+-->
