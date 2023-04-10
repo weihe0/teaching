@@ -13,7 +13,7 @@
 <script setup lang="ts">
 import Slide from "../../components/Slide.vue";
 import {onMounted, onUnmounted, ref} from "vue";
-const variables=ref("")
+const variables=ref("<span>int a0;</span><br/>")
 const n=ref(1);
 let id:number
 onMounted(()=>{
