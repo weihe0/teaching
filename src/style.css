@@ -6,3 +6,19 @@ em{
   font-family: sans-serif;
   font-style: normal;
 }
+.code{
+  border: solid black 1px;
+  font-family: monospace;
+}
+.dim{
+  color: gray;
+}
+.highlight{
+  color: unset;
+}
+.indent-1{
+  margin-left: 2em;
+}
+.indent-2{
+  margin-left: 4em;
+}

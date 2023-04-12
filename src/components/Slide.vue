@@ -29,7 +29,7 @@ section{
 }
 
 .body{
-    align-self: start;
-    justify-self: center;
+    display: flex;
+    justify-content: center;
 }
 </style>
