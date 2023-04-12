@@ -7,7 +7,7 @@
     <span class="indent-1">} else {</span><br/>
     <span class="indent-2">unsigned a=f(n-2);</span><br/>
     <span class="indent-2">unsigned b=f(n-1);</span><br/>
-    <span class="indent-2">unsigned b=f(n-1);</span><br/>
+    <span class="indent-2">return a+b;</span><br/>
     <span class="indent-1">}</span><br/>
     <span>}</span><br/>
     <span>int main() {</span><br/>
