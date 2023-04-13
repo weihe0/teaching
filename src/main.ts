@@ -17,7 +17,7 @@ import Loop from "./clang/loop/Loop.vue";
 import Transport from "./ai/transport/Transport.vue";
 import EHomework2 from "./electrical/EHomework2.vue";
 import ArrayString from "./clang/array-string/ArrayString.vue";
-import FunctionIndex from "./clang/function/FunctionIndex.vue";
+import LaplaceIndex from "./electrical/laplace/LaplaceIndex.vue";
 
 const app=createApp(App);
 const routes = [
@@ -29,12 +29,12 @@ const routes = [
     {path: '/clang/condition', component: Condition},
     {path: '/clang/loop',component: Loop},
     {path: '/clang/array-string', component: ArrayString},
-    {path: '/clang/function',component: FunctionIndex},
     { path: '/ai', component: SmartHome, },
     {path: '/ai/transport',component: Transport},
     {path: '/ai/smart-home', component: SmartHome},
     {path: '/electrical/series', component: Series},
     {path: '/electrical/residue',component: Residue},
+  {path:'/electrical/laplace',component: LaplaceIndex},
     {path:'/electrical/homework-2',component: EHomework2}
 ]
 

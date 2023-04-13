@@ -1,5 +1,9 @@
 <script setup lang="ts">
+import {onMounted} from "vue";
+import renderMathInElement from "katex/contrib/auto-render";
+
 const props=defineProps<{title:String}>();
+onMounted(()=>{renderMathInElement(document.body)})
 </script>
 
 <template>
@@ -15,6 +19,7 @@ const props=defineProps<{title:String}>();
 
 <style scoped>
 section{
+  margin: 1em;
     width: 100%;
     display: grid;
     grid-template-rows: 2em auto;
