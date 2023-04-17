@@ -1,9 +1,9 @@
-import SlideContainer from "@/components/slide-container";
-import Slide from "@/components/slide";
+import {Slide} from "@/components/slide";
+import { CLayout} from "@/components/layouts"
 import Image from "next/image";
 
 export default function Medicine(){
-  return <SlideContainer>
+  return <CLayout>
     <Slide title="项目七 人工智能+医疗">
       <ul>
         <li>人工智能+医疗的基本概念</li>
@@ -84,5 +84,5 @@ export default function Medicine(){
         HeartFlow如何使用AI来检测冠心病
       </a>
     </Slide>
-  </SlideContainer>
+  </CLayout>
 }

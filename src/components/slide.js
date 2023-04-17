@@ -1,7 +1,7 @@
-import {useEffect, useRef} from "react";
+import React, {useEffect, useRef,useState} from "react";
 import renderMathInElement from "katex/contrib/auto-render";
 
-export default function Slide(props) {
+export function Slide(props) {
   const body = useRef(null)
   useEffect(() => {
     renderMathInElement(body.current, {

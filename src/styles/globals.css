@@ -50,3 +50,42 @@ body{
 .body{
   justify-self: center;
 }
+nav.navigation{
+  position: absolute;
+  height: 100vh;
+  background-color: floralwhite;
+  display: grid;
+  grid-template-columns: auto 4em;
+}
+.navigation button{
+  background-color: transparent;
+  border: none;
+}
+ul.content{
+  place-self: center;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.content li{
+  margin: 1em;
+  font-size: 150%;
+  font-family: sans-serif;
+}
+button.fold{
+  place-self: center;
+}
+.lottery{
+  position: absolute;
+  bottom: 4em;
+}
+.lottery button{
+
+}
+.code{
+  font-family: monospace;
+}
+em{
+  font-family: sans-serif;
+  font-weight: bold;
+}
