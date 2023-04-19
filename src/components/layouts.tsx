@@ -97,6 +97,7 @@ export function CLayout(props: PropsWithChildren) {
           <li><Link href="/c/string">第11章 字符串</Link></li>
           <li><Link href="/c/function">第12章 函数</Link></li>
           <li><Link href="/c/pointer">第13章 指针</Link></li>
+          <li><Link href="/c/struct">第14章 结构体</Link></li>
         </ul>
         <button onClick={() => setShow(!show)} className="fold">
           <svg width="32px" height="64px" viewBox="0 0 32 64">
@@ -129,8 +130,8 @@ export function CLayout(props: PropsWithChildren) {
             <polyline points="0 0, 32 32, 64 0"/>
           </svg>
         </button>
-        <Lottery/>
       </div>
+      <Lottery/>
     </div>
   </>
 }

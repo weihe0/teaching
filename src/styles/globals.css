@@ -89,7 +89,7 @@ em{
   width: 3em;
   position: fixed;
   right: 0.5em;
-  bottom: 4em;
+  bottom: 1em;
 }
 .lottery span{
   text-align: justify;
@@ -99,6 +99,9 @@ em{
   font-size: 100%;
   background-color: deepskyblue;
   border-radius: 0.5em;
+}
+.lottery button:hover{
+  cursor: pointer;
 }
 .code{
   font-family: KaTeX_Typewriter,monospace;
