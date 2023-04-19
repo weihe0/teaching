@@ -1,6 +1,7 @@
 import Link from "next/link";
 import React, {PropsWithChildren, useState} from "react";
-export function AILayout(props:PropsWithChildren) {
+
+export function AILayout(props: PropsWithChildren) {
   let [index, setIndex] = useState(0)
 
   function previous() {
@@ -29,7 +30,7 @@ export function AILayout(props:PropsWithChildren) {
           <li><Link href="/ai/transport">项目六 智能交通</Link></li>
           <li><Link href="/ai/medicine">项目七 人工智能+医疗</Link></li>
         </ul>
-        <button onClick={() => setShow(!show)}>
+        <button className="fold" onClick={() => setShow(!show)}>
           <svg width="32px" height="64px" viewBox="0 0 32 64">
             <polyline points="32 0,  0 32, 32 64"/>
           </svg>
@@ -37,7 +38,7 @@ export function AILayout(props:PropsWithChildren) {
       </nav>
       : <></>}
     <div className="slide-container">
-      <button className="unfold" onClick={()=>setShow(!show)}>
+      <button className="unfold" onClick={() => setShow(!show)}>
         <svg width="32px" height="64px" viewBox="0 0 32 64">
           <polyline points="0 0, 32 32, 0 64"/>
         </svg>
@@ -65,7 +66,7 @@ export function AILayout(props:PropsWithChildren) {
   </>
 }
 
-export function CLayout(props:PropsWithChildren) {
+export function CLayout(props: PropsWithChildren) {
   let [index, setIndex] = useState(0)
 
   function previous() {
@@ -95,8 +96,9 @@ export function CLayout(props:PropsWithChildren) {
           <li><Link href="/c/array">第10章 数组</Link></li>
           <li><Link href="/c/string">第11章 字符串</Link></li>
           <li><Link href="/c/function">第12章 函数</Link></li>
+          <li><Link href="/c/pointer">第13章 指针</Link></li>
         </ul>
-        <button onClick={() => setShow(!show)}>
+        <button onClick={() => setShow(!show)} className="fold">
           <svg width="32px" height="64px" viewBox="0 0 32 64">
             <polyline points="32 0,  0 32, 32 64"/>
           </svg>
@@ -104,7 +106,7 @@ export function CLayout(props:PropsWithChildren) {
       </nav>
       : <></>}
     <div className="slide-container">
-      <button className="unfold" onClick={()=>setShow(!show)}>
+      <button className="unfold" onClick={() => setShow(!show)}>
         <svg width="32px" height="64px" viewBox="0 0 32 64">
           <polyline points="0 0, 32 32, 0 64"/>
         </svg>
@@ -127,16 +129,13 @@ export function CLayout(props:PropsWithChildren) {
             <polyline points="0 0, 32 32, 64 0"/>
           </svg>
         </button>
-      </div>
-      <div className="lottery">
-        <span>名字</span>
-        <button>摇人</button>
+        <Lottery/>
       </div>
     </div>
   </>
 }
 
-export function EELayout(props:PropsWithChildren) {
+export function EELayout(props: PropsWithChildren) {
   let [index, setIndex] = useState(0)
 
   function previous() {
@@ -166,7 +165,7 @@ export function EELayout(props:PropsWithChildren) {
           <li><Link href="/ee/laplace">Laplace变换</Link></li>
           <li><Link href="/ee/det">行列式</Link></li>
         </ul>
-        <button onClick={() => setShow(!show)}>
+        <button className="fold" onClick={() => setShow(!show)}>
           <svg width="32px" height="64px" viewBox="0 0 32 64">
             <polyline points="32 0,  0 32, 32 64"/>
           </svg>
@@ -174,7 +173,7 @@ export function EELayout(props:PropsWithChildren) {
       </nav>
       : <></>}
     <div className="slide-container">
-      <button className="unfold" onClick={()=>setShow(!show)}>
+      <button className="unfold" onClick={() => setShow(!show)}>
         <svg width="32px" height="64px" viewBox="0 0 32 64">
           <polyline points="0 0, 32 32, 0 64"/>
         </svg>
@@ -200,4 +199,28 @@ export function EELayout(props:PropsWithChildren) {
       </div>
     </div>
   </>
+}
+
+export function Lottery() {
+  let [name, setName] = useState('名字')
+  const names = ["陈海明", "陈嘉炜", "陈雨婷", "冯永康", "高鸿键", "高嘉林", "关劲贤", "官志标",
+    "黄鑫", "李灿", "李佳勇", "李文翔", "李文岳", "梁梓健", "林春学", "林家荣", "林凯丰", "林乔方",
+    "刘泰延", "龙国宏", "罗凯然", "聂志恒", "冉斌斌", "陕千熙", "沈雁楠", "苏润达", "苏鑫乐", "孙华鑫",
+    "谭媚", "谭云鹏", "王宏伟", "王开新", "王意园", "吴媚", "吴沛钢", "伍诗琪", "萧坚裕", "叶浩", "张安",
+    "张锦波", "张鹏娟", "张赟", "赵允涛", "郑通叶", "周汝承",
+  ]
+
+  function startLottery() {
+    let l=new Uint8Array(1)
+    crypto.getRandomValues(l)
+    let a = new Uint8Array(l[0]);
+    crypto.getRandomValues(a);
+    for (let i = 0; i < a.length; i++) {
+      setName(names[a[i] % names.length])
+    }
+  }
+  return <div className="lottery">
+    <span>{name}</span>
+    <button onClick={startLottery}>摇人</button>
+  </div>
 }

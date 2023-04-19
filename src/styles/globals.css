@@ -1,6 +1,11 @@
 body{
   margin: 0;
 }
+em{
+  font-family: sans-serif;
+  font-style: normal;
+  font-weight: bold;
+}
 .slide-container{
   display: grid;
   grid-template-columns: 2em auto 4em;
@@ -13,7 +18,35 @@ body{
   background-color: transparent;
   border: none;
 }
-
+.navigation{
+  position: absolute;
+  background-color: floralwhite;
+  font-size: 150%;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: auto 4em;
+}
+.content{
+  place-self: center;
+  list-style: none;
+}
+.content li{
+  margin: 1em;
+}
+.fold{
+  place-self: center;
+  background-color: transparent;
+  border: none;
+}
+.fold svg{
+  stroke: black;
+  fill: none;
+  stroke-width: 4px;
+}
+.fold svg:hover{
+  stroke: blue;
+  cursor: pointer;
+}
 .control{
   display: flex;
   flex-direction: column;
@@ -39,7 +72,7 @@ body{
   margin-top: 2em;
   display: grid;
   grid-template-rows: 2em auto;
-  aspect-ratio: 16/9;
+  aspect-ratio: 21/9;
 }
 .title{
   display: flex;
@@ -49,4 +82,31 @@ body{
 }
 .body{
   justify-self: center;
+}
+.lottery{
+  display: flex;
+  flex-direction: column;
+  width: 3em;
+  position: fixed;
+  right: 0.5em;
+  bottom: 4em;
+}
+.lottery span{
+  text-align: justify;
+  text-align-last: justify;
+}
+.lottery button{
+  font-size: 100%;
+  background-color: deepskyblue;
+  border-radius: 0.5em;
+}
+.code{
+  font-family: KaTeX_Typewriter,monospace;
+  border: solid black 1px;
+}
+.indent-1{
+  margin-left: 2em;
+}
+.indent-2{
+  margin-left: 4em;
 }

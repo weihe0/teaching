@@ -1,0 +1,15 @@
+table.memory{
+  border-collapse: collapse;
+}
+table.memory td{
+  min-width: 2em;
+}
+table.memory tr:nth-child(3n-2){
+  border-bottom: solid black 1px;
+}
+table.memory tr:nth-child(3n) td{
+  text-align: center;
+  border: solid black 1px;
+  margin-bottom: 1em;
+}
+

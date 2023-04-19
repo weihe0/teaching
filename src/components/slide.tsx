@@ -1,5 +1,6 @@
 import React, {ReactFragment, ReactNode, useEffect, useRef, useState} from "react";
 import renderMathInElement from "katex/contrib/auto-render";
+import 'katex/dist/katex.css'
 
 export function Slide(props:{title:string, children:ReactNode}) {
   const body = useRef<HTMLDivElement>(null)
