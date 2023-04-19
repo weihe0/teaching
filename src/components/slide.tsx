@@ -1,10 +1,10 @@
-import React, {useEffect, useRef,useState} from "react";
+import React, {ReactFragment, ReactNode, useEffect, useRef, useState} from "react";
 import renderMathInElement from "katex/contrib/auto-render";
 
-export function Slide(props) {
-  const body = useRef(null)
+export function Slide(props:{title:string, children:ReactNode}) {
+  const body = useRef<HTMLDivElement>(null)
   useEffect(() => {
-    renderMathInElement(body.current, {
+    renderMathInElement(body.current!, {
       output: 'html',
     })
   })

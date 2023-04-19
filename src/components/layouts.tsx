@@ -1,6 +1,6 @@
 import Link from "next/link";
-import React, {useState} from "react";
-export function AILayout(props) {
+import React, {PropsWithChildren, useState} from "react";
+export function AILayout(props:PropsWithChildren) {
   let [index, setIndex] = useState(0)
 
   function previous() {
@@ -65,7 +65,7 @@ export function AILayout(props) {
   </>
 }
 
-export function CLayout(props) {
+export function CLayout(props:PropsWithChildren) {
   let [index, setIndex] = useState(0)
 
   function previous() {
@@ -136,7 +136,7 @@ export function CLayout(props) {
   </>
 }
 
-export function EELayout(props) {
+export function EELayout(props:PropsWithChildren) {
   let [index, setIndex] = useState(0)
 
   function previous() {
