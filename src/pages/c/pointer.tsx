@@ -93,10 +93,10 @@ export default function Pointer() {
       </div>
     </Slide>
     <Slide title="获取指向的变量">
-      <li>语法：<span className="code">&指针</span>，例如<span className="code">&(*a)</span>或
-        <span className="code">&*a</span> </li>
-      <li>这个运算符只能作用于<em>指针</em>，否则<em>不能编译</em></li>
-      <li>可以将&运算符获取的变量参与<em>表达式</em>的运算</li>
+      <li>语法：<span className="code">*指针</span>，例如<span className="code">*(&a)</span>或
+        <span className="code">*&a</span> </li>
+      <li>*运算符只能作用于<em>指针</em>，否则<em>不能编译</em></li>
+      <li>*运算符获得的变量可以参与<em>表达式</em>的运算</li>
       <li>例如<span className="code">*&a = *&a + 1;</span>，这里的<span className="code">*&a</span>相当于变量
       <span className="code">a</span>
       </li>
