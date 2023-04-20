@@ -78,6 +78,8 @@ em{
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-bottom: 1em;
+  margin-bottom: 1em;
   border-bottom: solid black 1px;
 }
 .body{
