@@ -4,7 +4,7 @@ import styles from '@/styles/ai.module.css'
 import Link from "next/link";
 export default function Finance() {
   return <AILayout>
-    <Slide title="人工智能+金融">
+    <Slide title="项目八 人工智能+金融">
       <ul>
         <li>什么是金融</li>
         <li>身份识别</li>
@@ -73,16 +73,16 @@ export default function Finance() {
     </Slide>
     <Slide title={'智能终端取代银行网点'}>
       <ul>
-        <li><Link href={'http://www.ecovacs-c.com/news/yingyonganli/143.html'}>
+        <li><Link href={'http://www.ecovacs-c.com/news/yingyonganli/143.html'} target={'_blank'}>
           年内431家银行网点关门！看金融机器人困中破局，助力银行智能转型！
         </Link></li>
         <li>
-          <Link href={'http://www.xinhuanet.com/politics/2022-01/25/c_1128296896.htm'}>
+          <Link href={'http://www.xinhuanet.com/politics/2022-01/25/c_1128296896.htm'} target={'_blank'}>
             身边的银行网点会消失吗——银行业服务终端模式调整升级情况调查
           </Link>
         </li>
         <li>
-          <Link href={'https://www.sohu.com/a/201503343_733188'}>
+          <Link href={'https://www.sohu.com/a/201503343_733188'} target={'_blank'}>
             银行自助设备,让服务更便捷！智能化终端机已成为银行网点“标配”
           </Link>
         </li>
@@ -123,17 +123,17 @@ export default function Finance() {
     </Slide>
     <Slide title={'活体检测'}>
       <figure className={styles.fig}>
-        <img src={'/face-key-points.jpg'} alt={'活体检测'} width={'70%'}/>
+        <img src={'/liveness.jpg'} alt={'活体检测'} width={'70%'}/>
         <figcaption>确认是真人，而不是拍摄或合成的人类</figcaption>
       </figure>
     </Slide>
     <Slide title={'人工智能换脸'}>
       <ul>
-        <li><Link href={'https://m.thepaper.cn/baijiahao_7103231'}>和马斯克Zoom开个会，竟是AI换脸
+        <li><Link href={'https://m.thepaper.cn/baijiahao_7103231'} target={'_blank'}>和马斯克Zoom开个会，竟是AI换脸
         </Link></li>
         <li>用 Avatarify 将自己的脸替换成别人的脸，在视频会议中的表现也十分流畅</li>
-        <li><Link href={'https://github.com/alievk/avatarify'}>项目传送门</Link></li>
-        <li><Link href={'https://arxiv.org/pdf/2003.00196.pdf'}>论文传送门</Link></li>
+        <li><Link href={'https://github.com/alievk/avatarify'} target={'_blank'}>项目传送门</Link></li>
+        <li><Link href={'https://arxiv.org/pdf/2003.00196.pdf'} target={'_blank'}>论文传送门</Link></li>
       </ul>
     </Slide>
   </AILayout>

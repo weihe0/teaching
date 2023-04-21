@@ -5,7 +5,7 @@ import {useState} from "react";
 
 export default function Pointer() {
   return <CLayout>
-    <Slide title="指针">
+    <Slide title="第14章 指针">
       <ul>
         <li>指针的引入</li>
         <li>指针的定义</li>
