@@ -29,6 +29,7 @@ export function AILayout(props: PropsWithChildren) {
           <li><Link href="/ai/ehome">项目五 智能家居</Link></li>
           <li><Link href="/ai/transport">项目六 智能交通</Link></li>
           <li><Link href="/ai/medicine">项目七 人工智能+医疗</Link></li>
+          <li><Link href="/ai/finance">项目八 人工智能+金融</Link></li>
         </ul>
         <button className="fold" onClick={() => setShow(!show)}>
           <svg width="32px" height="64px" viewBox="0 0 32 64">

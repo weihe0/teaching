@@ -1,0 +1,9 @@
+figure.fig{
+  display: grid;
+}
+figure.fig img{
+  place-self: center;
+}
+figure.fig figcaption{
+  place-self: center;
+}
