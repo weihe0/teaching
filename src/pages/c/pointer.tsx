@@ -118,8 +118,121 @@ export default function Pointer() {
           <span className="code">pa</span>&#8594;</span><span className="code">*pa</span></li>
       </ul>
     </Slide>
+    <Slide title={'用指针改变函数的局部变量'}>
+      <p className={'code'}>
+        <span>void increase(int *x)&#123;</span><br/>
+        <span className={'indent-1'}>*x += 1;</span><br/>
+        <span>&#125;</span><br/>
+        <span>int main() &#123;</span><br/>
+        <span className={'indent-1'}>int a=2;</span><br/>
+        <span className={'indent-1'}>increase(&a);</span><br/>
+        <span className={'indent-1'}>printf("a=%d\n", a);</span><br/>
+        <span className={'indent-1'}>return 0;</span><br/>
+        <span>&#125;</span>
+      </p>
+    </Slide>
     <Slide title="如何使用指针改写swap函数？🤔">
       <RewriteSwap/>
+    </Slide>
+    <Slide title={'指针与数组'}>
+      <div className={styles.explanation}>
+        <p className={'code'}>
+          <span>int a[5] = &#123;1,2,3,4,5&#125;</span><br/>
+          <span>int *p = a;</span>
+        </p>
+        <table>
+          <tbody>
+          <tr>
+            <td colSpan={5}>p</td>
+          </tr>
+          <tr>
+            <td colSpan={5}>&#8595;</td>
+          </tr>
+          <tr>
+            <td>a[0]</td>
+            <td>a[1]</td>
+            <td>a[2]</td>
+            <td>a[3]</td>
+            <td>a[4]</td>
+          </tr>
+          <tr className={styles.array}>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+          </tr>
+          </tbody></table>
+      </div>
+      <p>p指向哪个元素？🤔</p>
+    </Slide>
+    <Slide title={'用指针访问数组元素'}>
+      <p className={'code'}>
+        <span>int a[5] = &#123;1,2,3,4,5&#125;</span><br/>
+        <span>int *p = a;</span>
+      </p>
+      <p>如果<span className={'code'}>p</span>被赋值为<span className={'code'}>a</span>，
+        那么<span className={'code'}>p[i]</span><em>相当于</em><span className={'code'}>a[i]</span> </p>
+      <table>
+        <tr>
+          <td>p[0]</td>
+          <td>p[1]</td>
+          <td>p[2]</td>
+          <td>p[3]</td>
+          <td>p[4]</td>
+        </tr>
+        <tr className={styles.array}>
+          <td>1</td>
+          <td>2</td>
+          <td>3</td>
+          <td>4</td>
+          <td>5</td>
+        </tr>
+        <tr>
+          <td>a[0]</td>
+          <td>a[1]</td>
+          <td>a[2]</td>
+          <td>a[3]</td>
+          <td>a[4]</td>
+        </tr>
+      </table>
+    </Slide>
+    <Slide title={'函数参数中的指针'}>
+      <p className={'code'}>
+        <span>float average_number(float *a, int n) &#123;</span><br/>
+        <span className={'indent-1'}>float sum = 0;</span><br/>
+        <span className={'indent-1'}>int i;</span><br/>
+        <span className={'indent-1'}>for(i=0;i&#60;n;i++)&#123;</span><br/>
+        <span className={'indent-2'}>sum += a[i];</span><br/>
+        <span className={'indent-1'}>&#125;</span><br/>
+        <span className={'indent-1'}>return sum/n;</span><br/>
+        <span>&#125;</span><br/>
+        <span>int main() &#123;</span><br/>
+        <span className={'indent-1'}>float array[5] = &#123;1.5, 3.5, 2.5, 5.5, 4.5&#125;</span><br/>
+        <span className={'indent-1'}>float average = average_number(array, 5);</span><br/>
+        <span className={'indent-1'}>printf("average=%f\n", average);</span><br/>
+        <span>&#125;</span>
+      </p>
+      <p>为什么<span className={'code'}>average_number</span>函数要传入两个参数？🤔</p>
+    </Slide>
+    <Slide title={'指针与字符串'}>
+      <p className={'code'}>
+        <span>int is_identifier_or_keyword(char *str) &#123;</span><br/>
+        <span className={'indent-1'}>if (!(isalpha(str[0]) || str[0]=='_')) return 0;</span><br/>
+        <span className={'indent-1'}>int i;</span><br/>
+        <span className={'indent-1'}>for (i=1;str[i]!='\0';i++) &#123;</span><br/>
+        <span className={'indent-2'}>if (!(isalnum(str[i]) || str[i]=='_')) return 0;</span><br/>
+        <span className={'indent-1'}>&#125;</span><br/>
+        <span className={'indent-1'}>return 1;</span><br/>
+        <span>&#125;</span><br/>
+        <span>int main() &#123;</span><br/>
+        <span className={'indent-1'}>char str0[]="sum";</span><br/>
+        <span className={'indent-1'}>char str1[]="123";</span><br/>
+        <span className={'indent-1'}>printf("%d\n", is_identifier_or_keyword(str0));</span><br/>
+        <span className={'indent-1'}>printf("%d\n", is_identifier_or_keyword(str1));</span><br/>
+        <span>&#125;</span>
+      </p>
+      <p>为什么<span className={'code'}>is_identifier_or_keyword</span>函数只需一个参数？🤔</p>
     </Slide>
   </CLayout>
 }

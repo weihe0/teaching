@@ -115,3 +115,9 @@ em{
 .indent-2{
   margin-left: 4em;
 }
+.indent-3{
+  margin-left: 6em;
+}
+table{
+  border-collapse: collapse;
+}

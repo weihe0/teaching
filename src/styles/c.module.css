@@ -13,3 +13,14 @@ table.memory tr:nth-child(3n) td{
   margin-bottom: 1em;
 }
 
+.explanation{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 2em;
+}
+.array{
+  border-collapse: collapse;
+}
+.array td{
+  border: solid black 1px;
+}
