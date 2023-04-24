@@ -2,7 +2,7 @@ import {InlineMath} from "@/components/slide";
 
 export default function Homework1(){
   return <ol>
-    <li>设<InlineMath tex={'\\theta=\\frac{\\pi}{4}\\)，计算\\(e^{i\\theta}'}/>，要算出结果中的所有三角函数值</li>
+    <li>设<InlineMath tex={'\\theta=\\frac{\\pi}{4}'}/>，计算<InlineMath tex={'e^{i\\theta}'}/>，要算出结果中的所有三角函数值</li>
     <li><InlineMath tex={'w_1=\\frac{\\sqrt{3}}{2}+\\frac{1}{2}i, w_2=\\frac{1}{2}+\\frac{\\sqrt{3}}{2}i'}/>
       <ol>
         <li>写出<InlineMath tex={'w_1,w_2'}/>的三角形式以及指数形式</li>
