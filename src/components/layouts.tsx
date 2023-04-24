@@ -37,20 +37,14 @@ export function AILayout(props: PropsWithChildren) {
           </svg>
         </button>
       </nav>
-      : <></>}
+      : null}
     <div className="slide-container">
       <button className="unfold" onClick={() => setShow(!show)}>
         <svg width="32px" height="64px" viewBox="0 0 32 64">
           <polyline points="0 0, 32 32, 0 64"/>
         </svg>
       </button>
-      {React.Children.map(props.children, ((child, i) => {
-        if (i === index) {
-          return child
-        } else {
-          return <></>
-        }
-      }))}
+      {React.Children.toArray(props.children)[index]}
       <div className="control">
         <button onClick={previous}>
           <svg width="64px" height="32px" viewBox="0 0 64 32">
@@ -106,20 +100,14 @@ export function CLayout(props: PropsWithChildren) {
           </svg>
         </button>
       </nav>
-      : <></>}
+      : null}
     <div className="slide-container">
       <button className="unfold" onClick={() => setShow(!show)}>
         <svg width="32px" height="64px" viewBox="0 0 32 64">
           <polyline points="0 0, 32 32, 0 64"/>
         </svg>
       </button>
-      {React.Children.map(props.children, ((child, i) => {
-        if (i === index) {
-          return child
-        } else {
-          return <></>
-        }
-      }))}
+      {React.Children.toArray(props.children)[index]}
       <div className="control">
         <button onClick={previous}>
           <svg width="64px" height="32px" viewBox="0 0 64 32">
@@ -173,20 +161,14 @@ export function EELayout(props: PropsWithChildren) {
           </svg>
         </button>
       </nav>
-      : <></>}
+      : null}
     <div className="slide-container">
       <button className="unfold" onClick={() => setShow(!show)}>
         <svg width="32px" height="64px" viewBox="0 0 32 64">
           <polyline points="0 0, 32 32, 0 64"/>
         </svg>
       </button>
-      {React.Children.map(props.children, ((child, i) => {
-        if (i === index) {
-          return child
-        } else {
-          return <></>
-        }
-      }))}
+      {React.Children.toArray(props.children)[index]}
       <div className="control">
         <button onClick={previous}>
           <svg width="64px" height="32px" viewBox="0 0 64 32">
