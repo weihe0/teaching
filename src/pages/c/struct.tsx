@@ -1,5 +1,6 @@
 import {CLayout} from "@/components/layouts";
 import {Slide} from "@/components/slide";
+import {useState} from "react";
 
 export default function Struct(){
   return <CLayout>
@@ -94,10 +95,73 @@ export default function Struct(){
       </ul>
     </Slide>
     <Slide title={'结构体的数组'}>
-      <ul>
-        <li>语法：struct 结构体类型名 数组名[元素个数];</li>
-        <li>示例：struct person students[50];</li>
-      </ul>
+      <p>语法：struct 结构体类型名 数组名[元素个数];</p>
+      <p className={'code'}>
+        <span>struct Dog {'{'}</span><br/>
+        <span className={'indent-1'}>char breed[10];</span><br/>
+        <span className={'indent-1'}>char color[10];</span><br/>
+        <span className={'indent-1'}>float weight;</span><br/>
+        <span className={'indent-1'}>int age;</span><br/>
+        <span>{'};'}</span><br/>
+        <span>struct Dog dogs[5];</span><br/>
+        <span>dogs[0].breed="rural dog"</span>
+      </p>
+    </Slide>
+    <Slide title={'结构体数组的初始化'}>
+      <p className={'code'}>
+        <span>struct Dog dogs[3] = {'{'}</span><br/>
+        <span className={'indent-1'}>{'{'}"Corgi", "white", 3.5f, 2{'}'},</span><br/>
+        <span className={'indent-1'}>{'{'}"Teddy", "brown", 1.5f, 1{'}'},</span><br/>
+        <span className={'indent-1'}>{'{'}"Husky", "white", 3.5f, 3{'}'},</span><br/>
+        <span>{'}'}</span>
+      </p>
+    </Slide>
+    <PointerToStruct/>
+    <Slide title={'通过指针获得结构体的成员'}>
+      <p className={'code'}>
+        <span>struct Dog * pStruct;</span><br/>
+        <span>(*pStruct).color;</span><br/>
+        <span style={{color:'blue'}}>pStruct-{'>'}color; // 推荐写法</span><br/>
+      </p>
+      <p>为什么不能写成<span className={'code'}>*pStruct.color</span>？🤔因为*与.运算的优先级</p>
+    </Slide>
+    <Slide title={'指向结构体数组的指针'}>
+      <p className={'code'}>
+        <span>struct Dog {'{'}</span><br/>
+        <span className={'indent-1'}>char breed[10];</span><br/>
+        <span className={'indent-1'}>char color[10];</span><br/>
+        <span className={'indent-1'}>float weight;</span><br/>
+        <span className={'indent-1'}>int age;</span><br/>
+        <span>{'};'}</span><br/>
+        <span>struct Dog dogs[5];</span><br/>
+        <span style={{color:'blue'}}>struct Dog * pStruct = dogs;</span>
+      </p>
+      <p>pStruct[i]相当于dogs[i]</p>
+    </Slide>
+    <Slide title={'结构体的赋值'}>
+      <p className={'code'}>
+        <span>struct Dog dog0 = {'{'}"Teddy", "brown", 2.5f, 1{'}'};</span><br/>
+        <span>struct Dog dog1;</span><br/>
+        <span>dog1 = dog0;</span><br/>
+      </p>
+      <p>dog1的各个成员的值等于dog0的各个成员的值</p>
     </Slide>
   </CLayout>
+}
+
+export function PointerToStruct(){
+  let [show,setShow]=useState(false)
+  return <Slide title={'结构体指针'}>
+    <p className={'code'}>
+      <span>struct Dog {'{'}</span><br/>
+      <span className={'indent-1'}>char breed[10];</span><br/>
+      <span className={'indent-1'}>char color[10];</span><br/>
+      <span className={'indent-1'}>float weight;</span><br/>
+      <span className={'indent-1'}>int age;</span><br/>
+      <span>{'};'}</span><br/>
+      <span>struct {show? 'Dog * pStruct;' : null}</span><br/>
+    </p>
+    <p>如何定义指向Dog结构体的指针？🤔</p>
+    <button onClick={()=>setShow(!show)}>{show ? '隐藏答案' : '显示答案'}</button>
+  </Slide>
 }
