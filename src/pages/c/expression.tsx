@@ -105,7 +105,7 @@ b = t;</code></pre>
       </ol>
     </Slide>
     <Slide title="unsigned运算超范围的处理">
-      <canvas width="960" height="540" ref="unsigned_clock"></canvas>
+      <canvas width="960" height="540"></canvas>
       <div>
         <input type="number"/>
         <button>运行</button>

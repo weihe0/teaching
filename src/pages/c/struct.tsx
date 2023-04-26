@@ -4,7 +4,7 @@ import {useState} from "react";
 
 export default function Struct(){
   return <CLayout>
-    <Slide title={'结构体'}>
+    <Slide title={'第14章 结构体'}>
       <ol>
         <li>结构体的应用场景</li>
         <li>结构体的定义</li>

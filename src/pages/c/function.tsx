@@ -1,9 +1,9 @@
 import {CLayout} from "@/components/layouts";
 import {Slide} from "@/components/slide";
 
-export default function Function() {
+export default function CFunction() {
   return <CLayout>
-    <Slide title="第13章 函数">
+    <Slide title="第12章 函数">
       <ul>
         <li>函数的概念</li>
         <li>函数的定义</li>

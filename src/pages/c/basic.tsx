@@ -3,6 +3,14 @@ import {CLayout} from "@/components/layouts";
 
 export default function Basic() {
   return <CLayout>
+    <Slide title={'第1-4章 C语言基础'}>
+      <ol>
+        <li>什么是C语言</li>
+        <li>C语言的发展史</li>
+        <li>C语言的软件</li>
+        <li>C程序基本结构</li>
+      </ol>
+    </Slide>
     <Slide title="C语言历史">
       <ol>
         <li>CPL、BCPL、B、C</li>

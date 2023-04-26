@@ -121,6 +121,13 @@ em{
 table{
   border-collapse: collapse;
 }
-.full-witdh{
+.code-column{
+  padding: 1em;
+  font-family: monospace;
+  border: solid black 1px;
+  margin: 1em;
+}
+.full-width{
   width: 100%;
+  display: flex;
 }
