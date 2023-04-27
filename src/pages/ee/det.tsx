@@ -2,6 +2,8 @@ import {EELayout} from "@/components/layouts";
 import {DisplayMath, InlineMath, Slide} from "@/components/slide";
 import Link from "next/link";
 import {func, string} from "prop-types";
+import {useEffect, useRef} from "react";
+import styles from '@/styles/ee.module.css'
 
 export default function Det() {
   return <EELayout>
@@ -9,10 +11,10 @@ export default function Det() {
       <ol>
         <li>二阶与三阶行列式</li>
         <li>行列式的性质</li>
-        <li>行列式按列展开</li>
         <li>克拉默法则</li>
         <li><InlineMath tex={'n'}/>阶行列式</li>
         <li>对换与逆序数</li>
+        <li>行列式按列展开</li>
       </ol>
     </Slide>
     <Slide title="行列式的引入">
@@ -95,21 +97,21 @@ export default function Det() {
       =0+a_{11}a_{22}+(-a_{21}a_{12})+0\\
       =a_{11}a_{22}-a_{21}a_{12}`}/>
     </Slide>
+    <Slide title={'克拉默法则'}>
+      <ul>
+        <li>研究线性方程组</li>
+        <li>给出了线性方程组的求解公式</li>
+        <li>可以用<em>线性变换</em>来理解克拉默法则</li>
+      </ul>
+    </Slide>
+    <Slide title={'线性变换'}>
+      <svg xmlns="http://www.w3.org/2000/svg">
+
+      </svg>
+    </Slide>
   </EELayout>
 }
 
-export function Space() {
-  const scale=40
-  const radius=5
-  const half=scale*radius
-  const center=[scale*radius,scale*radius]
-  return <svg xmlns="http://www.w3.org/2000/svg" width={2*half} height={2*half}
-              viewBox={`${-half} ${-half} ${half} ${half}`}
-              transform={`matrix(1 0 0 -1 0 0)`}
-  >
-    <line x1="0" y1="0" x2={`${scale}`} y2="0"/>
-  </svg>
-}
 export function Vector2(props:{mat:string,j:number}){
   return <InlineMath
     tex={String.raw`\begin{bmatrix}${props.mat}_{1${props.j}} \\ ${props.mat}_{2${props.j}}\end{bmatrix}`}/>
@@ -141,4 +143,27 @@ function DetString(mat:string[][]) {
   }
   s+=String.raw`\end{vmatrix}`
   return s
+}
+
+const scale=30
+export function LinearTransform(){
+  return <Slide title={'线性变换'}>
+    <div className={styles.mathAnime}>
+      <p>a</p>
+      <p>a</p>
+    </div>
+  </Slide>
+}
+function Grid(c:CanvasRenderingContext2D){
+  c.beginPath()
+  for(let x=-1;x<=9;x++){
+    c.moveTo(x*scale,-1*scale)
+    c.lineTo(x*scale,9*scale)
+  }
+  for(let y=-1;y<=9;y++){
+    c.moveTo(-1*scale,y*scale)
+    c.lineTo(9*scale,y*scale)
+  }
+  c.strokeStyle='gray'
+  c.stroke()
 }

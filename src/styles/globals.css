@@ -121,3 +121,6 @@ em{
 table{
   border-collapse: collapse;
 }
+.full-witdh{
+  width: 100%;
+}
