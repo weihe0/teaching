@@ -68,13 +68,13 @@ b = t;</code></pre>
     <Slide title="隐式类型转换">
       <ol>
         <li>转换<em>值的类型</em>而不是<em>变量的类型</em></li>
-        <li>整数类型<>&rightarrow;</>float<>&rightarrow;</>double<>&rightarrow;</>long double</li>
-        <li>signed&circledcirc;signed或unsigned&circledcirc;unsigned，char<>&rightarrow;</>short<>&rightarrow;</>int<>&rightarrow;</>long<>&rightarrow;</>long
+        <li>整数类型<>→</>float<>→</>double<>→</>long double</li>
+        <li>signed⊚signed或unsigned⊚unsigned，char<>→</>short<>→</>int<>→</>long<>→</>long
           long
         </li>
-        <li>signed&circledcirc;unsigned</li>
+        <li>signed⊚unsigned</li>
         <ol>
-          <li>如果signed的范围 &gt; unsigned的范围，unsigned<>&rightarrow;</>signed</li>
+          <li>如果signed的范围 &gt; unsigned的范围，unsigned<>→</>signed</li>
           <li>否则，signed转unsigned。<em>如果signed是负数，那么转换后的数 = unsigned的最大值 + 1 - 负数的绝对值</em></li>
         </ol>
       </ol>
@@ -91,9 +91,9 @@ b = t;</code></pre>
       <ul>
         <li>赋值符号右边的值的类型<em>强制转换</em>为左边的类型</li>
         <li>举例<code>int a; a=1.6;</code>效果是<code>a==1</code></li>
-        <li>浮点数<>&rightarrow;</>整数，截取整数部分，<em>不是四舍五入</em></li>
-        <li>unsigned大范围<>&rightarrow;</>小范围，大数 % (小范围最大值 + 1)</li>
-        <li>signed大范围<>&rightarrow;</>小范围，<em>结果不可预料，谨慎使用</em></li>
+        <li>浮点数<>→</>整数，截取整数部分，<em>不是四舍五入</em></li>
+        <li>unsigned大范围<>→</>小范围，大数 % (小范围最大值 + 1)</li>
+        <li>signed大范围<>→</>小范围，<em>结果不可预料，谨慎使用</em></li>
       </ul>
     </Slide>
     <Slide title="类型转换的推荐做法">
@@ -101,7 +101,7 @@ b = t;</code></pre>
         <li>尽量不要混用不同类型</li>
         <li>如要混用不同类型，尽量保证一种类型的范围<em>完全包含</em>另一种类型</li>
         <li>无必要不使用unsigned类型</li>
-        <li>必须使用unsigned类型时，unsigned&circledcirc;unsigned，或者，unsigned<>&rightarrow;</>更大的signed</li>
+        <li>必须使用unsigned类型时，unsigned⊚unsigned，或者，unsigned<>→</>更大的signed</li>
       </ol>
     </Slide>
     <Slide title="unsigned运算超范围的处理">
@@ -196,7 +196,7 @@ int c = 5;</code></pre>
           后面<em>不执行</em></li>
         <li><code>a &lt; b || <span>b &lt; c</span> </code>，由于<code>||</code>前面已经计算为真，
           后面<em>不执行</em></li>
-        <li>提问：<code>a &gt; b && (c = 1);</code>执行后，<code>c</code>的值为多少？&#x1F914</li>
+        <li>提问：<code>a &gt; b && (c = 1);</code>执行后，<code>c</code>的值为多少？&#x1F914;</li>
       </ul>
 
     </Slide>

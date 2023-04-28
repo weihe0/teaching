@@ -1,0 +1,19 @@
+.office{
+  display: flex;
+  background-color: whitesmoke;
+  justify-content: center;
+}
+.paper{
+  margin-top: 2em;
+  box-shadow: 0 0 6px black;
+  width: 50%;
+  min-width: 22em;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+}
+.plan{
+  width: 80%;
+  margin: 2em;
+  border: solid black 2px;
+}

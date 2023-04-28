@@ -4,7 +4,7 @@ import Link from "next/link";
 import styles from '@/styles/ai.module.css'
 export default function Transport(){
   return <AILayout>
-    <Slide title="智能交通">
+    <Slide title="项目六 智能交通">
       <ul>
         <li>智能交通的定义</li>
         <li>智能交通的应用领域</li>
@@ -142,7 +142,7 @@ export default function Transport(){
       <ul>
         <li>纯摄像头：Tesla</li>
         <li>纯激光雷达：Robotaxi</li>
-        <li>摄像头 + 激光雷达：<Link href={'https://new.qq.com/rain/a/20210420A0F01300'}>地平线</Link></li>
+        <li>摄像头 + 激光雷达：<Link href={'https://new.qq.com/rain/a/20210420A0F01300'} target={'_blank'}>地平线</Link></li>
       </ul>
     </Slide>
     <Slide title={'轨迹预测'}>
@@ -173,7 +173,7 @@ export default function Transport(){
           <li>要求：不得碰撞、不得闯红灯、不得过于激进、不得过于保守</li>
           <li>挑战：预测路况困难、可选的决策选项过多</li>
         </ul>
-        <li>参考资料：<Link href={'https://zhuanlan.zhihu.com/p/343898281'}>自动驾驶轨迹规划</Link></li>
+        <li>参考资料：<Link href={'https://zhuanlan.zhihu.com/p/343898281'} target={'_blank'}>自动驾驶轨迹规划</Link></li>
       </ul>
     </Slide>
   </AILayout>

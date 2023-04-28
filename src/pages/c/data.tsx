@@ -111,7 +111,7 @@ export default function Data(){
         <li>表示数学的小数</li>
         <li>数据类型为<code>float</code>，<code>double</code>、<code>long double</code></li>
         <li>浮点数常量默认为<code>double</code>，在末尾加上<code>f</code>或<code>F</code>才是<code>float</code></li>
-        <li>精度与范围<em>不能兼顾</em>，精度&leftrightarrow;范围</li>
+        <li>精度与范围<em>不能兼顾</em>，精度↔范围</li>
       </ul>
     </Slide>
     <Slide title="浮点数常量">

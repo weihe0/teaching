@@ -3,7 +3,7 @@ import {AILayout} from "@/components/layouts";
 
 export default function EHome(){
   return <AILayout>
-    <Slide title="项目六 智能家居">
+    <Slide title="项目五 智能家居">
       <ul>
         <li>智能家居的基本概念</li>
         <li>智能家居的产品形态</li>
@@ -54,10 +54,10 @@ export default function EHome(){
     </Slide>
     <Slide title="智能空调">
       <ul>
-        <li>温度传感器&rightarrow;开关空调</li>
-        <li>湿度传感器&rightarrow;水循环</li>
-        <li>空气质量探测器&rightarrow;新风</li>
-        <li>空调状态&rightarrow;终端</li>
+        <li>温度传感器→开关空调</li>
+        <li>湿度传感器→水循环</li>
+        <li>空气质量探测器→新风</li>
+        <li>空调状态→终端</li>
       </ul>
     </Slide>
     <Slide title="灯光控制">
@@ -81,11 +81,11 @@ export default function EHome(){
       <li>外观简单大方</li>
     </Slide>
     <Slide title="实际产品">
-      <li><a href="https://item.jd.com/100004676756.html">智能音箱</a></li>
-      <li><a href="https://item.jd.com/100037767981.html">智能冰箱</a></li>
-      <li><a href="https://item.jd.com/100048765169.html">智能门锁</a></li>
-      <li><a href="https://item.jd.com/100014743067.html">智能窗帘</a></li>
-      <li><a href="https://item.jd.com/100002439574.html">智能床头灯</a></li>
+      <li><a href="https://item.jd.com/100004676756.html" target={'_blank'}>智能音箱</a></li>
+      <li><a href="https://item.jd.com/100037767981.html" target={'_blank'}>智能冰箱</a></li>
+      <li><a href="https://item.jd.com/100048765169.html" target={'_blank'}>智能门锁</a></li>
+      <li><a href="https://item.jd.com/100014743067.html" target={'_blank'}>智能窗帘</a></li>
+      <li><a href="https://item.jd.com/100002439574.html" target={'_blank'}>智能床头灯</a></li>
     </Slide>
   </AILayout>
 }
