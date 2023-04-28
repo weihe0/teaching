@@ -4,16 +4,54 @@
   justify-content: center;
 }
 .paper{
-  margin-top: 2em;
+  margin-top: 3em;
+  padding-top: 3em;
   box-shadow: 0 0 6px black;
   width: 50%;
   min-width: 22em;
   background-color: white;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 .plan{
   width: 80%;
-  margin: 2em;
+  margin-bottom: 2em;
   border: solid black 2px;
+}
+.plan > :not(:first-child){
+  border-top: solid black 1px;
+  padding: 4px;
+}
+.head{
+  font-family: '仿宋', serif;
+}
+.time{
+  display: grid;
+  grid-template-columns: 2fr 4fr 2fr 1fr;
+}
+.time > *{
+  text-align: center;
+  padding: 4px 0;
+}
+.time > :not(:first-child){
+  border-left: solid black 1px;
+}
+.check > div{
+  width: 6em;
+  display: inline-flex;
+  justify-content: end;
+}
+.checkbox{
+  display: block;
+  margin-left: 4px;
+  width: 1em;
+  border: solid black 1px;
+  text-align: center;
+}
+.body > ol {
+  list-style-type: cjk-ideographic;
+}
+.plan ol ol{
+  padding: 0;
 }

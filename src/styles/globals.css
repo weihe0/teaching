@@ -78,7 +78,7 @@ em{
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: xxx-large;
+  font-size: 200%;
   padding-bottom: 1em;
   margin-bottom: 2em;
   border-bottom: solid black 1px;
@@ -133,3 +133,4 @@ table{
   width: 100%;
   display: flex;
 }
+
