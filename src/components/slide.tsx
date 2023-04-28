@@ -5,7 +5,7 @@ import parse, { domToReact } from 'html-react-parser';
 export function Slide(props:{title:string, children:ReactNode}) {
   return <section className="slide">
     <div className="title">
-      <h1>{props.title}</h1>
+      <span>{props.title}</span>
     </div>
     <div className="body">
       {props.children}

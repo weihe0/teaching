@@ -3,7 +3,7 @@ import {AILayout} from "@/components/layouts";
 
 export default function EHome(){
   return <AILayout>
-    <Slide title="智能家居">
+    <Slide title="项目六 智能家居">
       <ul>
         <li>智能家居的基本概念</li>
         <li>智能家居的产品形态</li>
