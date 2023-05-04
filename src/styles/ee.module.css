@@ -3,3 +3,12 @@
   grid-template-columns: auto auto;
   grid-gap: 1em;
 }
+table.perm{
+  border-collapse: collapse;
+}
+table.perm tr{
+  border: solid black 1px;
+}
+table.perm td{
+  min-width: 2em;
+}
