@@ -1,0 +1,10 @@
+body {
+  margin: 0;
+}
+em {
+  font-weight: bold;
+  font-style: normal;
+}
+code {
+  font-family: 'JetBrains Mono', monospace;
+}
