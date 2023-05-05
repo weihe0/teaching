@@ -8,8 +8,7 @@ const slides: Component[] = [
     setup() {
       return () => (
         <Slide title="目录">
-          <ul class="ul">
-            <li>目录</li>
+          <ul>
             <li>
               <router-link to="/c/basic">第1到4章 C语言基础</router-link>
             </li>
@@ -56,7 +55,8 @@ const slides: Component[] = [
 </template>
 
 <style scoped>
-.ul {
+ul {
+    font-size: xx-small;
   column-count: 2;
   max-height: 5em;
 }

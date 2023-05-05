@@ -8,3 +8,16 @@ em {
 code {
   font-family: 'JetBrains Mono', monospace;
 }
+.code{
+  font-family: "JetBrains Mono",monospace;
+  border: solid black 1px;
+}
+.indent-1{
+  margin-left: 2em;
+}
+.indent-2{
+  margin-left: 4em;
+}
+.indent-3{
+  margin-left: 6em;
+}
