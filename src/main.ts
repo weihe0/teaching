@@ -40,11 +40,13 @@ import EEPlan from '@/ee/EEPlan.vue'
 import Training from '@/components/Training.vue'
 import CFunction from '@/c/CFunction.vue'
 import CProgress from '@/c/CProgress.vue'
+import AIProgress from '@/ai/AIProgress.vue'
 
 const router = createRouter({
   history: createWebHashHistory(import.meta.env.BASE_URL),
   routes: [
     { path: '/ai/plan', component: AIPlan },
+    {path:'/ai/progress',component:AIProgress},
     { path: '/ai/contents', component: AIContents },
     { path: '/ai/general', component: General },
     { path: '/ai/robot', component: Robot },

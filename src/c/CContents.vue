@@ -8,7 +8,7 @@ const slides: Component[] = [
     setup() {
       return () => (
         <Slide title="目录">
-          <ul class="c-contents">
+          <ul class="two-columns">
             <li>
               <router-link to="/c/basic">第1到4章 C语言基础</router-link>
             </li>

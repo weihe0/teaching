@@ -38,7 +38,7 @@ var {
 .omit {
   color: gray;
 }
-.c-contents {
+.two-columns {
   column-count: 2;
   column-gap: 2em;
 }

@@ -4,7 +4,7 @@ import Taylor from '@/ee/residue/Taylor.vue'
 const props = defineProps<{
   name: string
   category: '理论课'
-  grading: '考试' | '考察'
+  grading: '考试' | '考查'
   total_hour: number
   week_hour: number
   classes: string
@@ -104,7 +104,6 @@ table {
 }
 td,
 th {
-  font-size: larger;
   border: solid black 1px;
 }
 table.brief {

@@ -8,7 +8,7 @@ const slides: Component[] = [
     setup() {
       return () => (
         <Slide title="目录">
-          <ul>
+          <ul class='two-columns'>
             <li>
               <router-link to="/ai/general">项目一 总论</router-link>
             </li>
@@ -49,8 +49,4 @@ const slides: Component[] = [
 </template>
 
 <style scoped>
-ul {
-  column-count: 2;
-  max-height: 5em;
-}
 </style>

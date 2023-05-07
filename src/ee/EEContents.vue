@@ -8,7 +8,7 @@ const slides: Component[] = [
     setup() {
       return () => (
         <Slide title="目录">
-          <ul>
+          <ol class='two-columns'>
             <li>
               <router-link to="/ee/complex">复数</router-link>
             </li>
@@ -30,7 +30,7 @@ const slides: Component[] = [
             <li>
               <router-link to="/ee/det">行列式</router-link>
             </li>
-          </ul>
+          </ol>
         </Slide>
       )
     }
@@ -42,9 +42,4 @@ const slides: Component[] = [
   <EELayout title="C语言目录" :slides="slides" />
 </template>
 
-<style scoped>
-ul {
-  column-count: 2;
-  max-height: 5em;
-}
-</style>
+<style scoped></style>
