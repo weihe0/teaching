@@ -5,19 +5,40 @@ em {
   font-weight: bold;
   font-style: normal;
 }
+dfn {
+  font-weight: bold;
+  font-style: normal;
+}
 code {
   font-family: 'JetBrains Mono', monospace;
 }
-.code{
-  font-family: "JetBrains Mono",monospace;
+samp {
+  font-family: 'Noto Sans Mono', monospace;
+}
+var {
+  font-family: 'Noto Sans Mono', monospace;
+  font-style: normal;
+}
+.region {
   border: solid black 1px;
 }
-.indent-1{
+.code {
+  font-family: 'JetBrains Mono', monospace;
+  border: solid black 1px;
+}
+.indent-1 {
   margin-left: 2em;
 }
-.indent-2{
+.indent-2 {
   margin-left: 4em;
 }
-.indent-3{
+.indent-3 {
   margin-left: 6em;
+}
+.omit {
+  color: gray;
+}
+.c-contents {
+  column-count: 2;
+  column-gap: 2em;
 }

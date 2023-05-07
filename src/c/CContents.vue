@@ -8,7 +8,7 @@ const slides: Component[] = [
     setup() {
       return () => (
         <Slide title="目录">
-          <ul>
+          <ul class="c-contents">
             <li>
               <router-link to="/c/basic">第1到4章 C语言基础</router-link>
             </li>
@@ -54,10 +54,4 @@ const slides: Component[] = [
   <CLayout title="C语言目录" :slides="slides" />
 </template>
 
-<style scoped>
-ul {
-    font-size: xx-small;
-  column-count: 2;
-  max-height: 5em;
-}
-</style>
+<style scoped></style>

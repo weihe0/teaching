@@ -2,6 +2,7 @@ lockfileVersion: 5.4
 
 specifiers:
   '@fontsource/jetbrains-mono': ^4.5.12
+  '@fontsource/noto-sans-mono': ^4.5.13
   '@rushstack/eslint-patch': ^1.2.0
   '@types/katex': ^0.16.0
   '@types/node': ^18.14.2
@@ -25,6 +26,7 @@ specifiers:
 
 dependencies:
   '@fontsource/jetbrains-mono': 4.5.12
+  '@fontsource/noto-sans-mono': 4.5.13
   katex: 0.16.7
   vue: 3.2.47
   vue-router: 4.1.6_vue@3.2.47
@@ -588,6 +590,10 @@ packages:
 
   /@fontsource/jetbrains-mono/4.5.12:
     resolution: {integrity: sha512-LJF1ala1/u+wXZmESFqIk08FA9yGX4/uAAleCHmXUMgEjvNAYFHUQQ7eK5hQQoBOwh99cU5suTrqYqEkgzwzPA==}
+    dev: false
+
+  /@fontsource/noto-sans-mono/4.5.13:
+    resolution: {integrity: sha512-b2gTUIFvLtDtOtKzjd9b5dXUGWNQeItuoaR9D0vNYV03PwUL+vjbi3x9yFRkL15X4SeoiWJCPBQ7bKz+51HC4Q==}
     dev: false
 
   /@humanwhocodes/config-array/0.11.8:

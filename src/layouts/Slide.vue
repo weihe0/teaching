@@ -34,7 +34,4 @@ const props = defineProps<{ title: string }>()
 .body {
   justify-self: center;
 }
-:deep(.body ul) {
-  margin: 1em 1em;
-}
 </style>

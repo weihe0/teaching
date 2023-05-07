@@ -2,7 +2,8 @@
 import CLayout from '@/layouts/CLayout.vue'
 import type { Component } from 'vue'
 import Jill from '@/ai/Jill.vue'
-const slides: Component[] = [Jill]
+import PrintfAnime from '@/c/io/PrintfAnime.vue'
+const slides: Component[] = [PrintfAnime]
 </script>
 
 <template>

@@ -1,10 +1,10 @@
-<script setup lang='tsx'>
-import type {Component} from 'vue'
+<script setup lang="tsx">
+import type { Component } from 'vue'
 import Slide from '@/layouts/Slide.vue'
 import EELayout from '@/layouts/EELayout.vue'
-const slides:Component[]=[
+const slides: Component[] = [
   {
-    render(){
+    render() {
       return
     }
   }
@@ -12,9 +12,7 @@ const slides:Component[]=[
 </script>
 
 <template>
-  <EELayout :slides='slides'/>
+  <EELayout :slides="slides" />
 </template>
 
-<style scoped>
-
-</style>
+<style scoped></style>

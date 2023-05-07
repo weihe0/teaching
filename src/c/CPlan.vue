@@ -1,107 +1,127 @@
-<script setup lang='ts'>
-
-import PlanLayout from '@/layouts/PlanLayout.vue'
+<script setup lang="ts">
+import Paper from '@/layouts/Paper.vue'
 import Plan from '@/layouts/Plan.vue'
 </script>
 
 <template>
-  <PlanLayout>
-    <Plan :count='1' :week='1' :weekday='2' :classNumber='1' topic='C语言基础' keynote='C语言的特点'
-          difficulty='C语言的基本结构的各个部分'>
+  <Paper>
+    <Plan
+      :count="1"
+      :week="3"
+      :weekday="2"
+      :classNumber="1"
+      topic="C语言基础"
+      keynote="C语言的特点"
+      difficulty="C语言的基本结构的各个部分"
+    >
       <template #body>
-      <ol>
-        <li>C语言历史</li>
         <ol>
-          <li>机器语言：计算机能直接识别并执行的二进制指令</li>
-          <li>汇编语言：机器指令的助记符</li>
-          <li>高级语言：接近自然语言和数学语言的编程语言</li>
+          <li>C语言历史</li>
+          <ol>
+            <li>机器语言：计算机能直接识别并执行的二进制指令</li>
+            <li>汇编语言：机器指令的助记符</li>
+            <li>高级语言：接近自然语言和数学语言的编程语言</li>
+          </ol>
+          <li>C语言的特点</li>
+          <ol>
+            <li>数据类型丰富</li>
+            <li>运算类型丰富</li>
+            <li>运行效率高</li>
+            <li>程序自由度高</li>
+          </ol>
+          <li>最简单的C程序</li>
+          <ol>
+            <li>最简单的C程序仅仅包含一个main函数</li>
+            <li>main函数的返回值类型是int</li>
+            <li>main函数内的圆括号必须保留</li>
+            <li>要在main函数内加上return语句</li>
+          </ol>
+          <li>使用Dev-C++编辑并运行C程序</li>
+          <ol>
+            <li>新建源程序文件</li>
+            <li>编辑源程序</li>
+            <li>编译程序，如果出错，仔细检查并修改源程序</li>
+            <li>编译并运行C程序</li>
+          </ol>
         </ol>
-        <li>C语言的特点</li>
-        <ol>
-          <li>数据类型丰富</li>
-          <li>运算类型丰富</li>
-          <li>运行效率高</li>
-          <li>程序自由度高</li>
-        </ol>
-        <li>最简单的C程序</li>
-        <ol>
-          <li>最简单的C程序仅仅包含一个main函数</li>
-          <li>main函数的返回值类型是int</li>
-          <li>main函数内的圆括号必须保留</li>
-          <li>要在main函数内加上return语句</li>
-        </ol>
-        <li>使用Dev-C++编辑并运行C程序</li>
-        <ol>
-          <li>新建源程序文件</li>
-          <li>编辑源程序</li>
-          <li>编译程序，如果出错，仔细检查并修改源程序</li>
-          <li>编译并运行C程序</li>
-        </ol>
-      </ol>
       </template>
       <template #question>
-      <ol>
-        <li>讨论第一次编写C程序的体会</li>
-        <li>编写程序时那些地方容易写错？</li>
-      </ol>
+        <ol>
+          <li>讨论第一次编写C程序的体会</li>
+          <li>编写程序时那些地方容易写错？</li>
+        </ol>
       </template>
       <template #result>
-      <ol>
-        <li>学生的计算机基础技能较弱，部分学生甚至不知键盘上的几个特殊符号的输入方法</li>
-        <li>学生英语基础较弱，使用英文版的编程软件有一定困难，下次换用中文版软件</li>
-        <li>大部分学生都能顺利输入和运行最简单的 C 程序，为后续的课程打下了良好的基础</li>
-      </ol>
+        <ol>
+          <li>学生的计算机基础技能较弱，部分学生甚至不知键盘上的几个特殊符号的输入方法</li>
+          <li>学生英语基础较弱，使用英文版的编程软件有一定困难，下次换用中文版软件</li>
+          <li>大部分学生都能顺利输入和运行最简单的 C 程序，为后续的课程打下了良好的基础</li>
+        </ol>
       </template>
     </Plan>
-    <Plan :count='2' :week='1' :weekday='4' :classNumber='1' topic='C语言程序基本结构' keynote='C程序的main函数'
-          difficulty='什么地方必须加空格，什么地方可以不加空格'>
+    <Plan
+      :count="2"
+      :week="3"
+      :weekday="4"
+      :classNumber="1"
+      topic="C语言程序基本结构"
+      keynote="C程序的main函数"
+      difficulty="什么地方必须加空格，什么地方可以不加空格"
+    >
       <template #body>
-      <ol>
-        <li>剖析第一个C语言程序</li>
         <ol>
-          <li>#include指令和stdio.h文件</li>
-          <li>主函数</li>
-          <li>函数体</li>
-          <li>执行语句</li>
-          <li>return语句</li>
+          <li>剖析第一个C语言程序</li>
+          <ol>
+            <li>#include指令和stdio.h文件</li>
+            <li>主函数</li>
+            <li>函数体</li>
+            <li>执行语句</li>
+            <li>return语句</li>
+          </ol>
+          <li>注释</li>
+          <ol>
+            <li>单行注释</li>
+            <li>多行注释</li>
+            <li>文档注释</li>
+          </ol>
+          <li>关键词与标识符</li>
+          <ol>
+            <li>标识符的命名规范</li>
+            <li>标识符的推荐命名</li>
+            <li>关键词</li>
+          </ol>
+          <li>C程序的编程规范</li>
+          <ol>
+            <li>使用空格</li>
+            <li>使用换行</li>
+            <li>多写注释</li>
+          </ol>
         </ol>
-        <li>注释</li>
-        <ol>
-          <li>单行注释</li>
-          <li>多行注释</li>
-          <li>文档注释</li>
-        </ol>
-        <li>关键词与标识符</li>
-        <ol>
-          <li>标识符的命名规范</li>
-          <li>标识符的推荐命名</li>
-          <li>关键词</li>
-        </ol>
-        <li>C程序的编程规范</li>
-        <ol>
-          <li>使用空格</li>
-          <li>使用换行</li>
-          <li>多写注释</li>
-        </ol>
-      </ol>
       </template>
       <template #question>
-      <ol>
-        <li>哪些字符序列是合法的标识符？为什么？</li>
-        <li>最短的C程序必须包含哪些标识符与符号？</li>
-        <li>为什么要写注释？</li>
-      </ol>
+        <ol>
+          <li>哪些字符序列是合法的标识符？为什么？</li>
+          <li>最短的C程序必须包含哪些标识符与符号？</li>
+          <li>为什么要写注释？</li>
+        </ol>
       </template>
       <template #result>
-      <ol>
-        <li>由于引入的概念太多，学生一时难以掌握</li>
-        <li>学生的英语水平较差，无法记住所有的关键词</li>
-        <li>学生基本掌握了最简单的C程序的写法</li>
-      </ol>
+        <ol>
+          <li>由于引入的概念太多，学生一时难以掌握</li>
+          <li>学生的英语水平较差，无法记住所有的关键词</li>
+          <li>学生基本掌握了最简单的C程序的写法</li>
+        </ol>
       </template>
     </Plan>
-    <Plan :count='3' :week='2' :weekday='2' :classNumber='1' topic='变量与常量' keynote='变量的定义'
-          difficulty='不同整数类型的大小范围'>
+    <Plan
+      :count="3"
+      :week="4"
+      :weekday="2"
+      :classNumber="1"
+      topic="变量与常量"
+      keynote="变量的定义"
+      difficulty="不同整数类型的大小范围"
+    >
       <template #body>
         <ol>
           <li>常量</li>
@@ -142,8 +162,15 @@ import Plan from '@/layouts/Plan.vue'
         </ol>
       </template>
     </Plan>
-    <Plan :count='4' :week='2' :weekday='4' :classNumber='1' topic='字符类型与类型转换' keynote='类型转换'
-          difficulty='什么时候应用自动类型转换，什么时候应用强制类型转换'>
+    <Plan
+      :count="4"
+      :week="4"
+      :weekday="4"
+      :classNumber="1"
+      topic="字符类型与类型转换"
+      keynote="类型转换"
+      difficulty="什么时候应用自动类型转换，什么时候应用强制类型转换"
+    >
       <template #body>
         <ol>
           <li>字符类型</li>
@@ -186,15 +213,789 @@ import Plan from '@/layouts/Plan.vue'
         </ol>
       </template>
     </Plan>
-    <Plan :count='5' :week='3' :weekday='2' :classNumber='1' topic='常见数据输入输出函数' keynote='格式化输入输出'
-          difficulty='格式化输入输出函数的模板字符串的匹配过程'>
-      <ol>
-
-      </ol>
+    <Plan
+      :count="5"
+      :week="5"
+      :weekday="2"
+      :classNumber="1"
+      topic="printf函数"
+      keynote="格式字符串"
+      difficulty="格式字符串与表达式类型的对应关系"
+    >
+      <template #body>
+        <ol>
+          <li>printf函数介绍</li>
+          <ol>
+            <li>输出简单的字符串</li>
+            <li>printf的格式字符串</li>
+            <li>%开头的字符串是特殊格式</li>
+            <li>格式与表达式的对应关系</li>
+          </ol>
+          <li>输出整数</li>
+          <ol>
+            <li>以十进制输出有符号整数</li>
+            <li>以十进制输出无符号整数</li>
+            <li>以十六进制输出整数</li>
+            <li>以八进制输出整数</li>
+            <li>输出长整数</li>
+            <li>输出超长整数</li>
+          </ol>
+          <li>输出浮点数</li>
+          <ol>
+            <li>输出小数</li>
+            <li>输出科学计数法</li>
+            <li>控制输出的小数点后位数</li>
+          </ol>
+          <li>输出字符</li>
+          <ol>
+            <li>输出单个字符</li>
+            <li>输出特殊字符</li>
+            <li>输出编码转义字符</li>
+            <li>输出字符的编码</li>
+          </ol>
+        </ol>
+      </template>
+      <template #question>
+        <ol>
+          <li>如何输出整数</li>
+          <li>如何输出小数</li>
+          <li>如何输出字符</li>
+        </ol>
+      </template>
+      <template #result>
+        <ol>
+          <li>学生对于printf的格式掌握不太好</li>
+          <li>学生对数据类型不熟悉，所以难以记住格式字符串与数据类型的对应关系</li>
+          <li>学生能分清字符的编码与字符本身</li>
+        </ol>
+      </template>
     </Plan>
-  </PlanLayout>
+    <Plan
+      keynote="格式字符串"
+      difficulty="scanf与printf的区别"
+      :week="5"
+      :count="6"
+      :weekday="4"
+      topic="scanf函数"
+      :class-number="1"
+    >
+      <template #body>
+        <ol>
+          <li>scanf函数介绍</li>
+          <ol>
+            <li>scanf函数暂停程序运行，等待用户输入</li>
+            <li>如果用户的输入与scanf的格式字符串匹配，则将输入的数据赋值给变量</li>
+            <li>scanf函数的格式字符串与用户输入不匹配时的做法</li>
+            <li>scanf函数的注意事项</li>
+          </ol>
+          <li>scanf与printf的区别</li>
+          <ol>
+            <li>scanf的格式字符串与printf的区别</li>
+            <li>scanf要在变量名的左边加上&运算符</li>
+            <li>不加&运算符的后果</li>
+          </ol>
+          <li>scanf输入整数</li>
+          <ol>
+            <li>输入int型整数</li>
+            <li>输入unsigned型整数</li>
+            <li>输入long型整数</li>
+            <li>输入long long型整数</li>
+            <li>输入十六进制</li>
+            <li>输入八进制</li>
+          </ol>
+          <li>scanf输入浮点数</li>
+          <ol>
+            <li>输入float型浮点数</li>
+            <li>输入double型浮点数</li>
+            <li>限制小数点后的位数</li>
+          </ol>
+          <li>scanf输入字符</li>
+          <ol>
+            <li>输入一般字符</li>
+            <li>输入特殊字符</li>
+            <li>输入字符的注意事项</li>
+          </ol>
+        </ol>
+      </template>
+      <template #question>
+        <ol>
+          <li>如何输入十六进制的无符号整数？</li>
+          <li>输入字符时，按下回车键会发生什么？</li>
+          <li>为什么输入double或long型数据，格式字符串需要设定为%lf和%ld？</li>
+          <li>scanf与printf有什么区别？</li>
+        </ol>
+      </template>
+      <template #result>
+        <ol>
+          <li>学生都记住了scanf的参数要加上&运算符</li>
+          <li>学生不能很好地掌握scanf与printf的区别</li>
+          <li>学生成功输入了整数、浮点数与字符</li>
+        </ol>
+      </template>
+    </Plan>
+    <Plan
+      keynote="整数与浮点数的四则运算"
+      difficulty="赋值运算"
+      :week="6"
+      :count="7"
+      :weekday="2"
+      topic="运算符号"
+      :class-number="1"
+    >
+      <template #body>
+        <ol>
+          <li>赋值运算</li>
+          <ol>
+            <li>赋值运算的结果与副作用</li>
+            <li>赋值运算与相等关系的区别</li>
+            <li>连续赋值运算</li>
+            <li>用赋值运算交换变量的值</li>
+          </ol>
+          <li>有符号整数类型的四则运算</li>
+          <ol>
+            <li>整数的加减法</li>
+            <li>整数除法的特别之处</li>
+            <li>取余运算</li>
+            <li>混合运算的优先级与结合性</li>
+            <li>算术溢出的后果</li>
+          </ol>
+          <li>无符号整数类型的四则运算</li>
+          <ol>
+            <li>无符号整数类型的运算结果</li>
+            <li>无符号整数运算溢出的结果</li>
+            <li>无符号整数与有符号整数的算术溢出的后果的不同之处</li>
+          </ol>
+          <li>浮点类型的运算</li>
+          <ol>
+            <li>浮点类型的运算符</li>
+            <li>浮点类型的算术溢出的后果</li>
+          </ol>
+          <li>优先级与结合性</li>
+          <ol>
+            <li>优先级与结合性用于确定运算符的作用范围</li>
+            <li>先看优先级</li>
+            <li>再看结合性</li>
+          </ol>
+        </ol>
+      </template>
+      <template #question>
+        <ol>
+          <li>赋值运算与相等关系的区别在哪里？</li>
+          <li>如何用赋值运算交换两个变量的值？</li>
+          <li>负整数的除法与取余运算的符号是如何确定的？</li>
+          <li>无符号整数类型在算术溢出后，结果变为多少？</li>
+          <li>为什么浮点类型不存在整除与取余运算？</li>
+        </ol>
+      </template>
+      <template #result>
+        <ol>
+          <li>学生对赋值运算与相等关系的区别有所了解</li>
+          <li>学生对负整数的除法与取余运算理解不佳</li>
+          <li>学生对无符号整数的溢出后果比较了解</li>
+          <li>学生对结合性的概念比较陌生</li>
+        </ol>
+      </template>
+    </Plan>
+    <Plan
+      keynote="不同范围的整数类型的转换"
+      difficulty="无符号与有符号数的转换"
+      :week="6"
+      :count="8"
+      :weekday="4"
+      topic="数据类型转换"
+      :class-number="1"
+    >
+      <template #body>
+        <ol>
+          <li>自动类型转换的原理</li>
+          <ol>
+            <li>运算符两边的类型不同时需要进行<em>自动类型转换</em></li>
+            <li>自动类型转换只转换中间值的类型，而不是变量的类型</li>
+            <li>多个运算符需要进行多次类型转换</li>
+          </ol>
+          <li>浮点数的类型转换</li>
+          <ol>
+            <li>如果一边有long double，另一边转换为long double</li>
+            <li>如果一边有double，另一边转换为double</li>
+            <li>如果一边有float，另一边转换为float</li>
+          </ol>
+          <li>有符号整数类型的转换</li>
+          <ol>
+            <li>按照整数类型的范围大小，小范围的类型转换为大范围的类型</li>
+            <li>类型按范围大小排序，依次为long long，long，int，short，char</li>
+            <li>两边都是无符号类型时，转换方法相同</li>
+          </ol>
+          <li>无符号与有符号的混合运算时的转换</li>
+          <ol>
+            <li>
+              如果有符号类型分范围<em>完全包含</em>无符号类型的范围，那么无符号类型转换为有符号类型
+            </li>
+            <li>
+              如果有符号类型与无符号类型的范围<em>有交集</em>，但没有<em>包含关系</em>，
+              那么有符号类型转换为无符号类型
+            </li>
+            <li>有符号的负整数转换为无符号数的后果</li>
+          </ol>
+          <li>使用无符号数的推荐做法</li>
+          <ol>
+            <li>无必要不适用无符号的常量与变量</li>
+            <li>在必须使用无符号数的地方，只让无符号数与无符号数运算</li>
+            <li>必须让无符号数与有符号数运算时，将无符号数转换为更大范围的有符号数</li>
+          </ol>
+          <li>强制类型转换</li>
+          <ol>
+            <li>赋值运算中的强制类型转换</li>
+            <li>强制类型转换运算符</li>
+            <li>浮点数强制转换为整数的后果</li>
+            <li>负整数强制转换为无符号数的后果</li>
+            <li>大范围整数转换为小范围整数类型的后果</li>
+            <li>强制类型转换的推荐做法</li>
+          </ol>
+        </ol>
+      </template>
+      <template #question>
+        <ol>
+          <li>浮点数与整数运算时，类型如何转换？</li>
+          <li>不同整数类型运算时，类型如何转换？</li>
+          <li>怎么使用无符号的常量与变量，不容易出错？</li>
+          <li>什么时候需要强制类型转换？</li>
+        </ol>
+      </template>
+      <template #result>
+        <ol>
+          <li>学生对有符号与无符号的类型装掌握不佳</li>
+          <li>学生对如何使用无符号变量有所了解</li>
+          <li>学生对于不同范围的整数类型的自动转换非常熟悉</li>
+        </ol>
+      </template>
+    </Plan>
+    <Plan
+      keynote="条件表达式"
+      difficulty="条件表达式的写法"
+      :week="7"
+      :count="9"
+      :weekday="2"
+      topic="条件判断语句"
+      :class-number="1"
+    >
+      <template #body>
+        <ol>
+          <li>关系运算符</li>
+          <ol>
+            <li>关系运算符的结果</li>
+            <li>关系运算符的注意事项</li>
+            <li>相等关系（==）与赋值运算符（=）的区别</li>
+          </ol>
+          <li>逻辑运算符</li>
+          <ol>
+            <li>逻辑与、逻辑或、逻辑非</li>
+            <li>逻辑运算符的优先级与结合性</li>
+            <li>逻辑与、逻辑或运算符的短路特性</li>
+            <li>如何使用关系运算符与逻辑运算符表达某个变量在某个范围内</li>
+            <li>如何使用关系运算符与逻辑运算符表达某个变量<em>不在</em>某个范围内</li>
+          </ol>
+          <li>单个if语句</li>
+          <ol>
+            <li>if语句的写法</li>
+            <li>if语句的花括号</li>
+            <li>if语句的注意事项</li>
+          </ol>
+          <li>else子句</li>
+          <ol>
+            <li>else子句的含义</li>
+            <li>else子句与if语句的匹配方法</li>
+            <li>else子句的注意事项</li>
+          </ol>
+          <li>if ... else if ... 语句</li>
+          <ol>
+            <li>用于多分支的if ... else if ... 语句</li>
+            <li>多分支的执行流程</li>
+            <li>if语句的嵌套</li>
+            <li>使用多分支的示例：计算个人所得税</li>
+          </ol>
+          <li>条件运算符</li>
+          <li>灵活运用if语句判断闰年</li>
+          <ol>
+            <li>仅使用<em>一个</em>if语句，借助复杂的条件表达式判断闰年</li>
+            <li>使用嵌套的if雨具判断闰年</li>
+          </ol>
+          <li>switch语句</li>
+          <ol>
+            <li>switch语句的语法</li>
+            <li>switch语句的fall through规则</li>
+            <li>default子句</li>
+          </ol>
+        </ol>
+      </template>
+      <template #question>
+        <ol>
+          <li>C语言中如何判断变量height在0到14之间？</li>
+          <li>else子句是如何与if语句匹配的？</li>
+          <li>什么时候使用if语句，什么时候使用switch语句？</li>
+        </ol>
+      </template>
+      <template #result>
+        <ol>
+          <li>学生用中小学数学的大于小于关系理解C语言的关系运算符，导致理解出现了一点偏差</li>
+          <li>学生很难理解if语句与else子句的匹配关系</li>
+          <li>学生都掌握了switch语句的fall through规则</li>
+        </ol>
+      </template>
+    </Plan>
+    <Plan
+      keynote="for循环"
+      difficulty="循环的条件"
+      :week="7"
+      :count="10"
+      :weekday="4"
+      topic="循环语句"
+      :class-number="1"
+    >
+      <template #body>
+        <ol>
+          <li>while循环</li>
+          <ol>
+            <li>while循环的执行流程</li>
+            <li>while循环的注意事项</li>
+            <li>while循环的条件表达式</li>
+          </ol>
+          <li>do while循环</li>
+          <ol>
+            <li>do while循环的执行流程</li>
+            <li>do while循环的注意事项</li>
+            <li>do while循环的条件表达式</li>
+            <li>do while循环与while循环的区别</li>
+          </ol>
+          <li>for循环</li>
+          <ol>
+            <li>for循环的初始表达式、条件表达式与增量表达式</li>
+            <li>for循环的执行流程</li>
+            <li>for循环与while循环的相互转换</li>
+          </ol>
+          <li>控制循环流程</li>
+          <ol>
+            <li>多重循环</li>
+            <li>break语句</li>
+            <li>用break语句跳出多重循环</li>
+            <li>用continue语句提前进入下一轮循环</li>
+          </ol>
+          <li>编写循环语句的思路</li>
+          <ol>
+            <li>将程序转化为重复执行一条或一组语句</li>
+            <li>提取出重复的语句中的循环变量</li>
+            <li>判断循环停止的条件</li>
+            <li>利用循环变量与停止条件编写循环语句</li>
+          </ol>
+        </ol>
+      </template>
+      <template #question>
+        <ol>
+          <li>如何用循环语句计算累加和？</li>
+          <li>如何用循环语句计算组合数？</li>
+          <li>如何用循环语句计算数列？</li>
+          <li>如何用循环语句实施牛顿迭代法？</li>
+          <li>如何用循环语句与break语句判断素数？</li>
+        </ol>
+      </template>
+      <template #result>
+        <ol>
+          <li>学生对于循环语句的执行流程比较了解</li>
+          <li>学生总是忘记do while循环最后的分号（;）</li>
+          <li>大多数学生不知道如何编写循环语句</li>
+          <li>学生很那理解嵌套循环的用法</li>
+        </ol>
+      </template>
+    </Plan>
+    <Plan
+      keynote="数组的定义，以及引用数组元素的方法"
+      difficulty="多维数组"
+      :week="8"
+      :count="11"
+      :weekday="2"
+      topic="数组"
+      :class-number="1"
+    >
+      <template #body>
+        <ol>
+          <li>数组的定义</li>
+          <ol>
+            <li>数组的引入：需要定义一组<em>相同类型</em>的变量</li>
+            <li>定义数组的方法</li>
+            <li>取数组名的规定</li>
+            <li>数组的初始化</li>
+            <li>数组的元素个数必须是非负整数，在1989版C语言中，甚至必须是<em>整数常量</em></li>
+          </ol>
+          <li>数组的引用</li>
+          <ol>
+            <li>引用数组的语法</li>
+            <li>数组下标的范围</li>
+            <li>下标从零开始的好处与坏处</li>
+            <li>计算两个下标之间的元素个数</li>
+            <li>数组下标超越界的后果</li>
+            <li>下标的标准类型</li>
+            <li>下标表达式的强制类型转换</li>
+          </ol>
+          <li>使用循环语句处理数组</li>
+          <ol>
+            <li>使用循环语句输入整个数组</li>
+            <li>使用循环语句输出数组的平均值</li>
+            <li>使用循环语句输出数组的最大值</li>
+          </ol>
+          <li>多维数组</li>
+          <ol>
+            <li>多维数组的定义方法</li>
+            <li>多维数组的本质——数组的数组</li>
+            <li>多维数组的初始化</li>
+            <li>多维数组的引用</li>
+            <li>多维数组的下标范围</li>
+          </ol>
+          <li>多维数组的应用</li>
+          <ol>
+            <li>用多维数组表示矩阵</li>
+            <li>用多维数组表示表格</li>
+            <li>用多维数组记录二维与三维点集</li>
+          </ol>
+        </ol>
+      </template>
+      <template #question>
+        <ol>
+          <li>为什么C语言的设计者将数组下标设定为从零开始？</li>
+          <li>多维数组的本质是什么？</li>
+          <li>如何使用循环语句处理数组？</li>
+          <li>编程序时如何保证下标不越界？</li>
+          <li>如何用多维数组表示一群学生的高考成绩？</li>
+          <li>多维数组<code>int a[3][2];</code>有多少个元素？</li>
+        </ol>
+      </template>
+      <template #result>
+        <ol>
+          <li>学生不理解下标为什么从零开始</li>
+          <li>学生大多数掌握了多维数组的本质</li>
+          <li>学生对于如何使用数组记录数据不太了解</li>
+          <li>由于对于循环语句不熟悉，学生对于使用循环语句处理数组的方法不熟练</li>
+        </ol>
+      </template>
+    </Plan>
+    <Plan
+      keynote="使用循环语句处理数组"
+      difficulty="使用循环语句处理数组时，确保下标不越界"
+      :week="8"
+      :count="12"
+      :weekday="4"
+      topic="数组的应用"
+      :class-number="1"
+    >
+      <template #body>
+        <ol>
+          <li>使用for循环依次输出数组的元素</li>
+          <ol>
+            <li>设定循环变量</li>
+            <li>设定初始表达式</li>
+            <li>设定条件表达式</li>
+            <li>设定增量表达式</li>
+            <li>将for循环转换为while循环</li>
+            <li>将for循环转换为do while循环</li>
+            <li>确保下标不越界</li>
+          </ol>
+          <li>使用for循环依次输入数组的元素</li>
+          <ol>
+            <li>设定循环变量、初始表达式、条件表达式与增量表达式</li>
+            <li>用scanf函数输入单个数组元素</li>
+            <li>用户的输入与scanf函数的格式字符串不匹配的做法</li>
+            <li>将数组元素设定为随机数</li>
+            <li>改写为while循环</li>
+          </ol>
+          <li>计算数组的统计量</li>
+          <ol>
+            <li>找出数组的最小值及其下标</li>
+            <li>找出数组的最大值及其下标</li>
+            <li>计算数组的平均值</li>
+            <li>计算数组的方差</li>
+            <li>计算数组的众数</li>
+          </ol>
+          <li>查找数组</li>
+          <ol>
+            <li>查找数组中的某个元素</li>
+            <li>筛选某个范围内的元素</li>
+            <li>排序数组并使用二分法查找某个值</li>
+          </ol>
+          <li>二维数组</li>
+          <ol>
+            <li>使用二维数组记录二维点集</li>
+            <li>使用二维数组记录棋盘</li>
+            <li>使用二维数组记录矩阵</li>
+          </ol>
+        </ol>
+      </template>
+      <template #question>
+        <ol>
+          <li>如何排序数组？</li>
+          <li>如何查找某个数组的元素？</li>
+          <li>二分法查找的优势与劣势分别是什么？什么时候使用二分法？</li>
+          <li>如何使用数组记录棋谱？</li>
+        </ol>
+      </template>
+      <template #result>
+        <ol>
+          <li>学生对循环语句不熟悉，所以对于使用循环语句处理数组也不熟</li>
+          <li>学生对于计算数组的统计量比较了解</li>
+          <li>学生难以理解排序算法</li>
+        </ol>
+      </template>
+    </Plan>
+    <Plan
+      keynote="字符串的表示方法"
+      difficulty="字符串与字符数组的区别"
+      :week="9"
+      :count="13"
+      :weekday="2"
+      topic="字符串"
+      :class-number="1"
+    >
+      <template #body>
+        <ol>
+          <li>字符串的概念</li>
+          <ol>
+            <li>字符串是以'\0'字符结尾的字符数组</li>
+            <li>由于'\0'是字符串的结束标志，字符串内不能包含'\0'字符</li>
+          </ol>
+          <li>字符串的定义</li>
+          <ol>
+            <li>使用双引号定义字符串</li>
+            <li>将字符串保存在字符数组内</li>
+            <li>使用字符数组保存字符串时的长度要求</li>
+            <li>双引号与单引号的区别</li>
+            <li>printf与scanf函数的格式字符串</li>
+            <li>字符串内的转义字符</li>
+            <li>多个字符串的拼接</li>
+          </ol>
+          <li>字符串的使用</li>
+          <ol>
+            <li>使用下标引用字符串的字符</li>
+            <li>下标的范围</li>
+            <li>从首尾下标计算字符串的长度</li>
+            <li>修改字符串</li>
+            <li>给字符串添加字符</li>
+            <li>删除字符串的字符</li>
+          </ol>
+          <li>字符串的长度计算</li>
+          <ol>
+            <li>计算字符串的长度不能包含'\0'字符</li>
+            <li>添加额外的'\0'后，字符串长度的变化</li>
+            <li>删除'\0'字符后，字符串长度的变化</li>
+          </ol>
+        </ol>
+      </template>
+      <template #question>
+        <ol>
+          <li>定义字符串<code>char str[]="hello"</code>，字符数组<code>str</code>包含多少字符？</li>
+          <li>字符串的长度如何定义？</li>
+          <li>为什么字符串内不能含有'\0'字符？</li>
+          <li>用循环语句处理字符串与处理数组的相同点与不同点在哪？</li>
+        </ol>
+      </template>
+      <template #result>
+        <ol>
+          <li>学生对于'\0'字符的作用非常了解</li>
+          <li>学生对字符串长度的定义也非常熟悉</li>
+          <li>学生对于如何使用循环语句处理字符串不熟练</li>
+        </ol>
+      </template>
+    </Plan>
+    <Plan
+      keynote="字符串的处理函数"
+      difficulty="字符串的处理函数的使用要点"
+      :week="9"
+      :count="14"
+      :weekday="4"
+      topic="字符串的处理函数"
+      :class-number="1"
+    >
+      <template #body>
+        <li>字符串复制函数strcpy</li>
+        <ol>
+          <li>字符串复制函数的用法</li>
+          <li>strcpy是sting copy的缩写</li>
+          <li>字符串复制函数的注意要点</li>
+          <li>字符串复制函数的错误用法</li>
+        </ol>
+        <li>字符串连接函数strcat</li>
+        <ol>
+          <li>函数strcat的记忆方法：string concatenate</li>
+          <li>字符串连接函数的作用及结果</li>
+          <li>字符串连接函数对字符串的长度要求</li>
+          <li>字符串连接函数的注意事项</li>
+        </ol>
+        <li>字符串比较函数strcmp</li>
+        <ol>
+          <li>函数strcmp的全称：string compare</li>
+          <li>排序方法——字典序</li>
+          <li>strcmp的比较结果</li>
+          <li>使用strcmp的返回值的注意事项</li>
+        </ol>
+        <li>字符串长度函数strlen</li>
+        <ol>
+          <li>函数strlen的全称：string length</li>
+          <li>计算长度不包括末尾的'\0'字符</li>
+          <li>在字符串中插入'\0'字符对于strlen函数的影响</li>
+        </ol>
+        <li>字符串查找函数strchr</li>
+        <ol>
+          <li>函数strchr的全称：string character</li>
+          <li>出现多个相同字符的处理方法</li>
+          <li>使用strchr的返回值的方法</li>
+        </ol>
+      </template>
+      <template #question>
+        <ol>
+          <li>哪些字符串处理函数对字符数组的长度有要求？</li>
+          <li>函数strcat对字符串有哪些额外的要求？</li>
+          <li>使用strcmp比较字符串"hello"与"world"，结果如何？</li>
+          <li>如何编写程序，查找某字符是否包含在某字符串内？</li>
+        </ol>
+      </template>
+      <template #result>
+        <ol>
+          <li>学生对于字符串与字符数组的区别不太理解</li>
+          <li>学生不熟悉调用字符串处理函数的方法</li>
+          <li>学生都非常熟悉字符串的长度的定义</li>
+        </ol>
+      </template>
+    </Plan>
+    <Plan
+      keynote="函数的定义与类型声明"
+      difficulty="函数的递归调用"
+      :week="10"
+      :count="15"
+      :weekday="2"
+      topic="函数"
+      :class-number="1"
+    >
+      <template #body>
+        <ol>
+          <li>函数的概念</li>
+          <ol>
+            <li>函数表示一组语句及参数</li>
+            <li>如果一组语句多次出现，可以改写为函数</li>
+            <li>C语言的函数与数学函数的区别</li>
+          </ol>
+          <li>函数的定义</li>
+          <ol>
+            <li>函数定义的语法</li>
+            <li>函数的取名要求</li>
+            <li>函数的返回值</li>
+            <li>函数的参数列表</li>
+            <li>编写函数体</li>
+          </ol>
+          <li>函数的参数</li>
+          <ol>
+            <li>参数表示传入函数的值</li>
+            <li>C语言传递参数表达式的<em>值</em>，而不是像数学函数那样直接替换</li>
+            <li>使用函数参数的易错点</li>
+          </ol>
+          <li>函数的返回值</li>
+          <ol>
+            <li>在函数定义中设定返回值类型</li>
+            <li>使用return语句返回</li>
+            <li>函数的返回值的用法</li>
+          </ol>
+          <li>函数的调用</li>
+          <ol>
+            <li>
+              每调用一次函数，就创建函数的一个<em>运行实例</em>。每次调用时创建的运行实例<em
+                >不同</em
+              >
+            </li>
+            <li>不同函数中同名变量的注意事项</li>
+            <li>递归调用</li>
+            <li>函数的局部变量的作用域与生存周期</li>
+          </ol>
+        </ol>
+      </template>
+      <template #question>
+        <ol>
+          <li>如何定义一个函数？</li>
+          <li>递归调用函数时，函数的每个运行实例的局部变量，它们的值是否相同？</li>
+          <li>函数的参数是如何传递的？</li>
+        </ol>
+      </template>
+      <template #result>
+        <ol>
+          <li>由于学生使用中学数学的函数理解C语言的函数，在学习函数的参数传递过程中出现了误解</li>
+          <li>由于学生使用中学数学的函数理解C语言的函数，学生很难理解递归调用</li>
+          <li>学生难以理解局部变量的作用域与生存周期</li>
+        </ol>
+      </template>
+    </Plan>
+    <Plan
+      keynote="库函数"
+      difficulty="函数类型声明"
+      :week="10"
+      :count="16"
+      :weekday="4"
+      topic="函数类型声明与库函数"
+      :class-number="1"
+    >
+      <template #body>
+        <ol>
+          <li>函数的作用域</li>
+          <ol>
+            <li>
+              函数的作用域在函数的定义点<em>之后</em>，所以在函数的定义点前调用函数会<em>出错</em>
+            </li>
+            <li>C语言设计者对函数的作用域的考量</li>
+          </ol>
+          <li>函数的类型声明</li>
+          <ol>
+            <li>如要在函数的定义点<em>之前</em>调用函数，需要添加<em>函数类型声明</em></li>
+            <li>函数的类型声明的写法及其简化方法</li>
+            <li>函数的类型声明用来确定调用函数时，传递函数参数及使用函数参数是否出错</li>
+            <li>函数的类型声明与函数的定义不一致时，编译器的处理方法</li>
+          </ol>
+          <li>库函数</li>
+          <ol>
+            <li>库函数是编译器自带的、完成常见任务的函数</li>
+            <li>使用库函数需要包含头文件</li>
+            <li>头文件内包含库函数的类型声明</li>
+          </ol>
+          <li>常见的库函数</li>
+          <ol>
+            <li>输入输出库函数的头文件是stdio.h</li>
+            <li>常用输入输出库函数：printf，scanf，getchar，putchar，gets，puts</li>
+            <li>字符处理函数的头文件是ctype.h</li>
+            <li>
+              常用的字符处理函数：isdigit，isalpha，isalnum，ispunct，islower，isupper，isspace
+            </li>
+            <li>数学函数的头文件是math.h</li>
+            <li>常用的数学函数：sin，cos，tan，log，log10，pow，sqrt，ceil，floor，fabs</li>
+            <li>通用的库函数的头文件是stdlib.h</li>
+            <li>stdlib.h声明的函数：atof，atoi，atol，div，labs，srand，rand，qsort，bsearch</li>
+          </ol>
+          <li>自定义的函数与库函数<em>重名</em>的情况</li>
+          <ol>
+            <li>如果自定义的函数与库函数重名，调用的是<em>自定义的函数</em></li>
+            <li>要想保证调用库函数，自定义的函数不能使用库函数的名字</li>
+          </ol>
+        </ol>
+      </template>
+      <template #question>
+        <ol>
+          <li>为什么需要函数类型声明？</li>
+          <li>函数类型声明有什么作用？</li>
+          <li>函数类型声明与函数定义有哪些区别？</li>
+          <li>头文件内包含什么内容？</li>
+          <li>使用printf与scanf函数需要包含哪个头文件？</li>
+        </ol>
+      </template>
+      <template #result>
+        <ol>
+          <li>学生不理解为什么需要函数的类型声明</li>
+          <li>学生不理解函数的类型声明的简化写法</li>
+          <li>学生对于常见的库函数及其头文件比较了解</li>
+        </ol>
+      </template>
+    </Plan>
+  </Paper>
 </template>
 
-<style scoped>
-
-</style>
+<style scoped></style>
