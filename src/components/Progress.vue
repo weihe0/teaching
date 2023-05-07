@@ -72,7 +72,7 @@ const props = defineProps<{
       </thead>
       <tbody>
         <tr v-for="(c, index) of props.contents">
-          <td>{{ props.start_week + index - 1 }}</td>
+          <td>{{ props.start_week + index }}</td>
           <td>{{ props.week_hour }}</td>
           <td>{{ c }}</td>
           <td>{{ props.category }}</td>
