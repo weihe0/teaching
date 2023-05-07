@@ -9,7 +9,7 @@
 </template>
 
 <script setup lang="ts">
-import Slide from '../../components/Slide.vue'
+import Slide from '@/layouts/Slide.vue'
 </script>
 
 <style scoped></style>

@@ -5,7 +5,9 @@ import EELayout from '@/layouts/EELayout.vue'
 const slides: Component[] = [
   {
     render() {
-      return
+      return <Slide title='级数'>
+
+      </Slide>
     }
   }
 ]

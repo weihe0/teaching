@@ -7,7 +7,7 @@ const props = defineProps<{ tex: string; block?: boolean }>()
 
 function render() {
   return katex.renderToString(props.tex, {
-    input: 'html',
+    output: 'html',
     displayMode: props.block
   })
 }

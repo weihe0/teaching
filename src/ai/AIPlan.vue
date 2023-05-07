@@ -297,7 +297,7 @@ const class_number=1
         </ol>
       </template>
     </Plan>
-    <Plan keynote='大数据思维' difficulty='如何运用大数据思维' week='7' count='6'
+    <Plan keynote='大数据思维' difficulty='如何运用大数据思维' :week='7' :count='6'
           :weekday='week_day' topic='建立大数据思维' :class-number='class_number'>
       <template #body>
         <ol>

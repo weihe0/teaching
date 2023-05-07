@@ -28,9 +28,9 @@ import Pointer from '@/c/Pointer.vue'
 import Struct from '@/c/Struct.vue'
 import Complex from '@/ee/complex/Complex.vue'
 import Analytic from '@/ee/Analytic.vue'
-import Series from '@/ee/Series.vue'
+import Series from '@/ee/series/Series.vue'
 import Residue from '@/ee/residue/Residue.vue'
-import Laplace from '@/ee/Laplace.vue'
+import Laplace from '@/ee/laplace/Laplace.vue'
 import Det from '@/ee/det/Det.vue'
 import AIContents from '@/ai/AIContents.vue'
 import EEContents from '@/ee/EEContents.vue'
@@ -41,6 +41,7 @@ import Training from '@/components/Training.vue'
 import CFunction from '@/c/CFunction.vue'
 import CProgress from '@/c/CProgress.vue'
 import AIProgress from '@/ai/AIProgress.vue'
+import EEProgress from '@/ee/EEProgress.vue'
 
 const router = createRouter({
   history: createWebHashHistory(import.meta.env.BASE_URL),
@@ -72,6 +73,7 @@ const router = createRouter({
     { path: '/c/pointer', component: Pointer },
     { path: '/c/struct', component: Struct },
     { path: '/ee/plan', component: EEPlan },
+    {path:'/ee/progress',component:EEProgress},
     { path: '/ee/contents', component: EEContents },
     { path: '/ee/complex', component: Complex },
     { path: '/ee/analytic', component: Analytic },
