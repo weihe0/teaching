@@ -164,12 +164,17 @@ function drawStudent() {
   justify-content: center;
   align-items: center;
 }
-.button-box > button,
 .lottery > button {
   border: none;
   border-radius: 0.5em;
   background-color: dodgerblue;
-  font-size: 2rem;
+  font-size: 80%;
+}
+.button-box > button{
+    border: none;
+    border-radius: 0.5em;
+    background-color: dodgerblue;
+    font-size: 80%;
 }
 button:hover {
   cursor: pointer;
@@ -209,5 +214,14 @@ button:hover {
   font-size: 60%;
   text-align-last: justify;
   margin-bottom: 1em;
+}
+
+@media screen and (max-width: 85rem){
+    .slider{
+        font-size: x-large;
+    }
+    .navigation{
+        font-size: large;
+    }
 }
 </style>

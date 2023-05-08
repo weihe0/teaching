@@ -12,6 +12,10 @@ import StringDefinition from '../string/StringDefinition.vue'
 import StringFunctions from '../string/StringFunctions.vue'
 import CLayout from '@/layouts/CLayout.vue'
 import type { Component } from 'vue'
+import ArrayDisplay from '@/c/array/ArrayDisplay.vue'
+import ArrayFind from '@/c/array/ArrayFind.vue'
+import ArrayMax from '@/c/array/ArrayMax.vue'
+import Sieve from '@/c/array/Sieve.vue'
 
 let slides: Component[] = [
   ArrayContents,
@@ -23,8 +27,10 @@ let slides: Component[] = [
   Initialization,
   ComputeMean,
   TwoDimensional,
-  StringDefinition,
-  StringFunctions
+  ArrayDisplay,
+  ArrayFind,
+  ArrayMax,
+  Sieve,
 ]
 </script>
 
