@@ -2,10 +2,11 @@
 import Progress from '@/components/Progress.vue'
 const contents = [
   '复数的运算',
+  '复平面',
   '复变函数',
   '解析函数',
   '曲线积分',
-  '无穷级数',
+  '级数',
   '留数定理',
   '留数的应用',
   'Laplace变换与卷积',
