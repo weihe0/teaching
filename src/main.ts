@@ -83,7 +83,7 @@ const router = createRouter({
     { path: '/ee/laplace', component: Laplace },
     { path: '/ee/det', component: Det },
     { path: '/training', component: Training },
-    { path: '/playground', component: Playground }
+    { path: '/', component: Playground }
   ]
 })
 

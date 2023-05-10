@@ -133,7 +133,7 @@ function drawStudent() {
 .slider {
   width: 100vw;
   height: 100vh;
-  font-size: xxx-large;
+  font-size: xx-large;
   display: grid;
   grid-template-columns: 2em auto 2em;
   grid-gap: 2em;
@@ -197,6 +197,7 @@ button:hover {
 }
 
 .control svg {
+    width: 90%;
   stroke: black;
   fill: none;
   stroke-width: 4px;
@@ -214,14 +215,5 @@ button:hover {
   font-size: 60%;
   text-align-last: justify;
   margin-bottom: 1em;
-}
-
-@media screen and (max-width: 85rem){
-    .slider{
-        font-size: x-large;
-    }
-    .navigation{
-        font-size: large;
-    }
 }
 </style>
