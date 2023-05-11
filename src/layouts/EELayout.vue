@@ -8,13 +8,13 @@ const props = defineProps<{ slides: Component[] }>()
   <Slider :slides="props.slides" :lottery="false">
     <ul>
       <li>目录</li>
-      <li><router-link to="/ee/complex">复数</router-link></li>
-      <li><router-link to="/ee/analytic">解析函数</router-link></li>
-      <li><router-link to="/ee/integral">曲线积分</router-link></li>
-      <li><router-link to="/ee/series">级数</router-link></li>
-      <li><router-link to="/ee/residue">留数</router-link></li>
-      <li><router-link to="/ee/laplace">Laplace变换</router-link></li>
-      <li><router-link to="/ee/det">行列式</router-link></li>
+      <li><RouterLink to="/ee/complex">复数</RouterLink></li>
+      <li><RouterLink to="/ee/analytic">解析函数</RouterLink></li>
+      <li><RouterLink to="/ee/integral">曲线积分</RouterLink></li>
+      <li><RouterLink to="/ee/series">级数</RouterLink></li>
+      <li><RouterLink to="/ee/residue">留数</RouterLink></li>
+      <li><RouterLink to="/ee/laplace">Laplace变换</RouterLink></li>
+      <li><RouterLink to="/ee/det">行列式</RouterLink></li>
     </ul>
   </Slider>
 </template>

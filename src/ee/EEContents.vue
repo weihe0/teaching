@@ -2,6 +2,7 @@
 import type { Component } from 'vue'
 import Slide from '@/layouts/Slide.vue'
 import EELayout from '@/layouts/EELayout.vue'
+import { RouterLink } from 'vue-router'
 
 const slides: Component[] = [
   {
@@ -10,25 +11,25 @@ const slides: Component[] = [
         <Slide title="目录">
           <ol class='two-columns'>
             <li>
-              <router-link to="/ee/complex">复数</router-link>
+              <RouterLink to="/ee/complex">复数</RouterLink>
             </li>
             <li>
-              <router-link to="/ee/analytic">解析函数</router-link>
+              <RouterLink to="/ee/analytic">解析函数</RouterLink>
             </li>
             <li>
-              <router-link to="/ee/integral">曲线积分</router-link>
+              <RouterLink to="/ee/integral">曲线积分</RouterLink>
             </li>
             <li>
-              <router-link to="/ee/series">级数</router-link>
+              <RouterLink to="/ee/series">级数</RouterLink>
             </li>
             <li>
-              <router-link to="/ee/residue">留数</router-link>
+              <RouterLink to="/ee/residue">留数</RouterLink>
             </li>
             <li>
-              <router-link to="/ee/laplace">Laplace变换</router-link>
+              <RouterLink to="/ee/laplace">Laplace变换</RouterLink>
             </li>
             <li>
-              <router-link to="/ee/det">行列式</router-link>
+              <RouterLink to="/ee/det">行列式</RouterLink>
             </li>
           </ol>
         </Slide>

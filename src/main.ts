@@ -42,6 +42,8 @@ import CFunction from '@/c/CFunction.vue'
 import CProgress from '@/c/CProgress.vue'
 import AIProgress from '@/ai/AIProgress.vue'
 import EEProgress from '@/ee/EEProgress.vue'
+import Python from '@/ai/Python.vue'
+import Index from '@/components/Index.vue'
 
 const router = createRouter({
   history: createWebHashHistory(import.meta.env.BASE_URL),
@@ -58,6 +60,7 @@ const router = createRouter({
     { path: '/ai/medicine', component: Medicine },
     { path: '/ai/finance', component: Finance },
     { path: '/ai/education', component: Education },
+    {path:'/ai/python',component:Python},
     { path: '/c/plan', component: CPlan },
     { path: '/c/progress', component: CProgress },
     { path: '/c/contents', component: CContents },
@@ -83,7 +86,7 @@ const router = createRouter({
     { path: '/ee/laplace', component: Laplace },
     { path: '/ee/det', component: Det },
     { path: '/training', component: Training },
-    { path: '/', component: Playground }
+    { path: '/', component: Index }
   ]
 })
 

@@ -2,6 +2,7 @@
 import type { Component } from 'vue'
 import Slide from '@/layouts/Slide.vue'
 import CLayout from '@/layouts/CLayout.vue'
+import { RouterLink } from 'vue-router'
 
 const slides: Component[] = [
   {
@@ -10,37 +11,37 @@ const slides: Component[] = [
         <Slide title="目录">
           <ul class="two-columns">
             <li>
-              <router-link to="/c/basic">第1到4章 C语言基础</router-link>
+              <RouterLink to="/c/basic">第1到4章 C语言基础</RouterLink>
             </li>
             <li>
-              <router-link to="/c/data">第5章 基础数据类型</router-link>
+              <RouterLink to="/c/data">第5章 基础数据类型</RouterLink>
             </li>
             <li>
-              <router-link to="/c/io">第6章 输入输出</router-link>
+              <RouterLink to="/c/io">第6章 输入输出</RouterLink>
             </li>
             <li>
-              <router-link to="/c/expression">第7章 运算符与表达式</router-link>
+              <RouterLink to="/c/expression">第7章 运算符与表达式</RouterLink>
             </li>
             <li>
-              <router-link to="/c/condition">第8章 条件判断语句</router-link>
+              <RouterLink to="/c/condition">第8章 条件判断语句</RouterLink>
             </li>
             <li>
-              <router-link to="/c/loop">第9章 循环语句</router-link>
+              <RouterLink to="/c/loop">第9章 循环语句</RouterLink>
             </li>
             <li>
-              <router-link to="/c/array">第10章 数组</router-link>
+              <RouterLink to="/c/array">第10章 数组</RouterLink>
             </li>
             <li>
-              <router-link to="/c/string">第11章 字符串</router-link>
+              <RouterLink to="/c/string">第11章 字符串</RouterLink>
             </li>
             <li>
-              <router-link to="/c/function">第12章 函数</router-link>
+              <RouterLink to="/c/function">第12章 函数</RouterLink>
             </li>
             <li>
-              <router-link to="/c/pointer">第13章 指针</router-link>
+              <RouterLink to="/c/pointer">第13章 指针</RouterLink>
             </li>
             <li>
-              <router-link to="/c/struct">第14章 结构体</router-link>
+              <RouterLink to="/c/struct">第14章 结构体</RouterLink>
             </li>
           </ul>
         </Slide>
