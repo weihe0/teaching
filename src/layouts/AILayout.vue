@@ -17,7 +17,7 @@ const props = defineProps<{ slides: Component[] }>()
       <li><RouterLink to="/ai/medicine">项目七 人工智能+医疗</RouterLink></li>
       <li><RouterLink to="/ai/finance">项目八 人工智能+金融</RouterLink></li>
       <li><RouterLink to="/ai/education">项目九 人工智能+教育</RouterLink></li>
-      <li><RouterLink to="/ai/education">项目十 人工智能语言Python</RouterLink></li>
+      <li><RouterLink to="/ai/python">项目十 人工智能语言Python</RouterLink></li>
     </ul>
   </Slider>
 </template>
