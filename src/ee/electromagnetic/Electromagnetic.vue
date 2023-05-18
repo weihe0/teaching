@@ -1,8 +1,8 @@
 <script setup lang="tsx">
-import CLayout from '@/layouts/CLayout.vue'
 import type { Component } from 'vue'
 import Slide from '@/layouts/Slide.vue'
 import Math from '@/components/Math.vue'
+import EELayout from '@/layouts/EELayout.vue'
 
 const slides: Component[] = [
   {
