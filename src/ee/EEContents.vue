@@ -9,7 +9,10 @@ const slides: Component[] = [
     setup() {
       return () => (
         <Slide title="目录">
-          <ol class='two-columns'>
+          <ol class="two-columns">
+            <li>
+              <RouterLink to="/ee/em">电磁场</RouterLink>
+            </li>
             <li>
               <RouterLink to="/ee/complex">复数</RouterLink>
             </li>

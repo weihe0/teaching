@@ -1,6 +1,6 @@
-export class Determinant{
-  squareMatrix:string[][]
-  constructor(square:string[][]) {
-    this.squareMatrix=square
+export class Determinant {
+  squareMatrix: string[][]
+  constructor(square: string[][]) {
+    this.squareMatrix = square
   }
 }

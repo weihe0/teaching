@@ -30,7 +30,7 @@ let slides: Component[] = [
   ArrayDisplay,
   ArrayFind,
   ArrayMax,
-  Sieve,
+  Sieve
 ]
 </script>
 

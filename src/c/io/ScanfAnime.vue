@@ -51,7 +51,7 @@ onMounted(() => {
       int a = 10;<br />
       float b = 0.5;<br />
       char c = 'A';<br />
-      printf("a=%d, b=%f, c=%c", a, b, c);
+      scanf("a=%d, b=%f, c=%c", &a, &b, &c);
     </CodeBlock>
     <p>
       格式：<code>{{ partial.format }}</code

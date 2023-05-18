@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import Paper from '@/layouts/Paper.vue'
 import Plan from '@/layouts/Plan.vue'
-const week_day=3
-const class_number=1
+const week_day = 3
+const class_number = 1
 </script>
 
 <template>
@@ -69,14 +69,23 @@ const class_number=1
         </ol>
       </template>
     </Plan>
-    <Plan keynote='人工智能的难点' difficulty='为什么模拟人类智能很难'
-          :week='3' :count='2' :weekday='3' topic='人工智能的预备知识' :class-number='1'>
+    <Plan
+      keynote="人工智能的难点"
+      difficulty="为什么模拟人类智能很难"
+      :week="3"
+      :count="2"
+      :weekday="3"
+      topic="人工智能的预备知识"
+      :class-number="1"
+    >
       <template #body>
         <ol>
           <li>人工智能的载体——计算机的特点</li>
           <ol>
             <li>人类能轻松完成的事情，计算机需要极大的计算量，这些事情往往<em>属于</em>人工智能</li>
-            <li>人类需要极大的努力才能完成的事情，计算机能轻松完成，这些事情<em>不属于</em>人工智能</li>
+            <li>
+              人类需要极大的努力才能完成的事情，计算机能轻松完成，这些事情<em>不属于</em>人工智能
+            </li>
             <li>计算机能轻松完成的事：海量的机械记忆、检索数据、科学计算、编码解码</li>
             <li>计算机做得比较慢的事：判断选择、猜测联想</li>
             <li>计算机能轻松完成的事情的特点：情景单一、流程固定、多次重复</li>
@@ -123,8 +132,15 @@ const class_number=1
         </ol>
       </template>
     </Plan>
-    <Plan keynote='智能机器人的要素' difficulty='智能机器人与传统的工业机器人的区别' :week='4' :count='3'
-          :weekday='3' topic='智能机器人' :class-number='1'>
+    <Plan
+      keynote="智能机器人的要素"
+      difficulty="智能机器人与传统的工业机器人的区别"
+      :week="4"
+      :count="3"
+      :weekday="3"
+      topic="智能机器人"
+      :class-number="1"
+    >
       <template #body>
         <ol>
           <li>智能机器人的基本要素</li>
@@ -176,8 +192,15 @@ const class_number=1
         </ol>
       </template>
     </Plan>
-    <Plan keynote='无人机的优点' difficulty='无人机在最近的军事冲突中的应用' :week='5' :count='4'
-          :weekday='3' topic='无人机' :class-number='1'>
+    <Plan
+      keynote="无人机的优点"
+      difficulty="无人机在最近的军事冲突中的应用"
+      :week="5"
+      :count="4"
+      :weekday="3"
+      topic="无人机"
+      :class-number="1"
+    >
       <template #body>
         <ol>
           <li>无人机的定义</li>
@@ -235,8 +258,15 @@ const class_number=1
         </ol>
       </template>
     </Plan>
-    <Plan keynote='大数据思维' difficulty='哪些新闻稿描述了真实的大数据技术，哪些新闻稿只是将大数据当做噱头'
-          :week='6' :count='5' :weekday='3' topic='大数据' :class-number='1'>
+    <Plan
+      keynote="大数据思维"
+      difficulty="哪些新闻稿描述了真实的大数据技术，哪些新闻稿只是将大数据当做噱头"
+      :week="6"
+      :count="5"
+      :weekday="3"
+      topic="大数据"
+      :class-number="1"
+    >
       <template #body>
         <ol>
           <li>大数据的定义</li>
@@ -250,12 +280,16 @@ const class_number=1
           <ol>
             <li><del>某某县房地产大数据</del></li>
             <li><del>乳制品行业企业大数据</del></li>
-            <li><a href="https://www.thepaper.cn/newsDetail_forward_5980996" target="'_blank'">
-              上海战“疫”精准防疫，大数据如何大显身手？
-            </a></li>
-            <li><a href="https://xueqiu.com/4548706173/245054081" target="'_blank'">
-              <del>3月21日大数据复盘：82%个股上涨 成交额0.89万亿</del>
-            </a></li>
+            <li>
+              <a href="https://www.thepaper.cn/newsDetail_forward_5980996" target="'_blank'">
+                上海战“疫”精准防疫，大数据如何大显身手？
+              </a>
+            </li>
+            <li>
+              <a href="https://xueqiu.com/4548706173/245054081" target="'_blank'">
+                <del>3月21日大数据复盘：82%个股上涨 成交额0.89万亿</del>
+              </a>
+            </li>
           </ol>
           <li>大数据的工作方向</li>
           <ol>
@@ -268,9 +302,7 @@ const class_number=1
           <li>大数据的基本处理流程</li>
           <ol>
             <li>数据采集</li>
-            <li>
-              数据清洗，<em>最重要的阶段</em>
-            </li>
+            <li>数据清洗，<em>最重要的阶段</em></li>
             <li>数据存储</li>
             <li>数据处理</li>
           </ol>
@@ -278,7 +310,9 @@ const class_number=1
           <ol>
             <li>成本壁垒：手机或购买数据的成本高，处理流程复杂，存储与计算成本高</li>
             <li>信息交流壁垒：政府、企业之间存在信息壁垒</li>
-            <li>个性化壁垒：不同类型、不同用户的数据具有个性化的特征，需要采取专门的处理方法，很难总结通用的处理技术</li>
+            <li>
+              个性化壁垒：不同类型、不同用户的数据具有个性化的特征，需要采取专门的处理方法，很难总结通用的处理技术
+            </li>
           </ol>
         </ol>
       </template>
@@ -297,8 +331,15 @@ const class_number=1
         </ol>
       </template>
     </Plan>
-    <Plan keynote='大数据思维' difficulty='如何运用大数据思维' :week='7' :count='6'
-          :weekday='week_day' topic='建立大数据思维' :class-number='class_number'>
+    <Plan
+      keynote="大数据思维"
+      difficulty="如何运用大数据思维"
+      :week="7"
+      :count="6"
+      :weekday="week_day"
+      topic="建立大数据思维"
+      :class-number="class_number"
+    >
       <template #body>
         <ol>
           <li>认识大数据时代</li>
@@ -326,8 +367,7 @@ const class_number=1
             <li>谁先拥有大数据，谁就能够在竞争中处于优势地位</li>
             <li>网络变得不再虚拟</li>
             <li>从数据到信息，从信息到决策</li>
-            <ol>
-            </ol>
+            <ol></ol>
           </ol>
           <li>大数据的应用</li>
           <ol>
@@ -356,27 +396,29 @@ const class_number=1
         </ol>
       </template>
     </Plan>
-    <Plan keynote='智能家居的关键技术' difficulty='智能家居与传统家居的区别' :week='8' :count='7'
-          :weekday='week_day' topic='智能家居' :class-number='class_number'>
+    <Plan
+      keynote="智能家居的关键技术"
+      difficulty="智能家居与传统家居的区别"
+      :week="8"
+      :count="7"
+      :weekday="week_day"
+      topic="智能家居"
+      :class-number="class_number"
+    >
       <template #body>
         <ol>
           <li>智能家居的概念</li>
           <li>
             <dfn>智能家居</dfn>是利用
             <em>综合布线技术、网络通信技术、安全防范技术、自动控制技术、音频技术</em>
-            将与家居有关的设施集成起来，构建高效的住宅设施的管理系统</li>
+            将与家居有关的设施集成起来，构建高效的住宅设施的管理系统
+          </li>
           <li></li>
           <li>智能家居的形态演变</li>
           <ol>
-            <li>
-              <dfn>智能单品</dfn>：智能冰箱、智能空调、智能洗衣机、路由器、电视盒子、摄像头
-            </li>
-            <li>
-              <dfn>不同产品的联动</dfn>：信息互通共享
-            </li>
-            <li>
-              <dfn>智能系统集成</dfn>：不同类产品直接的融合和交互
-            </li>
+            <li><dfn>智能单品</dfn>：智能冰箱、智能空调、智能洗衣机、路由器、电视盒子、摄像头</li>
+            <li><dfn>不同产品的联动</dfn>：信息互通共享</li>
+            <li><dfn>智能系统集成</dfn>：不同类产品直接的融合和交互</li>
           </ol>
           <li>智能家居的组成</li>
           <ol>
@@ -404,29 +446,19 @@ const class_number=1
           <li>实际产品</li>
           <ol>
             <li>
-              <a href="https://item.jd.com/100004676756.html" target='_blank'>
-                智能音箱
-              </a>
+              <a href="https://item.jd.com/100004676756.html" target="_blank"> 智能音箱 </a>
             </li>
             <li>
-              <a href="https://item.jd.com/100037767981.html" target='_blank'>
-                智能冰箱
-              </a>
+              <a href="https://item.jd.com/100037767981.html" target="_blank"> 智能冰箱 </a>
             </li>
             <li>
-              <a href="https://item.jd.com/100048765169.html" target='_blank'>
-                智能门锁
-              </a>
+              <a href="https://item.jd.com/100048765169.html" target="_blank"> 智能门锁 </a>
             </li>
             <li>
-              <a href="https://item.jd.com/100014743067.html" target='_blank'>
-                智能窗帘
-              </a>
+              <a href="https://item.jd.com/100014743067.html" target="_blank"> 智能窗帘 </a>
             </li>
             <li>
-              <a href="https://item.jd.com/100002439574.html" target='_blank'>
-                智能床头灯
-              </a>
+              <a href="https://item.jd.com/100002439574.html" target="_blank"> 智能床头灯 </a>
             </li>
           </ol>
         </ol>
@@ -447,8 +479,15 @@ const class_number=1
         </ol>
       </template>
     </Plan>
-    <Plan keynote='智能交通的组成部分' difficulty='智能交通的关键技术' :week='9' :count='8'
-          :weekday='week_day' topic='智能交通' :class-number='class_number'>
+    <Plan
+      keynote="智能交通的组成部分"
+      difficulty="智能交通的关键技术"
+      :week="9"
+      :count="8"
+      :weekday="week_day"
+      topic="智能交通"
+      :class-number="class_number"
+    >
       <template #body>
         <ol>
           <li>智能交通的概念</li>
@@ -503,8 +542,15 @@ const class_number=1
         </ol>
       </template>
     </Plan>
-    <Plan keynote='自动驾驶的等级' difficulty='自动驾驶的关键技术' :week='10' :count='9'
-          :weekday='week_day' topic='自动驾驶' :class-number='class_number'>
+    <Plan
+      keynote="自动驾驶的等级"
+      difficulty="自动驾驶的关键技术"
+      :week="10"
+      :count="9"
+      :weekday="week_day"
+      topic="自动驾驶"
+      :class-number="class_number"
+    >
       <template #body>
         <ol>
           <li>自动驾驶的等级</li>
@@ -539,12 +585,12 @@ const class_number=1
           <li>自动驾驶的案例</li>
           <ol>
             <li>
-              <a href='https://www.bilibili.com/video/BV1ko4y117HT' target='_blank'>
+              <a href="https://www.bilibili.com/video/BV1ko4y117HT" target="_blank">
                 地平线基于征程2芯片的ADAS视觉感知demo
               </a>
             </li>
             <li>
-              <a href='https://www.bilibili.com/video/BV1XN4y1P7Kr' target='_blank'>
+              <a href="https://www.bilibili.com/video/BV1XN4y1P7Kr" target="_blank">
                 沃尔沃的自动驾驶到底有多卷
               </a>
             </li>

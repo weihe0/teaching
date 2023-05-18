@@ -44,12 +44,13 @@ import AIProgress from '@/ai/AIProgress.vue'
 import EEProgress from '@/ee/EEProgress.vue'
 import Python from '@/ai/Python.vue'
 import Index from '@/components/Index.vue'
+import Electromagnetic from '@/ee/electromagnetic/Electromagnetic.vue'
 
 const router = createRouter({
   history: createWebHashHistory(import.meta.env.BASE_URL),
   routes: [
     { path: '/ai/plan', component: AIPlan },
-    {path:'/ai/progress',component:AIProgress},
+    { path: '/ai/progress', component: AIProgress },
     { path: '/ai/contents', component: AIContents },
     { path: '/ai/general', component: General },
     { path: '/ai/robot', component: Robot },
@@ -60,7 +61,7 @@ const router = createRouter({
     { path: '/ai/medicine', component: Medicine },
     { path: '/ai/finance', component: Finance },
     { path: '/ai/education', component: Education },
-    {path:'/ai/python',component:Python},
+    { path: '/ai/python', component: Python },
     { path: '/c/plan', component: CPlan },
     { path: '/c/progress', component: CProgress },
     { path: '/c/contents', component: CContents },
@@ -76,8 +77,9 @@ const router = createRouter({
     { path: '/c/pointer', component: Pointer },
     { path: '/c/struct', component: Struct },
     { path: '/ee/plan', component: EEPlan },
-    {path:'/ee/progress',component:EEProgress},
+    { path: '/ee/progress', component: EEProgress },
     { path: '/ee/contents', component: EEContents },
+    { path: '/ee/em', component: Electromagnetic },
     { path: '/ee/complex', component: Complex },
     { path: '/ee/analytic', component: Analytic },
     { path: '/ee/integral', component: Integral },

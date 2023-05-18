@@ -9,7 +9,7 @@ const slides: Component[] = [
     setup() {
       return () => (
         <Slide title="目录">
-          <ul class='two-columns'>
+          <ul class="two-columns">
             <li>
               <RouterLink to="/ai/general">项目一 总论</RouterLink>
             </li>
@@ -38,7 +38,7 @@ const slides: Component[] = [
               <RouterLink to="/ai/education">项目九 人工智能+教育</RouterLink>
             </li>
             <li>
-              <RouterLink to='/ai/python'>项目十 人工智能语言Python</RouterLink>
+              <RouterLink to="/ai/python">项目十 人工智能语言Python</RouterLink>
             </li>
           </ul>
         </Slide>
@@ -52,5 +52,4 @@ const slides: Component[] = [
   <AILayout title="C语言目录" :slides="slides" />
 </template>
 
-<style scoped>
-</style>
+<style scoped></style>

@@ -2,8 +2,8 @@
 import Paper from '@/layouts/Paper.vue'
 import Plan from '@/layouts/Plan.vue'
 import Math from '@/components/Math.vue'
-const weekday=4
-const class_number=7
+const weekday = 4
+const class_number = 7
 </script>
 
 <template>
@@ -57,7 +57,9 @@ const class_number=7
       </template>
       <template #result>
         <ol>
-          <li>由于多年的应试教育，学生们认为数学与物理只是用来考试的，在实际的生产生活中没有作用。</li>
+          <li>
+            由于多年的应试教育，学生们认为数学与物理只是用来考试的，在实际的生产生活中没有作用。
+          </li>
           <li>学生的微积分基础很差，很难理解复变函数</li>
           <li>学生认为复数是虚构的数，难以接受复数的概念</li>
         </ol>
@@ -78,13 +80,13 @@ const class_number=7
           <ol>
             <li>实数集是一维的数轴</li>
             <li>复数集是二维的平面</li>
-            <li>复数<Math tex='x+iy'/>还与从原点指向<Math tex='(x,y)'/>的向量一一对应</li>
+            <li>复数<Math tex="x+iy" />还与从原点指向<Math tex="(x,y)" />的向量一一对应</li>
             <li>复平面坐标系的横轴是实数</li>
             <li>复平面坐标系的虚轴是纯虚数</li>
           </ol>
           <li>复数的向量表示</li>
           <ol>
-            <li>复数<Math tex='x+iy'/>与点<Math tex='(x,y)'/>一一对应</li>
+            <li>复数<Math tex="x+iy" />与点<Math tex="(x,y)" />一一对应</li>
             <li>复数的模</li>
             <li>复数的辐角及主值</li>
             <li>复数的三角表示式</li>
@@ -98,7 +100,7 @@ const class_number=7
             <li>复平面上的除法运算，复数的模相除，辐角相减</li>
             <li>用三角表示式及指数表示式求负数的乘幂与方根</li>
             <li>求复数的方根的特别注意事项</li>
-            <li>在复数集下求<Math tex='n'/>次方根</li>
+            <li>在复数集下求<Math tex="n" />次方根</li>
           </ol>
         </ol>
       </template>
@@ -107,13 +109,15 @@ const class_number=7
           <li>复数的乘除法与旋转变换的关系</li>
           <li>复数的加法为什么符合平行四边形法则？（提示：平行四边形法则与交换律有关）</li>
           <li>复数为什么有多个辐角？多个辐角之间有什么关系？</li>
-          <li>在复数集内解方程<Math tex='x^3=-1'/>，方程有几个根？分别是多少？</li>
+          <li>在复数集内解方程<Math tex="x^3=-1" />，方程有几个根？分别是多少？</li>
           <li>复数的三角表示式与指数表示式主要用于哪些运算？</li>
         </ol>
       </template>
       <template #result>
         <ol>
-          <li>由于多年的应试教育，学生们认为数学与物理只是用来考试的，在实际的生产生活中没有作用。</li>
+          <li>
+            由于多年的应试教育，学生们认为数学与物理只是用来考试的，在实际的生产生活中没有作用。
+          </li>
           <li>学生的微积分基础很差，很难理解复变函数</li>
           <li>学生认为复数是虚构的数，难以接受复数的概念</li>
         </ol>
@@ -149,7 +153,7 @@ const class_number=7
           </ol>
           <li>复变函数的极限和连续性</li>
           <ol>
-            <li>函数极限的<Math :tex='String.raw`\varepsilon-\delta`'/>定义</li>
+            <li>函数极限的<Math :tex="String.raw`\varepsilon-\delta`" />定义</li>
             <li>复变函数的极限存在的充分必要条件</li>
             <li>极限的性质</li>
             <li>常见函数极限</li>
@@ -170,7 +174,9 @@ const class_number=7
       </template>
       <template #result>
         <ol>
-          <li>由于多年的应试教育，学生们认为数学与物理只是用来考试的，在实际的生产生活中没有作用。</li>
+          <li>
+            由于多年的应试教育，学生们认为数学与物理只是用来考试的，在实际的生产生活中没有作用。
+          </li>
           <li>学生的微积分基础很差，很难理解复变函数</li>
           <li>学生认为复数是虚构的数，难以接受复数的概念</li>
         </ol>
@@ -234,7 +240,9 @@ const class_number=7
       </template>
       <template #result>
         <ol>
-          <li>由于多年的应试教育，学生们认为数学与物理只是用来考试的，在实际的生产生活中没有作用。</li>
+          <li>
+            由于多年的应试教育，学生们认为数学与物理只是用来考试的，在实际的生产生活中没有作用。
+          </li>
           <li>学生的微积分基础很差，很难理解复变函数</li>
           <li>学生认为复数是虚构的数，难以接受复数的概念</li>
         </ol>
@@ -296,7 +304,9 @@ const class_number=7
       </template>
       <template #result>
         <ol>
-          <li>由于多年的应试教育，学生们认为数学与物理只是用来考试的，在实际的生产生活中没有作用。</li>
+          <li>
+            由于多年的应试教育，学生们认为数学与物理只是用来考试的，在实际的生产生活中没有作用。
+          </li>
           <li>学生的微积分基础很差，很难理解复变函数</li>
           <li>学生认为复数是虚构的数，难以接受复数的概念</li>
         </ol>
@@ -353,7 +363,9 @@ const class_number=7
       </template>
       <template #result>
         <ol>
-          <li>由于多年的应试教育，学生们认为数学与物理只是用来考试的，在实际的生产生活中没有作用。</li>
+          <li>
+            由于多年的应试教育，学生们认为数学与物理只是用来考试的，在实际的生产生活中没有作用。
+          </li>
           <li>学生的微积分基础很差，很难理解复变函数</li>
           <li>学生认为复数是虚构的数，难以接受复数的概念</li>
         </ol>
@@ -407,7 +419,9 @@ const class_number=7
       </template>
       <template #result>
         <ol>
-          <li>由于多年的应试教育，学生们认为数学与物理只是用来考试的，在实际的生产生活中没有作用。</li>
+          <li>
+            由于多年的应试教育，学生们认为数学与物理只是用来考试的，在实际的生产生活中没有作用。
+          </li>
           <li>学生的微积分基础很差，很难理解复变函数</li>
           <li>学生认为复数是虚构的数，难以接受复数的概念</li>
         </ol>
@@ -424,23 +438,29 @@ const class_number=7
     >
       <template #body>
         <ol>
-          <li>计算<Math :tex='String.raw`\int_0^{2\pi}f(\cos\theta,\sin\theta)d\theta`' /></li>
+          <li>计算<Math :tex="String.raw`\int_0^{2\pi}f(\cos\theta,\sin\theta)d\theta`" /></li>
           <ol>
             <li>利用欧拉公式，将三角函数转化为指数函数</li>
             <li>将定积分转化为沿正向单位圆周的曲线积分</li>
             <li>利用留数计算沿正向单位圆周的曲线积分</li>
           </ol>
-          <li>计算<Math :tex='String.raw`\int_{-\infty}^{+\infty} f(x)dx`' /></li>
+          <li>计算<Math :tex="String.raw`\int_{-\infty}^{+\infty} f(x)dx`" /></li>
           <ol>
-            <li>条件：<Math tex='f(x)'/>是<em>有理函数</em>，且分母的次数至少比分子的次数高二次，
-              且<Math tex='f(x)'/>在实轴上没有孤立奇点</li>
+            <li>
+              条件：<Math tex="f(x)" />是<em>有理函数</em>，且分母的次数至少比分子的次数高二次，
+              且<Math tex="f(x)" />在实轴上没有孤立奇点
+            </li>
             <li>选取以原点为中心的圆作为曲线积分的路径</li>
             <li>计算沿着这个圆周的积分</li>
             <li>将圆周的半径扩展为无穷大时，计算积分的极限</li>
           </ol>
-          <li>计算<Math :tex='String.raw`\int_{-\infty}^{+\infty} f(x)e^{aix}dx`' /></li>
+          <li>计算<Math :tex="String.raw`\int_{-\infty}^{+\infty} f(x)e^{aix}dx`" /></li>
           <ol>
-            <li>条件：<Math tex='f(x)'/>是有理函数，且分母的次数比至少比分子的次数高一次，且在实轴上没有孤立奇点</li>
+            <li>
+              条件：<Math
+                tex="f(x)"
+              />是有理函数，且分母的次数比至少比分子的次数高一次，且在实轴上没有孤立奇点
+            </li>
             <li>选取以原点为中心的圆作为曲线积分的路径</li>
             <li>计算沿着这个圆周的积分</li>
             <li>将圆周的半径扩展为无穷大时，计算积分的极限</li>
@@ -449,14 +469,24 @@ const class_number=7
       </template>
       <template #question>
         <ol>
-          <li>计算定积分<Math :tex='String.raw`\int_0^{2\pi} \frac{\cos 2\theta}{1-2p\cos\theta+p^2}d\theta`' /></li>
-          <li>计算定积分<Math :tex='String.raw`\int_{-\infty}^{+\infty} \frac{x^2}{(x^2+a^2)(x^2+b^2)}dx`' /></li>
-          <li>计算定积分<Math :tex='String.raw`\int_0^{+\infty} \frac{x\sin x}{x^2+a^2}dx`' /></li>
+          <li>
+            计算定积分<Math
+              :tex="String.raw`\int_0^{2\pi} \frac{\cos 2\theta}{1-2p\cos\theta+p^2}d\theta`"
+            />
+          </li>
+          <li>
+            计算定积分<Math
+              :tex="String.raw`\int_{-\infty}^{+\infty} \frac{x^2}{(x^2+a^2)(x^2+b^2)}dx`"
+            />
+          </li>
+          <li>计算定积分<Math :tex="String.raw`\int_0^{+\infty} \frac{x\sin x}{x^2+a^2}dx`" /></li>
         </ol>
       </template>
       <template #result>
         <ol>
-          <li>由于多年的应试教育，学生们认为数学与物理只是用来考试的，在实际的生产生活中没有作用。</li>
+          <li>
+            由于多年的应试教育，学生们认为数学与物理只是用来考试的，在实际的生产生活中没有作用。
+          </li>
           <li>学生的微积分基础很差，很难理解复变函数</li>
           <li>学生认为复数是虚构的数，难以接受复数的概念</li>
         </ol>
@@ -475,23 +505,30 @@ const class_number=7
         <ol>
           <li>Fourier变换</li>
           <ol>
-            <li>信号函数<Math tex='f(t)'/></li>
-            <li>Fourier变换将<em>时域</em>信号<Math tex='f(t)'/>变换为<em>频域</em>信号
-              <Math :tex='String.raw`F(\omega)`'/></li>
+            <li>信号函数<Math tex="f(t)" /></li>
+            <li>
+              Fourier变换将<em>时域</em>信号<Math tex="f(t)" />变换为<em>频域</em>信号
+              <Math :tex="String.raw`F(\omega)`" />
+            </li>
             <li>Fourier变换的原理及公式</li>
             <li>Fourier变换的局限性</li>
           </ol>
           <li>Laplace变换</li>
           <ol>
             <li>Laplace变换如何克服Fourier变换的局限性</li>
-            <li>Laplace变换第一步：时域信号乘以衰减函数，得到<Math tex='f(t)e^{-\alpha t}'/>，其中
-            <Math :tex='String.raw`\alpha>0`'/></li>
-            <li>Laplace变换第二步：对衰减的信号<Math tex='f(t)e^{-\alpha t}'/>做Fourier变换，得到
-            <Math :tex='String.raw`F(\omega)`'/></li>
-            <li>Laplace变换得到<em>二元函数</em><Math :tex='String.raw`F(\ln\alpha,\omega)`'/>，
-            令<Math :tex='String.raw`s=\ln\alpha+i\omega`'/>，即可将二元函数
-              <Math :tex='String.raw`F(\ln\alpha,\omega)`'/>转化为<em>复变函数</em>
-              <Math tex='F(s)'/>
+            <li>
+              Laplace变换第一步：时域信号乘以衰减函数，得到<Math tex="f(t)e^{-\alpha t}" />，其中
+              <Math :tex="String.raw`\alpha>0`" />
+            </li>
+            <li>
+              Laplace变换第二步：对衰减的信号<Math tex="f(t)e^{-\alpha t}" />做Fourier变换，得到
+              <Math :tex="String.raw`F(\omega)`" />
+            </li>
+            <li>
+              Laplace变换得到<em>二元函数</em><Math :tex="String.raw`F(\ln\alpha,\omega)`" />，
+              令<Math :tex="String.raw`s=\ln\alpha+i\omega`" />，即可将二元函数
+              <Math :tex="String.raw`F(\ln\alpha,\omega)`" />转化为<em>复变函数</em>
+              <Math tex="F(s)" />
             </li>
           </ol>
           <li>Laplace变换的性质</li>
@@ -520,7 +557,9 @@ const class_number=7
       </template>
       <template #result>
         <ol>
-          <li>由于多年的应试教育，学生们认为数学与物理只是用来考试的，在实际的生产生活中没有作用。</li>
+          <li>
+            由于多年的应试教育，学生们认为数学与物理只是用来考试的，在实际的生产生活中没有作用。
+          </li>
           <li>学生的微积分基础很差，很难理解复变函数</li>
           <li>学生认为复数是虚构的数，难以接受复数的概念</li>
         </ol>

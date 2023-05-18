@@ -8,6 +8,7 @@ const props = defineProps<{ slides: Component[] }>()
   <Slider :slides="props.slides" :lottery="false">
     <ul>
       <li>目录</li>
+      <li><RouterLink to="/ee/em">电磁场</RouterLink></li>
       <li><RouterLink to="/ee/complex">复数</RouterLink></li>
       <li><RouterLink to="/ee/analytic">解析函数</RouterLink></li>
       <li><RouterLink to="/ee/integral">曲线积分</RouterLink></li>

@@ -70,7 +70,7 @@ const slides: Component[] = [
       )
     }
   },
-/*  {
+  /*  {
     render() {
       return (
         <Slide title="行列式的几何意义">
@@ -283,7 +283,7 @@ const slides: Component[] = [
             </li>
             <li>
               示例：
-              <table >
+              <table>
                 <tbody>
                   <tr>
                     <td>

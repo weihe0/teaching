@@ -181,27 +181,27 @@ const slides: Component[] = [
         <Slide title="实际产品">
           <ul>
             <li>
-              <a href='https://item.jd.com/100004676756.html' target={'_blank'}>
+              <a href="https://item.jd.com/100004676756.html" target={'_blank'}>
                 智能音箱
               </a>
             </li>
             <li>
-              <a href='https://item.jd.com/100037767981.html' target={'_blank'}>
+              <a href="https://item.jd.com/100037767981.html" target={'_blank'}>
                 智能冰箱
               </a>
             </li>
             <li>
-              <a href='https://item.jd.com/100048765169.html' target={'_blank'}>
+              <a href="https://item.jd.com/100048765169.html" target={'_blank'}>
                 智能门锁
               </a>
             </li>
             <li>
-              <a href='https://item.jd.com/100014743067.html' target={'_blank'}>
+              <a href="https://item.jd.com/100014743067.html" target={'_blank'}>
                 智能窗帘
               </a>
             </li>
             <li>
-              <a href='https://item.jd.com/100002439574.html' target={'_blank'}>
+              <a href="https://item.jd.com/100002439574.html" target={'_blank'}>
                 智能床头灯
               </a>
             </li>

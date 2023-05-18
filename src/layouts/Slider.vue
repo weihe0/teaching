@@ -170,11 +170,11 @@ function drawStudent() {
   background-color: dodgerblue;
   font-size: 80%;
 }
-.button-box > button{
-    border: none;
-    border-radius: 0.5em;
-    background-color: dodgerblue;
-    font-size: 80%;
+.button-box > button {
+  border: none;
+  border-radius: 0.5em;
+  background-color: dodgerblue;
+  font-size: 80%;
 }
 button:hover {
   cursor: pointer;
@@ -197,7 +197,7 @@ button:hover {
 }
 
 .control svg {
-    width: 90%;
+  width: 90%;
   stroke: black;
   fill: none;
   stroke-width: 4px;

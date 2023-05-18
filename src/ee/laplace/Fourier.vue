@@ -1,6 +1,6 @@
 <template>
   <Slide title="傅里叶变换">
-    <img src='/fourier.jpg' />
+    <img src="/fourier.jpg" />
   </Slide>
 </template>
 

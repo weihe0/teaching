@@ -1,8 +1,10 @@
-<script setup lang='ts'>
-
+<script setup lang="ts">
 import { onMounted, onUnmounted, ref } from 'vue'
-const props=defineProps<{controls:number[],responses:number[]}>()
-const dx = 5, xmax = 80, dy = 20, ymax = 12
+const props = defineProps<{ controls: number[]; responses: number[] }>()
+const dx = 5,
+  xmax = 80,
+  dy = 20,
+  ymax = 12
 const width = xmax * dx
 const halfHeight = ymax * dy
 const controlCanvas = ref<HTMLCanvasElement | null>(null)
@@ -34,9 +36,9 @@ onUnmounted(() => {
 
 function animeStart() {
   if (id === null) {
-    const controlAnime=controlAnimeGenerator()
+    const controlAnime = controlAnimeGenerator()
     id = setInterval(() => {
-      if(controlAnime.next().done){
+      if (controlAnime.next().done) {
         animeStop()
       }
     }, 500)
@@ -73,10 +75,13 @@ function responseFrame(elapsedTime: number) {
   for (let tau = 0; tau <= elapsedTime; tau++) {
     if (props.controls[tau] !== 0) {
       responseContext.moveTo(tau * dx, props.controls[tau] * props.responses[0])
-      for (let timeAfterRes = 1;
-           timeAfterRes < props.responses.length && timeAfterRes < elapsedTime - tau;
-           timeAfterRes++) {
-        responseContext.lineTo((tau + timeAfterRes) * dx,
+      for (
+        let timeAfterRes = 1;
+        timeAfterRes < props.responses.length && timeAfterRes < elapsedTime - tau;
+        timeAfterRes++
+      ) {
+        responseContext.lineTo(
+          (tau + timeAfterRes) * dx,
           props.controls[tau] * props.responses[timeAfterRes] * dy
         )
       }
@@ -114,23 +119,22 @@ function drawControls() {
     }
   }
 }
-
 </script>
 
 <template>
-  <div class='canvases'>
-    <canvas ref='controlCanvas' :width='xmax*dx' :height='2*dy*ymax'></canvas>
-    <canvas ref='responseCanvas' :width='xmax*dx' :height='2*dy*ymax'></canvas>
-    <button @click='animeStart'>启动</button>
-    <button @click='animeStop'>暂停</button>
+  <div class="canvases">
+    <canvas ref="controlCanvas" :width="xmax * dx" :height="2 * dy * ymax"></canvas>
+    <canvas ref="responseCanvas" :width="xmax * dx" :height="2 * dy * ymax"></canvas>
+    <button @click="animeStart">启动</button>
+    <button @click="animeStop">暂停</button>
   </div>
 </template>
 
 <style scoped>
 .canvases {
-    display: grid;
-    grid-template-columns: auto auto;
-    grid-template-rows: auto auto;
-    grid-gap: 1em;
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto;
+  grid-gap: 1em;
 }
 </style>
