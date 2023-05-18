@@ -74,7 +74,7 @@ const slides: Component[] = [
 </script>
 
 <template>
-  <CLayout :slides="slides" />
+  <EELayout :slides="slides" />
 </template>
 
 <style scoped></style>
