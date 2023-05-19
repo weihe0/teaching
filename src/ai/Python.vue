@@ -270,7 +270,7 @@ const slides: Component[] = [
           <li>利用<em>注意力机制</em>分清数据的主次</li>
           <li>选择适合的神经网络的评价标准</li>
           <li>选择适合的调整神经网络的方法</li>
-          <li>参考资料：<a href='https://www.bilibili.com/video/BV1bx411M7Zx'>
+          <li>参考资料：<a href='https://www.bilibili.com/video/BV1Et411779N'>
             深度学习之神经网络的结构
           </a> </li>
         </ul>
