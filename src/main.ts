@@ -45,6 +45,7 @@ import EEProgress from '@/ee/EEProgress.vue'
 import Python from '@/ai/Python.vue'
 import Index from '@/components/Index.vue'
 import Electromagnetic from '@/ee/electromagnetic/Electromagnetic.vue'
+import Homework3 from '@/ee/Homework3.vue'
 
 const router = createRouter({
   history: createWebHashHistory(import.meta.env.BASE_URL),
@@ -87,6 +88,7 @@ const router = createRouter({
     { path: '/ee/residue', component: Residue },
     { path: '/ee/laplace', component: Laplace },
     { path: '/ee/det', component: Det },
+    {path:'/ee/homework3',component:Homework3},
     { path: '/training', component: Training },
     { path: '/', component: Index }
   ]
