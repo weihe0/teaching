@@ -69,7 +69,7 @@ const slides: Component[] = [
         </Slide>
       )
     }
-  },
+  }
 ]
 </script>
 
