@@ -47,6 +47,7 @@ import Index from '@/components/Index.vue'
 import Electromagnetic from '@/ee/electromagnetic/Electromagnetic.vue'
 import Homework3 from '@/ee/Homework3.vue'
 import Homework2 from '@/ee/Homework2.vue'
+import NeuralNetwork from '@/ai/neural-network/NeuralNetwork.vue'
 
 const router = createRouter({
   history: createWebHashHistory(import.meta.env.BASE_URL),
@@ -64,6 +65,7 @@ const router = createRouter({
     { path: '/ai/finance', component: Finance },
     { path: '/ai/education', component: Education },
     { path: '/ai/python', component: Python },
+    { path: '/ai/neural', component: NeuralNetwork },
     { path: '/c/plan', component: CPlan },
     { path: '/c/progress', component: CProgress },
     { path: '/c/contents', component: CContents },
