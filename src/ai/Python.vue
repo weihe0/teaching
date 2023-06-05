@@ -303,7 +303,9 @@ const slides: Component[] = [
             <li>选择适合的调整神经网络的方法</li>
             <li>
               参考资料：
-              <a href="https://www.bilibili.com/video/BV1Et411779N">深度学习之神经网络的结构</a>{' '}
+              <a href="https://www.bilibili.com/video/BV1Et411779N">
+                深度学习之神经网络的结构
+              </a>{' '}
             </li>
           </ul>
         </Slide>
