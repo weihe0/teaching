@@ -49,6 +49,7 @@ import Homework3 from '@/ee/Homework3.vue'
 import Homework2 from '@/ee/Homework2.vue'
 import NeuralNetwork from '@/ai/neural-network/NeuralNetwork.vue'
 import TrainingPlan from '@/TrainingPlan.vue'
+import Final from '@/ee/Final.vue'
 
 const router = createRouter({
   history: createWebHashHistory(import.meta.env.BASE_URL),
@@ -94,6 +95,7 @@ const router = createRouter({
     { path: '/ee/det', component: Det },
     { path: '/ee/homework2', component: Homework2 },
     { path: '/ee/homework3', component: Homework3 },
+    { path: '/ee/final', component: Final },
     { path: '/training', component: Training },
     { path: '/training/plan', component: TrainingPlan },
     { path: '/', component: Index }
