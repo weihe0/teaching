@@ -87,7 +87,7 @@ import Math from '@/components/Math.vue'
       "
     />
     其中每个<Math :tex="String.raw`a_{ij}\neq 0`" />，那么这个行列式有多少个非零项？
-    <li>将第1题的4阶行列式，按照第2行展开，写出展开式</li>
+    <li>将上一题的4阶行列式，按照第2行展开，写出展开式</li>
     </ol>
   </ol>
 </template>
