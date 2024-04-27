@@ -26,7 +26,7 @@
       <li>其他区号输出“未知”</li>
     </ul>
   </li>
-  <li>输入一个数n，如果1&leqslant;n&leqslant;20<em>不成立</em>，重复输入n，直到1&leqslant;n&leqslant;20成立为止。提示：使用do while语句（3分）</li>
+  <li>输入一个整数n，如果1&leqslant;n&leqslant;20<em>不成立</em>，重复输入n，直到1&leqslant;n&leqslant;20成立为止。提示：使用do while语句（3分）</li>
   <li>先按照第3题输入一个1到20之间的n，然后计算1&times;2&times;...&times;n（3分）</li>
 </ol>
 </template>
