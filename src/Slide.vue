@@ -15,18 +15,12 @@ const props = defineProps<{ topic: string }>();
   width: 100%;
   place-self: center;
   background: radial-gradient(white, papayawhip);
-  display: grid;
-  grid-template-rows: min-content min-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   .topic {
     text-align: center;
     margin: 0.5em;
-  }
-  > :nth-child(2) {
-    justify-self: center;
-    max-width: 90%;
-  }
-  > :nth-child(n + 3) {
-    display: none;
   }
 }
 </style>
