@@ -74,13 +74,13 @@ import Frac from '@/ee/components/Frac.vue';
       </ul>
     </Slide>
     <Slide topic="柯西-古萨定理的数学解释"
-    ><ul>
-      <li>
-        f(z)在封闭曲线上的路径积分，可以转化为许多个微小的三角形路径上的积分的总合
-      </li>
-      <li>每个微小的三角形路径上，f(z)的值几乎相等，所以路径积分非常接近0</li>
-      <li>因为每个微小三角形路径的积分几乎为0，积分的总和也为0</li>
-    </ul></Slide
+      ><ul>
+        <li>
+          f(z)在封闭曲线上的路径积分，可以转化为许多个微小的三角形路径上的积分的总合
+        </li>
+        <li>每个微小的三角形路径上，f(z)的值几乎相等，所以路径积分非常接近0</li>
+        <li>因为每个微小三角形路径的积分几乎为0，积分的总和也为0</li>
+      </ul></Slide
     >
     <Slide topic="柯西-古萨定理的推论">
       <ul>
@@ -97,22 +97,69 @@ import Frac from '@/ee/components/Frac.vue';
         <li>设路径的起点与终点分别为z<sub>1</sub>与z<sub>2</sub></li>
         <li>
           <Int curve="C" />f(z)dz=<Int
-          curve="C"
-        />dF(z)=F(z<sub>2</sub>)-F(z<sub>1</sub>)
+            curve="C"
+          />dF(z)=F(z<sub>2</sub>)-F(z<sub>1</sub>)
+        </li>
+      </ul>
+    </Slide>
+    <Slide topic="用原函数求积分举例">
+      <ul>
+        <li>
+          沿着圆心为0，从1到i的圆弧，求积分<Int curve="C" /><Frac
+            ><template #num>ln(z+1)</template>
+            <template #de>z+1</template></Frac
+          >dz
+        </li>
+        <li>
+          <Frac
+            ><template #num>ln(z+1)</template>
+            <template #de>z+1</template></Frac
+          >的原函数为<Frac
+            ><template #num>1</template> <template #de>2</template></Frac
+          >ln<sup>2</sup>(z+1)
+        </li>
+        <li>
+          <Int curve="C" /><Frac
+            ><template #num>ln(z+1)</template>
+            <template #de>z+1</template></Frac
+          >dz=<Frac><template #num>1</template> <template #de>2</template></Frac
+          >ln<sup>2</sup>(z+1)|<sub>1</sub><sup>i</sup>
         </li>
       </ul>
     </Slide>
     <Slide topic="柯西积分公式">
       <ol>
         <li>积分曲线C是以z<sub>0</sub>为圆心，半径为&delta;的圆</li>
-        <li>研究在C上的积分<Int curve="C" /><Frac><template #num>f(z)</template>
-          <template #de>z-z<sub>0</sub></template></Frac>dz</li>
-        <li>当&delta;&rightarrow;0时，<Int curve="C" /><Frac><template #num>f(z)</template>
-          <template #de>z-z<sub>0</sub></template></Frac>dz =
-          f(z<sub>0</sub>)<Int curve="C" /><Frac><template #num>1</template>
-            <template #de>z-z<sub>0</sub></template></Frac>dz = 2&pi;if(z<sub>0</sub>)</li>
+        <li>
+          研究在C上的积分<Int curve="C" /><Frac
+            ><template #num>f(z)</template>
+            <template #de>z-z<sub>0</sub></template></Frac
+          >dz
+        </li>
+        <li>
+          当&delta;&rightarrow;0时，<Int curve="C" /><Frac
+            ><template #num>f(z)</template>
+            <template #de>z-z<sub>0</sub></template></Frac
+          >dz = f(z<sub>0</sub>)<Int curve="C" /><Frac
+            ><template #num>1</template>
+            <template #de>z-z<sub>0</sub></template></Frac
+          >dz = 2&pi;if(z<sub>0</sub>)
+        </li>
       </ol>
-        <p>&#x1f914;圆是封闭曲线，但为什么这个积分不等于0？</p>
+      <p>&#x1f914;圆是封闭曲线，但为什么这个积分不等于0？</p>
+    </Slide>
+    <Slide topic="解析函数的高阶导数">
+      <p>解析函数f(z)的导数仍为解析函数，它的n阶导数为</p>
+      <p>
+        f<sup>(n)</sup>(z<sub>0</sub>)=
+        <Frac><template #num>n!</template><template #de>2&pi;i</template></Frac>
+        <Int curve="C" /><Frac
+          ><template #num>f(z)</template
+          ><template #de>(z-z<sub>0</sub>)<sup>n+1</sup></template
+          >dz</Frac
+        >
+      </p>
+      <p><a href="https://zhuanlan.zhihu.com/p/498293104">证明过程链接</a></p>
     </Slide>
   </Carousel>
 </template>
