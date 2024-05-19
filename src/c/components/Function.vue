@@ -11,12 +11,13 @@ const props = defineProps<{
 <template>
   <div>
     <div>
-      {{ props.returnType }} {{ props.functionName }}({{ props.parameters }})
+      {{ props.returnType }} {{ props.functionName }}({{ props.parameters }}){
     </div>
-    <Block>
+    <div class="indent">
       <slot />
-    </Block>
+    </div>
+    <div>}</div>
   </div>
 </template>
 
-<style scoped></style>
+<style scoped>.indent{margin-left: 4ex}</style>

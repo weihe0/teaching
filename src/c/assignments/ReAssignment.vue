@@ -1,6 +1,5 @@
 <script setup lang="ts">
-
-import Frac from "@/ee/components/Frac.vue";
+import Frac from '@/ee/components/Frac.vue';
 </script>
 
 <template>
@@ -10,11 +9,18 @@ import Frac from "@/ee/components/Frac.vue";
   </ul>
   <ol>
     <li>编写一个C程序，输出你的姓名与学号</li>
-    <li>编写一个C程序，输入两个整数，计算两个整数的加法、减法、乘法、除法与取余运算的结果</li>
-    <li>编写一个C程序，输入一个摄氏温度，输出对应的华氏温度，两个温度都是小数。设摄氏温度为
-      c，华氏温度为f， 转换公式为f=<Frac><template #num>9</template><template #de>5</template></Frac>c+32。当c=10.0时，f=50.0。
-      运行截图中 必须包含c=25与c=38的结果。</li>
-    <li>编写一个C程序，输入一个<em>小数</em>，输出这个小数的绝对值。当这个数为负数时，绝对值等于它取反，否则等于它本身。</li>
+    <li>
+      编写一个C程序，输入两个整数，计算两个整数的加法、减法、乘法、除法与取余运算的结果
+    </li>
+    <li>
+      编写一个C程序，输入一个摄氏温度，输出对应的华氏温度，两个温度都是小数。设摄氏温度为
+      c，华氏温度为f， 转换公式为f=<Frac
+        ><template #num>9</template><template #de>5</template></Frac
+      >c+32。当c=10.0时，f=50.0。 运行截图中 必须包含c=25与c=38的结果。
+    </li>
+    <li>
+      编写一个C程序，输入一个<em>小数</em>，输出这个小数的绝对值。当这个数为负数时，绝对值等于它取反，否则等于它本身。
+    </li>
     <li>
       输入一个整数，表示一个人的全年工资（2分）
       <ol>
@@ -41,10 +47,6 @@ import Frac from "@/ee/components/Frac.vue";
       先按照第7题输入一个1到20之间的n，然后计算1&times;2&times;...&times;n（3分）
     </li>
   </ol>
-
-
 </template>
 
-<style scoped>
-
-</style>
+<style scoped></style>
