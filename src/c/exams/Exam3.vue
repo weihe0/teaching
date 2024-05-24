@@ -280,7 +280,7 @@ import Structure from '@/c/components/Structure.vue'
             那么<span class="code">languages</span>包含<Underline />个char
           </li>
           <Choices :choices="['30', '22', '25', '23']"> </Choices>
-
+          <PageBreak />
 
         </ol>
         <h2 class="question-type">填空题，每题2分，共15题，合计30分</h2>
@@ -329,7 +329,7 @@ import Structure from '@/c/components/Structure.vue'
 
 
             <Function function-name="main" parameters="" return-type="int">
-              <PageBreak />
+
               <div>int n=2;</div>
               <div>plus(n);</div>
               <div>printf("%d", n);</div>
@@ -339,8 +339,8 @@ import Structure from '@/c/components/Structure.vue'
 
 
           <li>
-            已知suffix函数的定义如下，那么<span class="code">suffix(3)</span
-            >的调用结果为<Underline />
+            已知suffix函数的定义如下，那么调用<span class="code">suffix(3)</span
+            >后屏幕显示<Underline />
           </li>
           <div class="code">
             <Function function-name="suffix" parameters="int n" return-type="void">
@@ -351,10 +351,11 @@ import Structure from '@/c/components/Structure.vue'
                 <div>case 3: printf("3rd"); break;</div>
                 <div>default: printf("%dth", n);</div>
               </div>
+              <div>}</div>
             </Function>
           </div>
 
-
+          <PageBreak/>
           <li>下列程序的运行结果为<Underline /></li>
           <div class="code">
             <Structure id="point">
@@ -547,6 +548,9 @@ th {
   .side {
     display: grid;
   }
+}
+footer{
+  font-family: serif;
 }
 .indent{
   margin-left: 4ex;

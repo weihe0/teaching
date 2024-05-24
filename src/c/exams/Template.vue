@@ -13,70 +13,9 @@ import PageBreak from '@/c/exams/PageBreak.vue';
 
 <template>
   <div class="exam-paper">
-    <div class="background">
-      <div v-for="(_, i) in Array(4)" class="page">
-        <div></div>
-        <footer>第{{ i + 1 }}页</footer>
-      </div>
-    </div>
+
     <div class="front">
-      <aside class="side">
-        <div class="info">
-          <table class="meta">
 
-
-            <tr>
-              <td><span>考试时间</span></td>
-            </tr>
-            <tr>
-              <td>
-                <span class="week"
-                  ><span>第</span><span>19</span><span>周</span></span
-                >
-              </td>
-            </tr>
-            <tr>
-              <td><span>学院</span></td>
-            </tr>
-            <tr>
-              <td><span>机电学院</span></td>
-            </tr>
-            <tr>
-              <td><span>班级</span></td>
-            </tr>
-            <tr>
-              <td><span>机器人232</span></td>
-            </tr>
-            <tr>
-              <td><span>姓名</span></td>
-            </tr>
-            <tr>
-              <td>&nbsp;</td>
-            </tr>
-            <tr>
-              <td><span>学号</span></td>
-            </tr>
-            <tr>
-              <td>&nbsp;</td>
-            </tr>
-            <tr>
-              <td><span>任课教师</span></td>
-            </tr>
-            <tr>
-              <td><span>何为</span></td>
-            </tr>
-          </table>
-          <div class="signature">
-            <span>拟题人签名</span>
-            <span>校卷人签名</span>
-            <span>教研室主任</span>
-            <span>系主任签名</span>
-          </div>
-        </div>
-        <div class="seal">
-          装 &cir; 订 &cir; 线 &cir; 内 &cir; 请 &cir; 勿 &cir; 答 &cir; 题
-        </div>
-      </aside>
       <div class="questions">
         <h1 class="college">广东轻工职业技术学院</h1>
         <h1 class="term">2023-2024学年第2学期期末考试</h1>
@@ -85,42 +24,42 @@ import PageBreak from '@/c/exams/PageBreak.vue';
         </div>
         <table class="grades">
           <thead>
-            <tr>
-              <th>题号</th>
-              <th>一</th>
-              <th>二</th>
-              <th>三</th>
-              <th>四</th>
-              <th>五</th>
-              <th>六</th>
-              <th>合计</th>
-            </tr>
+          <tr>
+            <th>题号</th>
+            <th>一</th>
+            <th>二</th>
+            <th>三</th>
+            <th>四</th>
+            <th>五</th>
+            <th>六</th>
+            <th>合计</th>
+          </tr>
           </thead>
           <tbody>
-            <tr>
-              <td>题分</td>
-              <td>20</td>
-              <td>30</td>
-              <td>30</td>
-              <td>20</td>
-              <td></td>
-              <td></td>
-              <td>100</td>
-            </tr>
+          <tr>
+            <td>题分</td>
+            <td>20</td>
+            <td>30</td>
+            <td>30</td>
+            <td>20</td>
+            <td></td>
+            <td></td>
+            <td>100</td>
+          </tr>
           </tbody>
         </table>
         <table class="grader-inspector">
           <thead>
-            <tr>
-              <th>试卷评分人</th>
-              <th>试卷核分人</th>
-            </tr>
+          <tr>
+            <th>试卷评分人</th>
+            <th>试卷核分人</th>
+          </tr>
           </thead>
           <tbody>
-            <tr>
-              <td>&nbsp;</td>
-              <td></td>
-            </tr>
+          <tr>
+            <td>&nbsp;</td>
+            <td></td>
+          </tr>
           </tbody>
         </table>
 
@@ -129,35 +68,35 @@ import PageBreak from '@/c/exams/PageBreak.vue';
         <Judgements>
           <JudgeItem>C程序从main函数开始执行</JudgeItem>
           <JudgeItem
-            ><span class="code">int a=10;</span>那么<span class="code"
-              >a==10</span
-            ></JudgeItem
+          ><span class="code">int a=10;</span>那么<span class="code"
+          >a==10</span
+          ></JudgeItem
           >
           <JudgeItem
-            ><span class="code">1+2*3</span>相当于<span class="code"
-              >1+(2*3)</span
-            >
+          ><span class="code">1+2*3</span>相当于<span class="code"
+          >1+(2*3)</span
+          >
           </JudgeItem>
           <JudgeItem
-            ><span class="code">2&gt;1</span>的值为<span class="code"
-              >1</span
-            ></JudgeItem
+          ><span class="code">2&gt;1</span>的值为<span class="code"
+          >1</span
+          ></JudgeItem
           >
           <JudgeItem><span class="code">5/4==1</span></JudgeItem>
           <JudgeItem
-            ><span class="code">float b;</span>那么<span class="code"
-              >b==0</span
-            ></JudgeItem
+          ><span class="code">float b;</span>那么<span class="code"
+          >b==0</span
+          ></JudgeItem
           >
           <JudgeItem
-            ><span class="code">double c[10];</span
-            ><span class="code">c[10]是c的一个元素</span></JudgeItem
+          ><span class="code">double c[10];</span
+          ><span class="code">c[10]是c的一个元素</span></JudgeItem
           >
           <JudgeItem><span class="code">int if=3;</span>能通过编译</JudgeItem>
           <JudgeItem
-            ><span class="code">int i=3;</span>那么<span class="code"
-              >i<1||i>4 == 1</span
-            >
+          ><span class="code">int i=3;</span>那么<span class="code"
+          >i<1||i>4 == 1</span
+          >
           </JudgeItem>
           <JudgeItem><span class="code">8%5==1</span></JudgeItem>
         </Judgements>
@@ -167,15 +106,15 @@ import PageBreak from '@/c/exams/PageBreak.vue';
         <ol class="multiple-choices">
           <li>
             <Parentheses /><span class="code"
-              >printf("<Underline />", 2024);</span
-            >
+          >printf("<Underline />", 2024);</span
+          >
           </li>
           <Choices :choices="['%d', '%b', '%r', '%y']"> </Choices>
 
           <li>
             <Parentheses /><span class="code"
-              >int n; scanf("%d", <Underline />);</span
-            >
+          >int n; scanf("%d", <Underline />);</span
+          >
           </li>
           <Choices :choices="['^n', '&n', '@n', '$n']"> </Choices>
 
@@ -196,8 +135,8 @@ import PageBreak from '@/c/exams/PageBreak.vue';
 
           <li>
             <Parentheses /><Underline /><span class="code"
-              >very_large_number=2147483647;</span
-            >
+          >very_large_number=2147483647;</span
+          >
           </li>
           <Choices :choices="['long', 'big', 'large', 'huge']"> </Choices>
           <li>
@@ -215,7 +154,7 @@ import PageBreak from '@/c/exams/PageBreak.vue';
             如何判断n在2到8之间？
           </li>
           <Choices
-            :choices="['2<=n<=8', '2=<n=<8', 'n>=2 && n<=8', 'n>=2 || n<=8']"
+              :choices="['2<=n<=8', '2=<n=<8', 'n>=2 && n<=8', 'n>=2 || n<=8']"
           >
           </Choices>
 
@@ -241,22 +180,22 @@ import PageBreak from '@/c/exams/PageBreak.vue';
           </Choices>
           <li>
             <Parentheses /><span class="code"
-              >int array<Underline />={1,2,3,4,5};</span
-            >
+          >int array<Underline />={1,2,3,4,5};</span
+          >
           </li>
           <Choices :choices="['(5)', '[5]', '{5}', '<5>']"> </Choices>
 
           <li>
             <Parentheses /><span class="code"
-              >int d={4,3,2,1}; 那么<span class="code">d[1]==</span><Underline
-            /></span>
+          >int d={4,3,2,1}; 那么<span class="code">d[1]==</span><Underline
+          /></span>
           </li>
           <Choices :choices="['4', '3', '2', '1']"> </Choices>
 
           <li>
             <Parentheses /><span class="code"
-              >int e[2][3]={ {1,2,3}, {4,5,6} };</span
-            >
+          >int e[2][3]={ {1,2,3}, {4,5,6} };</span
+          >
             那么<span class="code">e[1][2]==</span><Underline />
           </li>
           <Choices :choices="['1', '3', '4', '6']"> </Choices>
@@ -272,8 +211,8 @@ import PageBreak from '@/c/exams/PageBreak.vue';
 
           <li>
             <Parentheses />有函数原型声明<span class="code"
-              >double sin(double x);</span
-            >调用sin时，<span class="code">sin(<Underline />)</span>
+          >double sin(double x);</span
+          >调用sin时，<span class="code">sin(<Underline />)</span>
             可以填哪个？
           </li>
           <Choices :choices="['1.57', 'else', '3.14, 2', '90\\3']"> </Choices>
@@ -290,12 +229,12 @@ import PageBreak from '@/c/exams/PageBreak.vue';
           <li><span class="code">3*3%5==</span><Underline /></li>
           <li>
             <span class="code">int i=0; i++;</span>执行后<span class="code"
-              >i==</span
-            ><Underline />
+          >i==</span
+          ><Underline />
           </li>
           <li>
             <span class="code"
-              >int n=2; !(n&lt;1 || n&gt;3)==<Underline
+            >int n=2; !(n&lt;1 || n&gt;3)==<Underline
             /></span>
           </li>
           <li>
@@ -306,8 +245,8 @@ import PageBreak from '@/c/exams/PageBreak.vue';
           </li>
           <li>
             <span class="code">char names[5][6];</span>那么<span class="code"
-              >names</span
-            >包含<Underline />个char
+          >names</span
+          >包含<Underline />个char
           </li>
           <li>下列程序的执行结果为<Underline /></li>
           <div class="code">
@@ -317,8 +256,8 @@ import PageBreak from '@/c/exams/PageBreak.vue';
           </div>
           <li>
             已知square函数定义如下，那么<span class="code"
-              >square(3)==<Underline
-            /></span>
+          >square(3)==<Underline
+          /></span>
           </li>
           <div class="code">
             <div>int square(int a)</div>
@@ -326,16 +265,16 @@ import PageBreak from '@/c/exams/PageBreak.vue';
           </div>
           <li>
             已知abs函数的定义如下，那么<span class="code">abs(-2)==</span
-            ><Underline />
+          ><Underline />
           </li>
           <div class="code">
             <Function function-name="abs" parameters="int m" return-type="int">
               <IfElse condition="m > 0">
                 <template #ifStatement
-                  ><SingleStatement>return m;</SingleStatement></template
+                ><SingleStatement>return m;</SingleStatement></template
                 >
                 <template #elseStatement
-                  ><SingleStatement>return -m;</SingleStatement></template
+                ><SingleStatement>return -m;</SingleStatement></template
                 >
               </IfElse>
             </Function>
@@ -343,9 +282,9 @@ import PageBreak from '@/c/exams/PageBreak.vue';
           <li>下列程序的执行结果为<Underline /></li>
           <div class="code">
             <Function
-              function-name="increase"
-              parameters="x"
-              return-type="void"
+                function-name="increase"
+                parameters="x"
+                return-type="void"
             >
               x = x+1;
             </Function>
@@ -361,7 +300,7 @@ import PageBreak from '@/c/exams/PageBreak.vue';
             <div>struct person</div>
             <div>{</div>
             <div class="indent">
-            <div>int id;</div>
+              <div>int id;</div>
               <div>double temperature;</div>
             </div>
             <div>};</div>
@@ -371,8 +310,8 @@ import PageBreak from '@/c/exams/PageBreak.vue';
           <li>
             <span class="code">struct person *wangwu;</span>那么<span
               class="code"
-              >wangwu->id</span
-            >
+          >wangwu->id</span
+          >
             相当于<span class="code">(<Underline />).id</span>
           </li>
           <li>填入正确的表达式，使pf指向f</li>
@@ -407,9 +346,9 @@ import PageBreak from '@/c/exams/PageBreak.vue';
           </li>
           <div class="code">
             <Function
-              function-name="max_value"
-              parameters="long *p, int n"
-              return-type="long"
+                function-name="max_value"
+                parameters="long *p, int n"
+                return-type="long"
             >
               <div>long max=<Underline /> //假设最大值是数组的首个元素</div>
               <div>int i;</div>
@@ -417,7 +356,7 @@ import PageBreak from '@/c/exams/PageBreak.vue';
               <Block>
                 <div>if (p[i]<Underline />) //如果遇到更大的元素</div>
                 <SingleStatement
-                  >max=<Underline />; //那么更新最大值</SingleStatement
+                >max=<Underline />; //那么更新最大值</SingleStatement
                 >
               </Block>
               <div>return <Underline />; //返回最大值</div>
@@ -486,18 +425,7 @@ h1 {
 .questions {
   padding: 0 1ex;
 }
-.page {
-  page-break-after: always;
-  display: grid;
-  grid-template-rows: auto min-content;
-  > div {
-    height: 95vh;
-    border: solid black thin;
-  }
-  > footer {
-    text-align: center;
-  }
-}
+
 table {
   border-collapse: collapse;
   font-family: initial;

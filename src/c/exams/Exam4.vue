@@ -24,8 +24,6 @@ import Structure from '@/c/components/Structure.vue'
       <aside class="side">
         <div class="info">
           <table class="meta">
-
-
             <tr>
               <td><span>考试时间</span></td>
             </tr>
@@ -128,41 +126,41 @@ import Structure from '@/c/components/Structure.vue'
         <p><em>试题中所有的表达式都是C语言的表达式，不是数学算式</em></p>
         <h2 class="question-type">判断题，每题2分，共10题，合计20分</h2>
         <Judgements>
-          <JudgeItem><span class="code">1+2==3</span></JudgeItem>
+          <JudgeItem><span class="code">1+1==2</span></JudgeItem>
           <JudgeItem
-            ><span class="code">int a=5;</span>那么<span class="code"
-              >a==5</span
+            ><span class="code">int a=3;</span>那么<span class="code"
+              >a==3</span
             ></JudgeItem
           >
           <JudgeItem
-            ><span class="code">3/4/5</span>相当于<span class="code"
-              >(3/4)/5</span
-            >
-          </JudgeItem>
+          ><span class="code">double b[10];</span
+          ><span class="code">b[0]是b的一个元素</span></JudgeItem
+          >
+
           <JudgeItem
-            ><span class="code">1+1&gt;2</span>的值为<span class="code"
+            ><span class="code">2000>3000*7.25</span>的值为<span class="code"
               >0</span
             ></JudgeItem
           >
-          <JudgeItem><span class="code">1/2==0</span></JudgeItem>
+          <JudgeItem><span class="code">4%2==0</span></JudgeItem>
           <JudgeItem
-            ><span class="code">float int=2.5f;</span>可以通过编译</JudgeItem
+            ><span class="code">int c; 2=c;</span>可以通过编译</JudgeItem
           >
+
           <JudgeItem
-            ><span class="code">double c[10];</span
-            ><span class="code">c[10]是c的一个元素</span></JudgeItem
-          >
-          <JudgeItem
-            ><span class="code">int d;</span>那么<span class="code"
-              >d==0</span
-            ></JudgeItem
+            ><span class="code">int double=2;</span>可以通过编译</JudgeItem
           >
           <JudgeItem
             ><span class="code">int i=5;</span>那么<span class="code"
-              >i>=1&&i<=9 == 0</span
+              >!(i<1 || i>9)==0</span
             >
           </JudgeItem>
-          <JudgeItem><span class="code">3%4==1</span></JudgeItem>
+          <JudgeItem><span class="code">3/4==0.75</span></JudgeItem>
+          <JudgeItem
+          ><span class="code">4/5/6</span>相当于<span class="code"
+          >4/(5/6)</span
+          >
+          </JudgeItem>
         </Judgements>
 
         <h2 class="question-type">单选题，每题2分，共15题，合计30分</h2>
@@ -170,23 +168,20 @@ import Structure from '@/c/components/Structure.vue'
         <ol class="multiple-choices">
           <li>
             <Parentheses /><span class="code"
-              >printf("<Underline />", 2024.0f);</span
+              >int year=2024; printf("<Underline />", year);</span
             >
           </li>
-          <Choices :choices="['%f', '%a', '%z', '%j']"> </Choices>
+          <Choices :choices="['%j', '%z', '%d', '%s']"> </Choices>
 
           <li>
-            <Parentheses /><span class="code">int i<Underline />0;</span>
+            <Parentheses /><span class="code"><Underline/> a=0;</span>
           </li>
-          <Choices :choices="['=', '==', '=>', '<=']"> </Choices>
+          <Choices :choices="['unsigned int', 'inn', 'lung', 'floating']"> </Choices>
 
           <li>
-            <Parentheses /><span class="code">int n; scanf("%d", &n);</span>
+            <Parentheses /><span class="code">int d; scanf("%d", <Underline/>);</span>
           </li>
-          <p>
-            如果用户输入5，那么<span class="code">n==<Underline /></span>
-          </p>
-          <Choices :choices="['2', '5', '8', '1']"> </Choices>
+          <Choices :choices="['%d', '/d', '@d', '&d']"> </Choices>
 
           <li>
             <Parentheses /><span class="code">float <Underline />=0.0f;</span>

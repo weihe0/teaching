@@ -1,7 +1,9 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import './exam.scss'
+</script>
 
 <template>
-  <span class="blank" />
+  <span class="blank"><slot/></span>
 </template>
 
 <style scoped>

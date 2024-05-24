@@ -588,6 +588,9 @@ th {
     display: grid;
   }
 }
+footer{
+  font-family: serif;
+}
 .indent{
   margin-left: 4ex;
 }
