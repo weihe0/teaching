@@ -157,60 +157,60 @@ import Structure from '@/c/components/Structure.vue'
         </Judgements>
 
         <h2 class="question-type">单选题，每题2分，共15题，合计30分</h2>
-        <p><em>答案写在每题开头的圆括号内</em></p>
+        <p><em>答案写在下划线上</em></p>
         <ol class="multiple-choices">
           <li>
-            <Parentheses /><span class="code"
+            <span class="code"
               >printf("<Underline />", "2024");</span
             >
           </li>
           <Choices :choices="['%s', '%c', '%d', '%f']"> </Choices>
 
           <li>
-            <Parentheses /><span class="code">int n; scanf("%d", <Underline/>);</span>
+            <span class="code">int n; scanf("%d", <Underline/>);</span>
           </li>
 
           <Choices :choices="['@n', '&n', '^n', '#n']"> </Choices>
 
           <li>
-            <Parentheses /><span class="code"><Underline/> a=0;</span>
+            <span class="code"><Underline/> a=0;</span>
           </li>
           <Choices :choices="['int', 'inn', 'into', 'index']"> </Choices>
 
           <li>
-            <Parentheses /><span class="code">double <Underline />=0.0;</span>
+            <span class="code">double <Underline />=0.0;</span>
           </li>
           <Choices :choices="['if', 'for', 'while', 'origin']"> </Choices>
           <PageBreak />
 
           <li>
-            <Parentheses /><span class="code">double b=</span><Underline />;
+            <span class="code">double b=</span><Underline />;
           </li>
           <Choices :choices="['2.5U', '2.5UL', '2.5', '2.5L']"> </Choices>
 
           <li>
-            <Parentheses /><Underline /><span class="code"
+            <Underline /><span class="code"
               >huge_number=2147483647;</span
             >选择最恰当的选项
           </li>
           <Choices :choices="['long', 'short', 'char', 'signed']"> </Choices>
 
           <li>
-            <Parentheses /><Underline /><span class="code"
+            <Underline /><span class="code"
           >ch = 'A';</span
           >选择最恰当的选项
           </li>
           <Choices :choices="['long', 'double', 'char', 'float']"> </Choices>
 
           <li>
-            <Parentheses /><Underline /><span class="code"
+            <Underline /><span class="code"
           >pi=3.1415926535897932384626433;</span
           >选择最恰当的选项
           </li>
           <Choices :choices="['long', 'int', 'double', 'float']"> </Choices>
 
           <li>
-            <Parentheses /><span class="code">int n=-4;</span
+            <span class="code">int n=-4;</span
             >那么<Underline />==1
           </li>
           <Choices
@@ -223,7 +223,7 @@ import Structure from '@/c/components/Structure.vue'
           >
           </Choices>
 
-          <li><Parentheses />下列程序的运行结果是<Underline/></li>
+          <li>下列程序的运行结果是<Underline/></li>
           <div class="code">
             <div>int p=5, q=3*p+2;</div>
             <div>printf("%d", q%3);</div>
@@ -233,7 +233,7 @@ import Structure from '@/c/components/Structure.vue'
           >
           </Choices>
 
-          <li><Parentheses />下列程序的运行结果是<Underline/></li>
+          <li>下列程序的运行结果是<Underline/></li>
           <div class="code">
             <div>int m=20000;</div>
             <div>if (m<=10000) {</div>
@@ -248,7 +248,7 @@ import Structure from '@/c/components/Structure.vue'
             :choices="['low', 'medium', 'high', 'ultra']"
           >
           </Choices>
-          <li><Parentheses />填哪个数，使该程序运行结果为even</li>
+          <li>填哪个数，使该程序运行结果为even</li>
           <div class="code">
             <div>int n=<Underline/>;</div>
             <div>if (n%2 == 1) {</div>
@@ -260,21 +260,21 @@ import Structure from '@/c/components/Structure.vue'
           <Choices :choices="['4', '1', '3', '5']">
           </Choices>
           <li>
-            <Parentheses /><span class="code"
+            <span class="code"
               >int coordinate[2]=<Underline/>;</span
             >
           </li>
           <Choices :choices="['{3,4}', '[3,4]', '(3,4)', '<3,4>']"> </Choices>
 
           <li>
-            <Parentheses /><span class="code"
+            <span class="code"
               >int d={1,4,5,3}; 那么<span class="code">d[3]==</span><Underline
             /></span>
           </li>
           <Choices :choices="['4', '3', '5', '1']"> </Choices>
 
           <li>
-            <Parentheses /><span class="code"
+            <span class="code"
               >char languages[3][10]={ "Chinese", "English", "Japanese" };</span
             >
             那么<span class="code">languages</span>包含<Underline />个char

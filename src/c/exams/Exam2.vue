@@ -166,22 +166,22 @@ import Structure from '@/c/components/Structure.vue'
         </Judgements>
 
         <h2 class="question-type">单选题，每题2分，共15题，合计30分</h2>
-        <p><em>答案写在每题开头的圆括号内</em></p>
+        <p><em>答案写在下划线上</em></p>
         <ol class="multiple-choices">
           <li>
-            <Parentheses /><span class="code"
+            <span class="code"
               >printf("<Underline />", 2024.0f);</span
             >
           </li>
           <Choices :choices="['%f', '%a', '%z', '%j']"> </Choices>
 
           <li>
-            <Parentheses /><span class="code">int i<Underline />0;</span>
+            <span class="code">int i<Underline />0;</span>
           </li>
           <Choices :choices="['=', '==', '=>', '<=']"> </Choices>
 
           <li>
-            <Parentheses /><span class="code">int n; scanf("%d", &n);</span>
+            <span class="code">int n; scanf("%d", &n);</span>
           </li>
           <p>
             如果用户输入5，那么<span class="code">n==<Underline /></span>
@@ -189,25 +189,25 @@ import Structure from '@/c/components/Structure.vue'
           <Choices :choices="['2', '5', '8', '1']"> </Choices>
 
           <li>
-            <Parentheses /><span class="code">float <Underline />=0.0f;</span>
+            <span class="code">float <Underline />=0.0f;</span>
           </li>
           <Choices :choices="['if', 'for', 'while', 'offset']"> </Choices>
           <PageBreak />
           <li>
-            <Parentheses /><span class="code">double b=</span><Underline />;
+            <span class="code">double b=</span><Underline />;
           </li>
           <Choices :choices="['1.5U', '1.5R', '1.5', '1.5L']"> </Choices>
 
 
           <li>
-            <Parentheses /><Underline /><span class="code"
+            <Underline /><span class="code"
               >huge_number=2147483647;</span
             >
           </li>
           <Choices :choices="['long', 'short', 'char', 'unsigned']"> </Choices>
 
           <li>
-            <Parentheses /><span class="code">float c; c=3/2;</span>那么<span
+            <span class="code">float c; c=3/2;</span>那么<span
               class="code"
               >c==</span
             ><Underline />;
@@ -215,7 +215,7 @@ import Structure from '@/c/components/Structure.vue'
           <Choices :choices="['0.0f', '1.5f', '1.0f', '2.0f']"> </Choices>
 
           <li>
-            <Parentheses /><span class="code">int n=-3;</span
+            <span class="code">int n=-3;</span
             >那么<Underline />==1
           </li>
           <Choices
@@ -228,7 +228,7 @@ import Structure from '@/c/components/Structure.vue'
           >
           </Choices>
 
-          <li><Parentheses /></li>
+          <li>运行结果是<Underline/></li>
           <div class="code">
             <div>int item_id=257;</div>
             <div>switch (item_id)</div>
@@ -239,13 +239,13 @@ import Structure from '@/c/components/Structure.vue'
               <div>default: puts("others"); break;</div>
             </Block>
           </div>
-          <div>运行结果是</div>
+
           <Choices
             :choices="['iron_shovel', 'iron_pickaxe', 'iron_axe', 'others']"
           >
           </Choices>
 
-          <li><Parentheses />下划线填哪个，能输出1到99的整数？</li>
+          <li>下划线填哪个，能输出1到99的整数？</li>
           <div class="code">
             <div>int i;</div>
             <div>for (i=1;<Underline />;i++)</div>
@@ -254,21 +254,21 @@ import Structure from '@/c/components/Structure.vue'
           <Choices :choices="['i<=99', 'i<=100', 'i=<101', 'i==102']">
           </Choices>
           <li>
-            <Parentheses /><span class="code"
+            <span class="code"
               >int array<Underline />={5,4,3,2,1};</span
             >
           </li>
           <Choices :choices="['(5)', '[5]', '{5}', '<5>']"> </Choices>
 
           <li>
-            <Parentheses /><span class="code"
+            <span class="code"
               >int d={8,4,2,0}; 那么<span class="code">d[2]==</span><Underline
             /></span>
           </li>
           <Choices :choices="['4', '3', '2', '1']"> </Choices>
 
           <li>
-            <Parentheses /><span class="code"
+            <span class="code"
               >char languages[3][5]={ "Java", "C", "C++" };</span
             >
             那么<span class="code">languages</span>包含<Underline />个char
@@ -276,7 +276,7 @@ import Structure from '@/c/components/Structure.vue'
           <Choices :choices="['15', '9', '11', '8']"> </Choices>
 
           <li>
-            <Parentheses />执行<span class="code">triple(1)</span
+            执行<span class="code">triple(1)</span
             >，运行结果为<Underline />
           </li>
           <div class="code">
@@ -286,7 +286,7 @@ import Structure from '@/c/components/Structure.vue'
             </Block>
           </div>
           <Choices :choices="['1', '3', '6', '9']"> </Choices>
-          <li><Parentheses />如下程序的运行结果是<Underline /></li>
+          <li>如下程序的运行结果是<Underline /></li>
           <div class="code">
             <Function function-name="add" parameters="int x" return-type="int">
               return x+1;
@@ -311,7 +311,7 @@ import Structure from '@/c/components/Structure.vue'
           </li>
           <li><span class="code">3/2*1.5==</span><Underline /></li>
           <li><span class="code">4-5%2==</span><Underline /></li>
-          <li>表达式
+          <li>
             <span class="code">int j=1; j++;</span>执行后<span class="code"
               >j==</span
             ><Underline />

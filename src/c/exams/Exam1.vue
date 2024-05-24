@@ -163,63 +163,63 @@ import PageBreak from '@/c/exams/PageBreak.vue';
         </Judgements>
 
         <h2 class="question-type">单选题，每题2分，共15题，合计30分</h2>
-        <p><em>答案写在每题开头的圆括号内</em></p>
+        <p><em>答案写在下划线上</em></p>
         <ol class="multiple-choices">
           <li>
-            <Parentheses /><span class="code"
+            <span class="code"
               >printf("<Underline />", 2024);</span
             >
           </li>
           <Choices :choices="['%d', '%b', '%r', '%y']"> </Choices>
 
           <li>
-            <Parentheses /><span class="code"
+            <span class="code"
               >int n; scanf("%d", <Underline />);</span
             >
           </li>
           <Choices :choices="['^n', '&n', '@n', '$n']"> </Choices>
 
-          <li><Parentheses /><Underline /><span class="code">i = 0;</span></li>
+          <li><Underline /><span class="code">i = 0;</span></li>
           <Choices :choices="['int', 'integer', 'integral', 'internet']">
           </Choices>
 
           <li>
-            <Parentheses /><span class="code">float <Underline />=0.0f;</span>
+            <span class="code">float <Underline />=0.0f;</span>
           </li>
           <Choices :choices="['if', 'for', 'while', 'on']"> </Choices>
 
           <li>
-            <Parentheses /><span class="code">double b=</span><Underline />;
+            <span class="code">double b=</span><Underline />;
           </li>
           <Choices :choices="['1.5', '1@5', '1:5', '1_5']"> </Choices>
           <PageBreak />
 
           <li>
-            <Parentheses /><Underline /><span class="code"
+            <Underline /><span class="code"
               >very_large_number=2147483647;</span
             >
           </li>
           <Choices :choices="['long', 'big', 'large', 'huge']"> </Choices>
           <li>
-            <Parentheses /><span class="code">float c=</span><Underline />;
+            <span class="code">float c=</span><Underline />;
           </li>
           <Choices :choices="['2.5f', '2.5float', '2.5afloat', '2.5floater']">
           </Choices>
 
           <li>
-            <Parentheses />
+
             <div class="code">
               <div>if (<Underline />)</div>
               <SingleStatement>printf("2&lt;=n&lt;=8");</SingleStatement>
             </div>
-            如何判断n在2到8之间？
+            <p>如何判断n在2到8之间？<Underline/></p>
           </li>
           <Choices
             :choices="['2<=n<=8', '2=<n=<8', 'n>=2 && n<=8', 'n>=2 || n<=8']"
           >
           </Choices>
 
-          <li><Parentheses /></li>
+          <li>下列程序的运行结果是<Underline/></li>
           <div class="code">
             <div>int m=2;</div>
             <div>switch (m)</div>
@@ -228,10 +228,10 @@ import PageBreak from '@/c/exams/PageBreak.vue';
               <div>default: puts("m!=1"); break;</div>
             </Block>
           </div>
-          <div>运行结果是</div>
+
           <Choices :choices="['m=1', 'm!=1', 'm==1', 'm=2']"> </Choices>
 
-          <li><Parentheses />下划线填哪个，能输出1到100的整数？</li>
+          <li>下划线填哪个，能输出1到100的整数？</li>
           <div class="code">
             <div>int i;</div>
             <div>for (i=1;<Underline />;i++)</div>
@@ -240,28 +240,28 @@ import PageBreak from '@/c/exams/PageBreak.vue';
           <Choices :choices="['i<100', 'i<=100', 'i=<100', 'i==100']">
           </Choices>
           <li>
-            <Parentheses /><span class="code"
+            <span class="code"
               >int array<Underline />={1,2,3,4,5};</span
             >
           </li>
           <Choices :choices="['(5)', '[5]', '{5}', '<5>']"> </Choices>
 
           <li>
-            <Parentheses /><span class="code"
+            <span class="code"
               >int d={4,3,2,1}; 那么<span class="code">d[1]==</span><Underline
             /></span>
           </li>
           <Choices :choices="['4', '3', '2', '1']"> </Choices>
 
           <li>
-            <Parentheses /><span class="code"
+            <span class="code"
               >int e[2][3]={ {1,2,3}, {4,5,6} };</span
             >
             那么<span class="code">e[1][2]==</span><Underline />
           </li>
           <Choices :choices="['1', '3', '4', '6']"> </Choices>
 
-          <li><Parentheses /></li>
+          <li></li>
           <div class="code">
             <div>void twice(<Underline />)</div>
             <Block>
@@ -271,7 +271,7 @@ import PageBreak from '@/c/exams/PageBreak.vue';
           <Choices :choices="['int', 'n', 'int n', 'n:int']"> </Choices>
 
           <li>
-            <Parentheses />有函数原型声明<span class="code"
+            有函数原型声明<span class="code"
               >double sin(double x);</span
             >调用sin时，<span class="code">sin(<Underline />)</span>
             可以填哪个？
