@@ -30,7 +30,7 @@ import Structure from '@/c/components/Structure.vue'
             <tr>
               <td>
                 <span class="week"
-                  ><span>第</span><span>19</span><span>周</span></span
+                  ><span>第</span><span>18</span><span>周</span></span
                 >
               </td>
             </tr>
@@ -218,7 +218,7 @@ import Structure from '@/c/components/Structure.vue'
               '-5<=n<=-1',
               'n>=-5 && n<=-1',
               'n>=-5 ** n<=-1',
-              'n>=-5 || n<=-1',
+              'n>=-5 %% n<=-1',
             ]"
           >
           </Choices>
@@ -315,10 +315,12 @@ import Structure from '@/c/components/Structure.vue'
           <li>
             <span class="code">char *str="c language"; *str==</span><Underline />
           </li>
+
+          <li>char *s="BCD"; *(s+1)==<Underline/></li>
           <li>
-            <span class="code">char titles[5][4];</span>那么 <span class="code"
-              >titles</span
-            >包含<Underline />个char
+            <span class="code">int P[5][4];</span>那么 <span class="code"
+              >P</span
+            >包含<Underline />个int
           </li>
           <li>下列程序的运行结果为<Underline /></li>
           <div class="code">
@@ -351,7 +353,7 @@ import Structure from '@/c/components/Structure.vue'
           <div class="code">
             <Function
               function-name="inc"
-              parameters="x"
+              parameters="int *x"
               return-type="void"
             >
               *x = *x+3;
@@ -363,7 +365,6 @@ import Structure from '@/c/components/Structure.vue'
             </Function>
             <PageBreak />
           </div>
-          <li>char *s="GDP"; *(s+1)==<Underline/></li>
 
           <li>填入正确的单词与符号，使<span class="code">s.mark==90</span></li>
 <div class="code">
@@ -485,6 +486,7 @@ h1 {
   }
   > footer {
     text-align: center;
+    font-family: serif;
   }
 }
 table {

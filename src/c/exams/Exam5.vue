@@ -32,7 +32,7 @@ import Structure from '@/c/components/Structure.vue'
             <tr>
               <td>
                 <span class="week"
-                  ><span>第</span><span>19</span><span>周</span></span
+                  ><span>第</span><span>18</span><span>周</span></span
                 >
               </td>
             </tr>
@@ -128,41 +128,40 @@ import Structure from '@/c/components/Structure.vue'
         <p><em>试题中所有的表达式都是C语言的表达式，不是数学算式</em></p>
         <h2 class="question-type">判断题，每题2分，共10题，合计20分</h2>
         <Judgements>
-          <JudgeItem><span class="code">1+2==3</span></JudgeItem>
+          <JudgeItem>'A'!='B'</JudgeItem>
           <JudgeItem
-            ><span class="code">int a=5;</span>那么<span class="code"
-              >a==5</span
+            ><span class="code">int a=2;</span>那么<span class="code"
+              >a==2</span
             ></JudgeItem
           >
           <JudgeItem
-            ><span class="code">3/4/5</span>相当于<span class="code"
-              >(3/4)/5</span
+            ><span class="code">a+b/2>0</span>相当于<span class="code"
+              >(a+(b/2))>0</span
             >
           </JudgeItem>
           <JudgeItem
-            ><span class="code">1+1&gt;2</span>的值为<span class="code"
-              >0</span
+            ><span class="code">6>4</span>的值为<span class="code"
+              >1</span
             ></JudgeItem
           >
-          <JudgeItem><span class="code">1/2==0</span></JudgeItem>
+          <JudgeItem><span class="code">5/2==2</span></JudgeItem>
           <JudgeItem
-            ><span class="code">float int=2.5f;</span>可以通过编译</JudgeItem
+            ><span class="code">1+2=3;</span>可以通过编译</JudgeItem
           >
           <JudgeItem
-            ><span class="code">double c[10];</span
-            ><span class="code">c[10]是c的一个元素</span></JudgeItem
+            ><span class="code">double c[5]={1,2,3,4,5};</span
+            >那么<span class="code">c[1]==1</span></JudgeItem
           >
           <JudgeItem
-            ><span class="code">int d;</span>那么<span class="code"
-              >d==0</span
+            ><span class="code">unsigned u=-1;</span>那么<span class="code"
+              >u<0</span
             ></JudgeItem
           >
           <JudgeItem
-            ><span class="code">int i=5;</span>那么<span class="code"
-              >i>=1&&i<=9 == 0</span
-            >
+            ><span class="code">int a,b;</span>那么<span class="code"
+              >ab</span>相当于<span class="code">a*b</span>
           </JudgeItem>
-          <JudgeItem><span class="code">3%4==1</span></JudgeItem>
+          <JudgeItem><span class="code">2/5==0.4</span></JudgeItem>
         </Judgements>
 
         <h2 class="question-type">单选题，每题2分，共15题，合计30分</h2>
@@ -170,7 +169,7 @@ import Structure from '@/c/components/Structure.vue'
         <ol class="multiple-choices">
           <li>
             <span class="code"
-              >printf("<Underline />", 2024.0f);</span
+              >printf("<Underline />", 2020+4.0);</span
             >
           </li>
           <Choices :choices="['%f', '%a', '%z', '%j']"> </Choices>
@@ -181,203 +180,184 @@ import Structure from '@/c/components/Structure.vue'
           <Choices :choices="['=', '==', '=>', '<=']"> </Choices>
 
           <li>
-            <span class="code">int n; scanf("%d", &n);</span>
+            <span class="code">int a; scanf("%d", <Underline/>);</span>
           </li>
-          <p>
-            如果用户输入5，那么<span class="code">n==<Underline /></span>
-          </p>
-          <Choices :choices="['2', '5', '8', '1']"> </Choices>
+
+          <Choices :choices="['a', '&a', '*a', '^a']"> </Choices>
 
           <li>
-            <span class="code">float <Underline />=0.0f;</span>
+            <span class="code">double <Underline />=0.0;</span>
           </li>
-          <Choices :choices="['if', 'for', 'while', 'offset']"> </Choices>
+          <Choices :choices="['if', 'for', 'do', 'to']"> </Choices>
+
+          <li>
+            <span class="code">float b=</span><Underline />;
+          </li>
+          <Choices :choices="['2.5f', '2.5g', '2.5h', '2.5i']"> </Choices>
+
           <PageBreak />
           <li>
-            <span class="code">double b=</span><Underline />;
-          </li>
-          <Choices :choices="['1.5U', '1.5R', '1.5', '1.5L']"> </Choices>
-
-
-          <li>
             <Underline /><span class="code"
-              >huge_number=2147483647;</span
-            >
+              >big_number=2147483647;</span
+            >选择最合适的选项
           </li>
-          <Choices :choices="['long', 'short', 'char', 'unsigned']"> </Choices>
+          <Choices :choices="['float', 'long', 'char', 'short']"> </Choices>
+
+          <li><span class="code"><Underline/> ch='1';</span>选择最合适的选项</li>
+          <Choices :choices="['long double', 'double', 'char', 'float']"/>
+
+          <li><span class="code"><Underline/> d=3.0f;</span>选择最合适的选项</li>
+          <Choices :choices="['float', 'int', 'double', 'long']"/>
 
           <li>
-            <span class="code">float c; c=3/2;</span>那么<span
-              class="code"
-              >c==</span
-            ><Underline />;
+            <span class="code">(double)3/2==<Underline /></span>
           </li>
           <Choices :choices="['0', '1.5', '1', '2']"> </Choices>
 
           <li>
-            <span class="code">int n=-3;</span
+            <span class="code">int n=-2;</span
             >那么<Underline />==1
           </li>
           <Choices
             :choices="[
-              '-5<=n<=-1',
-              'n>=-5 && n<=-1',
-              'n>=-5 ** n<=-1',
-              'n>=-5 || n<=-1',
+              '-5<=n<=0',
+              'n>=-5 && n<=0',
+              'n>=-5 ** n<=0',
+              'n>=-5 %% n<=0',
             ]"
           >
           </Choices>
 
-          <li></li>
+          <li>下列程序的运行结果是<underline/></li>
           <div class="code">
-            <div>int item_id=257;</div>
-            <div>switch (item_id)</div>
-            <Block>
-              <div>case 256: puts("iron_shovel"); break;</div>
-              <div>case 257: puts("iron_pickaxe"); break;</div>
-              <div>case 258: puts("iron_axe"); break;</div>
-              <div>default: puts("others"); break;</div>
-            </Block>
+            <div>int start(){</div>
+            <div class="indent">printf("start "); return 0;</div>
+            <div>}</div>
+            <div>int main(){</div>
+            <div class="indent">printf("main "); return 0;</div>
+            <div>}</div>
           </div>
-          <div>运行结果是</div>
           <Choices
-            :choices="['iron_shovel', 'iron_pickaxe', 'iron_axe', 'others']"
+            :choices="['main ', 'start ', 'start main ', 'main start ']"
           >
           </Choices>
 
-          <li>下划线填哪个，能输出1到99的整数？</li>
+          <li>下列程序的运行结果是<underline/></li>
+          <div class="code">
+            <div>int s=20000;</div>
+            <div>if (s<5000){</div>
+            <div class="indent">puts("low");</div>
+            <div>}else if(s<20000){</div>
+            <div class="indent">puts("middle");</div>
+            <div>}else{</div>
+            <div class="indent">puts("high");</div>
+            <div>}</div>
+          </div>
+          <Choices :choices="['low', 'middle', 'high', 'extra']">
+          </Choices>
+
+          <li>下列程序的运行结果是<Underline/></li>
           <div class="code">
             <div>int i;</div>
-            <div>for (i=1;<Underline />;i++)</div>
-            <SingleStatement>printf("%d ", i);</SingleStatement>
+            <div>for(i=0;i<3;i++)</div>
+            <div class="indent"> putchar('a');</div>
           </div>
-          <Choices :choices="['i<=99', 'i<=100', 'i=<101', 'i==102']">
-          </Choices>
+          <Choices :choices="['a','aa','aaa','aaaa']"/>
+
+          <li>下列程序的运行结果是<Underline/></li>
+          <div class="code">
+            <div>int m=2;</div>
+            <div>switch (m){</div>
+            <div class="indent">
+              <div>case 0: puts("zero"); break;</div>
+              <div>case 1: puts("one"); break;</div>
+              <div>case 2: puts("two"); break;</div>
+              <div>default: puts("not learned");</div>
+            </div>
+            <div>}</div>
+          </div>
+          <Choices :choices="['zero', 'one', 'two', 'not learned']" />
+
+
           <li>
             <span class="code"
-              >int array<Underline />={5,4,3,2,1};</span
+              >int point[2]=<Underline/>;</span
             >
           </li>
-          <Choices :choices="['(5)', '[5]', '{5}', '<5>']"> </Choices>
+          <Choices :choices="['{1,1}', '[1,1]', '(1,1)', '<1,1>']"> </Choices>
 
-          <li>
-            <span class="code"
-              >int d={8,4,2,0}; 那么<span class="code">d[2]==</span><Underline
-            /></span>
-          </li>
-          <Choices :choices="['4', '3', '2', '1']"> </Choices>
-
-          <li>
-            <span class="code"
-              >char languages[3][5]={ "Java", "C", "C++" };</span
-            >
-            那么<span class="code">languages</span>包含<Underline />个char
-          </li>
-          <Choices :choices="['15', '9', '11', '8']"> </Choices>
-
-          <li>
-            执行<span class="code">triple(1)</span
-            >，运行结果为<Underline />
-          </li>
-          <div class="code">
-            <div>void triple(int n)</div>
-            <Block>
-              <div>printf("%d", n+n+n);</div>
-            </Block>
-          </div>
-          <Choices :choices="['1', '3', '6', '9']"> </Choices>
-          <li>如下程序的运行结果是<Underline /></li>
-          <div class="code">
-            <Function function-name="add" parameters="int x" return-type="int">
-              return x+1;
-            </Function>
-
-
-            <Function function-name="main" parameters="" return-type="int">
-              <PageBreak />
-              <div>int y=2;</div>
-              <div>printf("y=%d", add(y));</div>
-              <div>return 0;</div>
-            </Function>
-          </div>
-          <Choices :choices="['y=3', '3', '2', 'y=2']"> </Choices>
         </ol>
+        <PageBreak/>
         <h2 class="question-type">填空题，每题2分，共15题，合计30分</h2>
         <p><em>请写最简单的答案，例如不要写1+2，要写成3</em></p>
         <ol>
           <li>
-            <span class="code">printf("%s", "ABC");</span
+            <span class="code">printf("%c", '0');</span
             >的运行结果是<Underline />
           </li>
-          <li><span class="code">3/2*1.5==</span><Underline /></li>
-          <li><span class="code">4-5%2==</span><Underline /></li>
+          <li><span class="code">5/2*4==</span><Underline /></li>
+          <li><span class="code">10/3-10%3==</span><Underline /></li>
           <li>
-            <span class="code">int j=1; i++;</span>执行后<span class="code"
+            <span class="code">int j=1; j+=2;</span>执行后<span class="code"
               >j==</span
             ><Underline />
           </li>
           <li>
             <span class="code"
-              >int m=2; !(m&lt;1) && !(m&gt;3)==<Underline
+              >int m=5; !(m<1 && m>9)==<Underline
             /></span>
           </li>
           <li>
-            <span class="code">int a[][2]=&lbrace;{ 1,3 },{2,4}&rbrace; a[1][1]==</span><Underline />
+            <span class="code">int a[]={5,4,3,2,1}; a[1]==</span><Underline />
           </li>
           <li>
-            <span class="code">char str[]="QWERT"; str[1]==</span><Underline />
+            <span class="code">char *str="BCD"; *str==</span><Underline />
           </li>
+          <li><span class="code">int tetris=&lbrace;{-1,0},{0,0},{1,0},{2,0}&rbrace;;
+          tetris[0][1]==<Underline/></span></li>
           <li>
-            <span class="code">char titles[3][4];</span>那么<span class="code"
-              >names</span
+            <span class="code">char d[5][4];</span>那么<span class="code"
+              >d</span
             >包含<Underline />个char
           </li>
           <li>下列程序的执行结果为<Underline /></li>
           <div class="code">
-            <div>int d[]= {1,3,5,7};</div>
-            <div>int *pd=d;</div>
-            <div>printf("%d", pd[3]);</div>
+            <div>int second(int *p){</div>
+            <div class="indent">return p[2];</div>
+            <div>}</div>
+            <div>int main(){</div>
+            <div class="indent">
+              <div>int a[4]={0,2,4,8};</div>
+              <div>second(a);</div>
+              <div>return 0;</div>
+            </div>
+            <div>}</div>
           </div>
           <li>
-            已知half函数定义如下，那么<span class="code"
-              >half(5)==<Underline
+            已知one_half函数定义如下，那么<span class="code"
+              >one_half(5)==<Underline
             /></span>
           </li>
           <div class="code">
-            <div>int half(int a)</div>
-            <Block>return a/2;</Block>
+            <div>int one_half(int a)</div>
+            <Block>return a+a/2;</Block>
           </div>
-          <li>
-            已知abs函数的定义如下，那么<span class="code">abs(-2)==</span
-            ><Underline />
-          </li>
-          <div class="code">
-            <Function function-name="abs" parameters="int m" return-type="int">
-              <IfElse condition="m > 0">
-                <template #ifStatement
-                  ><SingleStatement>return m;</SingleStatement></template
-                >
-                <template #elseStatement
-                  ><SingleStatement>return -m;</SingleStatement></template
-                >
-              </IfElse>
-            </Function>
-          </div>
+
           <li>下列程序的执行结果为<Underline /></li>
           <div class="code">
             <Function
               function-name="inc"
-              parameters="x"
+              parameters="int *x"
               return-type="void"
             >
-              *x = *x+1;
+              *x = *x+10;
             </Function>
             <Function function-name="main" parameters="" return-type="int">
-              <div>int y = 3;</div>
+              <div>int y = 2;</div>
               <div>inc(&y);</div>
               <div>printf("%d", y);</div>
             </Function>
-            <PageBreak />
+
           </div>
           <li>下列程序的执行结果为<Underline /></li>
           <div class="code">
@@ -385,61 +365,53 @@ import Structure from '@/c/components/Structure.vue'
               <div>int id;</div>
               <div>int mark;</div>
             </Structure>
-            <div>struct student lisi={ 10, 87 };</div>
-            <div>printf("%d", lisi.mark);</div>
+            <div>struct student s={ 20, 80 };</div>
+            <div>printf("%d", s.id);</div>
           </div>
+
+          <PageBreak />
           <li>下列程序的执行结果为<Underline /></li>
-<div class="code">
-  <div>struct student s={5, 90};</div>
-  <div>struct student *t=&amp;s;</div>
-  <div>t->mark=96;</div>
-  <div>printf("%d", s.mark);</div>
-</div>
-          <li>填入正确的表达式，使ph指向h</li>
           <div class="code">
-            <div>double h=5.5;</div>
-            <div>double *ph=<Underline />;</div>
+            <div>struct coordinate{</div>
+            <div class="indent">int x;</div>
+            <div class="indent">int y;</div>
+            <div>};</div>
+            <div>struct coordinate p={2,1};</div>
+            <div>struct coordinate *q=&amp;p;</div>
+            <div>q->y=3;</div>
+            <div>printf("(%d,%d)", p.x, p.y);</div>
+          </div>
+          <li>填入正确的单词，使p指向g</li>
+          <div class="code">
+            <div>float g=9.8f;</div>
+            <div><Underline/> *p=&amp;g;</div>
           </div>
         </ol>
         <h2 class="question-type">编程题，每题10分，共2题，合计20分</h2>
         <ol>
-          <li>输出九九乘法表</li>
+          <li>编写函数prime，传入整数n。如果n是素数，返回1，否则返回0。素数的标准是n&ge;2，
+            而且n不能被大于1小于n的整数整除。</li>
           <div class="code">
-            <div>#include&lt;stdio.h&gt;</div>
-            <Function function-name="main" parameters="" return-type="int">
-              <div>int i, j;</div>
-              <div>
-                for (i=1;i<=<Underline />;<Underline />) //从1到9
-                <Block>
-                  for(j=1; j<=<Underline />;j++) //从1到9
-                  <Block>
-                    printf("%d*%d=%d ", i, j, <Underline/>); //输出某个乘法
-                  </Block>
-                  printf("<Underline/>"); //换行
-                </Block>
+            <Function function-name="prime" parameters="int n" return-type="int">
+              <div>if(<Underline/>) return 0; //如果不满足n&ge;2，直接返回0</div>
+              <div>int i;</div>
+              <div>for(<Underline/>;<Underline/>;i++){ //逐个检查满足1&lt;i&lt;n的整数i</div>
+              <div class="indent">
+                <div>if(<Underline/>) return 0; //如果发现n能被某个i整除，直接返回0</div>
               </div>
-              <div>return 0;</div>
+              <div>return <Underline/>; //通过检查，返回1</div>
             </Function>
           </div>
           <li>
-            编写一个函数，传入一个指针a和一个整数n，a指向数组的首个元素，n代表数组的元素个数，返回该数组的最小值。
+            编写一个函数，传入字符指针str，str指向字符串的首个字符，计算字符串的长度（'\0'不计入长度）。
           </li>
           <div class="code">
-            <Function
-              function-name="array_min"
-              parameters="int *a, int n"
-              return-type="int"
-            >
-              <div>long min=<Underline /> //假设最小值是数组的首个元素</div>
+            <Function function-name="length" parameters="char *str" return-type="int">
               <div>int i;</div>
-              <div>for (i=0;<Underline />;i++) //检查数组的每个元素</div>
-              <Block>
-                <div>if (a[i]<Underline />) //如果遇到更小的元素</div>
-                <SingleStatement
-                  >min=<Underline />; //那么更新最小值</SingleStatement
-                >
-              </Block>
-              <div>return <Underline />; //返回最小值</div>
+              <div>int len=<Underline/>; //len记录字符串长度。检查字符串前，长度为0</div>
+              <div>for(<Underline/>;str[i]<Underline/>; i++){ //逐个检查字符串的字符，直到遇到空字符</div>
+              <div class="indent"><Underline/> //每检查一个字符，长度都要加1</div>
+              <div>return <Underline/>; //返回字符串的长度</div>
             </Function>
           </div>
         </ol>
@@ -515,6 +487,7 @@ h1 {
   }
   > footer {
     text-align: center;
+    font-family: serif;
   }
 }
 table {

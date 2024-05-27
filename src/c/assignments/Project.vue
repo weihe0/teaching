@@ -33,7 +33,7 @@ import Block from '@/c/components/Block.vue'
       补全项目里的game.cpp文件，完成俄罗斯方块。<em>不要擅自修改其他文件，一定要联系老师协助修改。</em>
     </p>
   </section>
-  <h2>程序说明</h2>
+  <h2>数据结构</h2>
   <section>
     <div class="code">
       <div>struct box</div>
@@ -121,7 +121,7 @@ import Block from '@/c/components/Block.vue'
         </tbody>
       </table>
     </figure>
-
+<p><em>特别注意：田字形方块不可旋转。所以在旋转前，一定要检查是否为田字形方块。如果是，直接忽略旋转操作。</em></p>
     <p>所有可能的形状用all_shapes表示，all_shapes[i]表示第i个形状。创建下落的形状时，要把all_shapes[i]复制给current_shape。</p>
     <p><span class="code">const int Width = 10, Height = 20;</span>中，Width与Height分别表示游戏界面的宽度与高度。</p>
     <p>游戏内x,y处的方格用二维数组field[x][y]表示，x的范围为0&le;x&lt;Width，y的范围为0&le;y&lt;Height。
@@ -142,7 +142,55 @@ import Block from '@/c/components/Block.vue'
       </tbody>
     </table>
   </section>
-
+<h2>可用函数</h2>
+  <p>game.cpp内可以使用如下函数</p>
+    <p>set_size(int size)，将方块的边长设置为size，只在prepare()函数里调用才生效，<em>在其他函数内调用无效</em></p>
+    <p>draw_shape(struct box *shape, int dx, int dy)，绘制某个形状，shape指向struct box的数组，
+    而struct box用于记录相对于旋转中心的坐标，实际坐标还要加上(dx,dy)。</p>
+    <p>erase_shape：抹掉(dx,dy)处的形状。<em>移动某个形状时，一定要先用erase_shape抹掉，再用draw_shape绘制，
+    否则有拖影</em></p>
+  <figure class="movement">
+    <table class="layout">
+      <thead>
+      <tr><th></th><th v-for="(_,i) in Array(10)">{{i}}</th></tr>
+      </thead>
+      <tbody>
+      <tr><td class="y">0</td><td></td><td></td><td></td><td></td><td></td><td class="box"></td><td></td><td></td><td></td><td></td></tr>
+      <tr><td class="y">1</td><td></td><td></td><td></td><td class="box"></td><td class="box"></td><td class="box"></td><td></td><td></td><td></td><td></td></tr>
+      <tr><td class="y">2</td><td></td><td></td><td></td><td class="box"></td><td class="box"></td><td class="box"></td><td></td><td></td><td></td><td></td></tr>
+      <tr></tr>
+      <tr></tr>
+      </tbody>
+    </table>
+    <figcaption>没有用erase_shape抹掉之前的形状，导致出现拖影</figcaption>
+    <table class="layout">
+      <thead>
+      <tr><th></th><th v-for="(_,i) in Array(10)">{{i}}</th></tr>
+      </thead>
+      <tbody>
+      <tr><td class="y">0</td><td></td><td></td><td></td><td></td><td></td><td class="box"></td><td></td><td></td><td></td><td></td></tr>
+      <tr><td class="y">1</td><td></td><td></td><td></td><td class="box"></td><td class="box"></td><td class="box"></td><td></td><td></td><td></td><td></td></tr>
+      <tr><td class="y">2</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+      <tr></tr>
+      <tr></tr>
+      </tbody>
+    </table>
+    <figcaption>用erase_shape抹掉之前的形状</figcaption>
+  </figure>
+  <p>draw_box(x,y)：在(x,y)处绘制方块</p>
+  <p>erase_box(x,y)：在(x,y)处绘制方块</p>
+  <p>clear_all：清除整个游戏画面</p>
+  <p><em>特别注意：调用draw_shape, erase_shape, draw_box, erase_box, clear_all函数前，一定要调用begin_draw()，
+  之后一定要调用end_draw()，否则出错！</em></p>
+  <div>
+    <div class="code">
+      <div>begin_draw(); //调用各种绘制函数前一定要调用begin_draw，否则出错</div>
+      <div>for(int x=0;x&lt;Width;x++){</div>
+      <div class="indent">draw_box(x,0);</div>
+      <div>draw_shape(current_shape, 4, 1);</div>
+      <div>end_draw(); //调用各种绘制函数后一定要调用end_draw，否则看不到画面</div>
+    </div>
+  </div>
 
 </template>
 
@@ -188,5 +236,12 @@ td.field-i{
 }
 span.upright{
   text-orientation: upright;
+}
+.movement{
+  display: grid;
+  grid-auto-flow: column;
+  grid-template: auto auto/auto auto;
+  place-items: center;
+  justify-items: center;
 }
 </style>

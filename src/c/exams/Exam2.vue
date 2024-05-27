@@ -32,7 +32,7 @@ import Structure from '@/c/components/Structure.vue'
             <tr>
               <td>
                 <span class="week"
-                  ><span>第</span><span>19</span><span>周</span></span
+                  ><span>第</span><span>18</span><span>周</span></span
                 >
               </td>
             </tr>
@@ -223,7 +223,7 @@ import Structure from '@/c/components/Structure.vue'
               '-5<=n<=-1',
               'n>=-5 && n<=-1',
               'n>=-5 ** n<=-1',
-              'n>=-5 || n<=-1',
+              'n>=-5 %% n<=-1',
             ]"
           >
           </Choices>
@@ -367,7 +367,7 @@ import Structure from '@/c/components/Structure.vue'
           <div class="code">
             <Function
               function-name="inc"
-              parameters="x"
+              parameters="int *x"
               return-type="void"
             >
               *x = *x+1;
@@ -515,6 +515,7 @@ h1 {
   }
   > footer {
     text-align: center;
+    font-family: serif;
   }
 }
 table {

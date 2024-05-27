@@ -31,7 +31,7 @@ import PageBreak from '@/c/exams/PageBreak.vue';
             <tr>
               <td>
                 <span class="week"
-                  ><span>第</span><span>19</span><span>周</span></span
+                  ><span>第</span><span>18</span><span>周</span></span
                 >
               </td>
             </tr>
@@ -344,7 +344,7 @@ import PageBreak from '@/c/exams/PageBreak.vue';
           <div class="code">
             <Function
               function-name="increase"
-              parameters="x"
+              parameters="int x"
               return-type="void"
             >
               x = x+1;
@@ -496,6 +496,7 @@ h1 {
   }
   > footer {
     text-align: center;
+    font-family: serif;
   }
 }
 table {
@@ -568,9 +569,6 @@ th {
   .side {
     display: grid;
   }
-}
-footer{
-  font-family: serif;
 }
 .indent{
   margin-left: 4ex;

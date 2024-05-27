@@ -30,7 +30,7 @@ import Structure from '@/c/components/Structure.vue'
             <tr>
               <td>
                 <span class="week"
-                  ><span>第</span><span>19</span><span>周</span></span
+                  ><span>第</span><span>18</span><span>周</span></span
                 >
               </td>
             </tr>
@@ -218,7 +218,7 @@ import Structure from '@/c/components/Structure.vue'
               '-4<=n<=-1',
               'n>=-4 && n<=-1',
               'n>=-4 ** n<=-1',
-              'n>=-4 || n<=-1',
+              'n>=-4 %% n<=-1',
             ]"
           >
           </Choices>
@@ -476,6 +476,7 @@ h1 {
   }
   > footer {
     text-align: center;
+    font-family: serif;
   }
 }
 table {
