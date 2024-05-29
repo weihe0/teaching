@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { shuffle } from '@/c/exams/shuffle';
+import { shuffle } from '@/c/exams/template/shuffle';
 
 const p = defineProps<{ choices: string[] }>();
 let shuffled = [...p.choices];

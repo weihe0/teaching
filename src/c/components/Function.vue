@@ -20,4 +20,8 @@ const props = defineProps<{
   </div>
 </template>
 
-<style scoped>.indent{margin-left: 4ex}</style>
+<style scoped>
+.indent {
+  margin-left: 4ex;
+}
+</style>

@@ -9,11 +9,11 @@ import Function from '@/c/components/Function.vue';
 import IfElse from '@/c/components/IfElse.vue';
 import JudgeItem from '@/c/exams/JudgeItem.vue';
 import PageBreak from '@/c/exams/PageBreak.vue';
-import Structure from '@/c/components/Structure.vue'
+import Structure from '@/c/components/Structure.vue';
 </script>
 
 <template>
-  <div class="exam-paper">
+  <div class="exam">
     <div class="background">
       <div v-for="(_, i) in Array(4)" class="page">
         <div></div>
@@ -24,8 +24,6 @@ import Structure from '@/c/components/Structure.vue'
       <aside class="side">
         <div class="info">
           <table class="meta">
-
-
             <tr>
               <td><span>考试时间</span></td>
             </tr>
@@ -69,8 +67,11 @@ import Structure from '@/c/components/Structure.vue'
           </table>
           <div class="signature">
             <span>拟题人签名</span>
+            <span class="hewei">何为</span>
             <span>校卷人签名</span>
+            <span class="duliang0">杜亮</span>
             <span>教研室主任</span>
+            <span class="duliang1">杜亮</span>
             <span>系主任签名</span>
           </div>
         </div>
@@ -86,16 +87,16 @@ import Structure from '@/c/components/Structure.vue'
         </div>
         <table class="grades">
           <thead>
-          <tr>
-            <th>题号</th>
-            <th>一</th>
-            <th>二</th>
-            <th>三</th>
-            <th>四</th>
-            <th>五</th>
-            <th>六</th>
-            <th>合计</th>
-          </tr>
+            <tr>
+              <th>题号</th>
+              <th>一</th>
+              <th>二</th>
+              <th>三</th>
+              <th>四</th>
+              <th>五</th>
+              <th>六</th>
+              <th>合计</th>
+            </tr>
           </thead>
           <tbody>
             <tr>
@@ -145,12 +146,12 @@ import Structure from '@/c/components/Structure.vue'
             ></JudgeItem
           >
           <JudgeItem><span class="code">5/2==2</span></JudgeItem>
+          <JudgeItem><span class="code">1+2=3;</span>可以通过编译</JudgeItem>
           <JudgeItem
-            ><span class="code">1+2=3;</span>可以通过编译</JudgeItem
-          >
-          <JudgeItem
-            ><span class="code">double c[5]={1,2,3,4,5};</span
-            >那么<span class="code">c[1]==1</span></JudgeItem
+            ><span class="code">double c[5]={1,2,3,4,5};</span>那么<span
+              class="code"
+              >c[1]==1</span
+            ></JudgeItem
           >
           <JudgeItem
             ><span class="code">unsigned u=-1;</span>那么<span class="code"
@@ -158,8 +159,8 @@ import Structure from '@/c/components/Structure.vue'
             ></JudgeItem
           >
           <JudgeItem
-            ><span class="code">int a,b;</span>那么<span class="code"
-              >ab</span>相当于<span class="code">a*b</span>
+            ><span class="code">int a,b;</span>那么<span class="code">ab</span
+            >相当于<span class="code">a*b</span>
           </JudgeItem>
           <JudgeItem><span class="code">2/5==0.4</span></JudgeItem>
         </Judgements>
@@ -168,9 +169,7 @@ import Structure from '@/c/components/Structure.vue'
         <p><em>答案写在下划线上</em></p>
         <ol class="multiple-choices">
           <li>
-            <span class="code"
-              >printf("<Underline />", 2020+4.0);</span
-            >
+            <span class="code">printf("<Underline />", 2020+4.0);</span>
           </li>
           <Choices :choices="['%f', '%a', '%z', '%j']"> </Choices>
 
@@ -180,7 +179,7 @@ import Structure from '@/c/components/Structure.vue'
           <Choices :choices="['=', '==', '=>', '<=']"> </Choices>
 
           <li>
-            <span class="code">int a; scanf("%d", <Underline/>);</span>
+            <span class="code">int a; scanf("%d", <Underline />);</span>
           </li>
 
           <Choices :choices="['a', '&a', '*a', '^a']"> </Choices>
@@ -190,34 +189,32 @@ import Structure from '@/c/components/Structure.vue'
           </li>
           <Choices :choices="['if', 'for', 'do', 'to']"> </Choices>
 
-          <li>
-            <span class="code">float b=</span><Underline />;
-          </li>
+          <li><span class="code">float b=</span><Underline />;</li>
           <Choices :choices="['2.5f', '2.5g', '2.5h', '2.5i']"> </Choices>
 
           <PageBreak />
           <li>
-            <Underline /><span class="code"
-              >big_number=2147483647;</span
+            <Underline /><span class="code">big_number=2147483647;</span
             >选择最合适的选项
           </li>
           <Choices :choices="['float', 'long', 'char', 'short']"> </Choices>
 
-          <li><span class="code"><Underline/> ch='1';</span>选择最合适的选项</li>
-          <Choices :choices="['long double', 'double', 'char', 'float']"/>
+          <li>
+            <span class="code"><Underline /> ch='1';</span>选择最合适的选项
+          </li>
+          <Choices :choices="['long double', 'double', 'char', 'float']" />
 
-          <li><span class="code"><Underline/> d=3.0f;</span>选择最合适的选项</li>
-          <Choices :choices="['float', 'int', 'double', 'long']"/>
+          <li>
+            <span class="code"><Underline /> d=3.0f;</span>选择最合适的选项
+          </li>
+          <Choices :choices="['float', 'int', 'double', 'long']" />
 
           <li>
             <span class="code">(double)3/2==<Underline /></span>
           </li>
           <Choices :choices="['0', '1.5', '1', '2']"> </Choices>
 
-          <li>
-            <span class="code">int n=-2;</span
-            >那么<Underline />==1
-          </li>
+          <li><span class="code">int n=-2;</span>那么<Underline />==1</li>
           <Choices
             :choices="[
               '-5<=n<=0',
@@ -228,7 +225,7 @@ import Structure from '@/c/components/Structure.vue'
           >
           </Choices>
 
-          <li>下列程序的运行结果是<underline/></li>
+          <li>下列程序的运行结果是<underline /></li>
           <div class="code">
             <div>int start(){</div>
             <div class="indent">printf("start "); return 0;</div>
@@ -237,12 +234,10 @@ import Structure from '@/c/components/Structure.vue'
             <div class="indent">printf("main "); return 0;</div>
             <div>}</div>
           </div>
-          <Choices
-            :choices="['main ', 'start ', 'start main ', 'main start ']"
-          >
+          <Choices :choices="['main ', 'start ', 'start main ', 'main start ']">
           </Choices>
 
-          <li>下列程序的运行结果是<underline/></li>
+          <li>下列程序的运行结果是<underline /></li>
           <div class="code">
             <div>int s=20000;</div>
             <div>if (s<5000){</div>
@@ -253,18 +248,17 @@ import Structure from '@/c/components/Structure.vue'
             <div class="indent">puts("high");</div>
             <div>}</div>
           </div>
-          <Choices :choices="['low', 'middle', 'high', 'extra']">
-          </Choices>
+          <Choices :choices="['low', 'middle', 'high', 'extra']"> </Choices>
 
-          <li>下列程序的运行结果是<Underline/></li>
+          <li>下列程序的运行结果是<Underline /></li>
           <div class="code">
             <div>int i;</div>
             <div>for(i=0;i<3;i++)</div>
-            <div class="indent"> putchar('a');</div>
+            <div class="indent">putchar('a');</div>
           </div>
-          <Choices :choices="['a','aa','aaa','aaaa']"/>
+          <Choices :choices="['a', 'aa', 'aaa', 'aaaa']" />
 
-          <li>下列程序的运行结果是<Underline/></li>
+          <li>下列程序的运行结果是<Underline /></li>
           <div class="code">
             <div>int m=2;</div>
             <div>switch (m){</div>
@@ -278,16 +272,12 @@ import Structure from '@/c/components/Structure.vue'
           </div>
           <Choices :choices="['zero', 'one', 'two', 'not learned']" />
 
-
           <li>
-            <span class="code"
-              >int point[2]=<Underline/>;</span
-            >
+            <span class="code">int point[2]=<Underline />;</span>
           </li>
           <Choices :choices="['{1,1}', '[1,1]', '(1,1)', '<1,1>']"> </Choices>
-
         </ol>
-        <PageBreak/>
+        <PageBreak />
         <h2 class="question-type">填空题，每题2分，共15题，合计30分</h2>
         <p><em>请写最简单的答案，例如不要写1+2，要写成3</em></p>
         <ol>
@@ -303,9 +293,7 @@ import Structure from '@/c/components/Structure.vue'
             ><Underline />
           </li>
           <li>
-            <span class="code"
-              >int m=5; !(m<1 && m>9)==<Underline
-            /></span>
+            <span class="code">int m=5; !(m<1 && m>9)==<Underline /></span>
           </li>
           <li>
             <span class="code">int a[]={5,4,3,2,1}; a[1]==</span><Underline />
@@ -313,8 +301,12 @@ import Structure from '@/c/components/Structure.vue'
           <li>
             <span class="code">char *str="BCD"; *str==</span><Underline />
           </li>
-          <li><span class="code">int tetris=&lbrace;{-1,0},{0,0},{1,0},{2,0}&rbrace;;
-          tetris[0][1]==<Underline/></span></li>
+          <li>
+            <span class="code"
+              >int tetris=&lbrace;{-1,0},{0,0},{1,0},{2,0}&rbrace;;
+              tetris[0][1]==<Underline
+            /></span>
+          </li>
           <li>
             <span class="code">char d[5][4];</span>那么<span class="code"
               >d</span
@@ -357,7 +349,6 @@ import Structure from '@/c/components/Structure.vue'
               <div>inc(&y);</div>
               <div>printf("%d", y);</div>
             </Function>
-
           </div>
           <li>下列程序的执行结果为<Underline /></li>
           <div class="code">
@@ -384,34 +375,60 @@ import Structure from '@/c/components/Structure.vue'
           <li>填入正确的单词，使p指向g</li>
           <div class="code">
             <div>float g=9.8f;</div>
-            <div><Underline/> *p=&amp;g;</div>
+            <div><Underline /> *p=&amp;g;</div>
           </div>
         </ol>
         <h2 class="question-type">编程题，每题10分，共2题，合计20分</h2>
         <ol>
-          <li>编写函数prime，传入整数n。如果n是素数，返回1，否则返回0。素数的标准是n&ge;2，
-            而且n不能被大于1小于n的整数整除。</li>
+          <li>
+            编写函数prime，传入整数n。如果n是素数，返回1，否则返回0。素数的标准是n&ge;2，
+            而且n不能被大于1小于n的整数整除。
+          </li>
           <div class="code">
-            <Function function-name="prime" parameters="int n" return-type="int">
-              <div>if(<Underline/>) return 0; //如果不满足n&ge;2，直接返回0</div>
-              <div>int i;</div>
-              <div>for(<Underline/>;<Underline/>;i++){ //逐个检查满足1&lt;i&lt;n的整数i</div>
-              <div class="indent">
-                <div>if(<Underline/>) return 0; //如果发现n能被某个i整除，直接返回0</div>
+            <Function
+              function-name="prime"
+              parameters="int n"
+              return-type="int"
+            >
+              <div>
+                if(<Underline />) return 0; //如果不满足n&ge;2，直接返回0
               </div>
-              <div>return <Underline/>; //通过检查，返回1</div>
+              <div>int i;</div>
+              <div>
+                for(<Underline />;<Underline />;i++){
+                //逐个检查满足1&lt;i&lt;n的整数i
+              </div>
+              <div class="indent">
+                <div>
+                  if(<Underline />) return 0;
+                  //如果发现n能被某个i整除，直接返回0
+                </div>
+              </div>
+              <div>return <Underline />; //通过检查，返回1</div>
             </Function>
           </div>
           <li>
             编写一个函数，传入字符指针str，str指向字符串的首个字符，计算字符串的长度（'\0'不计入长度）。
           </li>
           <div class="code">
-            <Function function-name="length" parameters="char *str" return-type="int">
+            <Function
+              function-name="length"
+              parameters="char *str"
+              return-type="int"
+            >
               <div>int i;</div>
-              <div>int len=<Underline/>; //len记录字符串长度。检查字符串前，长度为0</div>
-              <div>for(<Underline/>;str[i]<Underline/>; i++){ //逐个检查字符串的字符，直到遇到空字符</div>
-              <div class="indent"><Underline/> //每检查一个字符，长度都要加1</div>
-              <div>return <Underline/>; //返回字符串的长度</div>
+              <div>
+                int len=<Underline />;
+                //len记录字符串长度。检查字符串前，长度为0
+              </div>
+              <div>
+                for(<Underline />;str[i]<Underline />; i++){
+                //逐个检查字符串的字符，直到遇到空字符
+              </div>
+              <div class="indent">
+                <Underline /> //每检查一个字符，长度都要加1
+              </div>
+              <div>return <Underline />; //返回字符串的长度</div>
             </Function>
           </div>
         </ol>
@@ -468,10 +485,10 @@ h1 {
   font-size: larger;
   font-weight: bold;
 }
-.exam-paper {
+.exam {
   display: grid;
 }
-.exam-paper > * {
+.exam > * {
   grid-area: 1/1/2/2;
 }
 .questions {
@@ -540,8 +557,8 @@ th {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  > span {
-    margin-bottom: 2em;
+  span {
+    margin: 0.5ex;
   }
 }
 .seal {
@@ -561,8 +578,22 @@ th {
     display: grid;
   }
 }
-.indent{
+.indent {
   margin-left: 4ex;
 }
-
+.hewei {
+  font-family: '方正硬笔楷书简体', cursive;
+  font-size: x-large;
+  letter-spacing: 0.5ex;
+}
+.duliang0 {
+  font-family: '方正字迹-洪俊硬笔行草简体', cursive;
+  text-align: justify;
+  letter-spacing: 0.4ex;
+  font-size: x-large;
+}
+.duliang1 {
+  font-family: '方正舒体', cursive;
+  font-size: x-large;
+}
 </style>

@@ -9,11 +9,11 @@ import Function from '@/c/components/Function.vue';
 import IfElse from '@/c/components/IfElse.vue';
 import JudgeItem from '@/c/exams/JudgeItem.vue';
 import PageBreak from '@/c/exams/PageBreak.vue';
-import Structure from '@/c/components/Structure.vue'
+import Structure from '@/c/components/Structure.vue';
 </script>
 
 <template>
-  <div class="exam-paper">
+  <div class="exam">
     <div class="background">
       <div v-for="(_, i) in Array(4)" class="page">
         <div></div>
@@ -24,8 +24,6 @@ import Structure from '@/c/components/Structure.vue'
       <aside class="side">
         <div class="info">
           <table class="meta">
-
-
             <tr>
               <td><span>考试时间</span></td>
             </tr>
@@ -69,8 +67,11 @@ import Structure from '@/c/components/Structure.vue'
           </table>
           <div class="signature">
             <span>拟题人签名</span>
+            <span class="hewei">何为</span>
             <span>校卷人签名</span>
+            <span class="duliang0">杜亮</span>
             <span>教研室主任</span>
+            <span class="duliang1">杜亮</span>
             <span>系主任签名</span>
           </div>
         </div>
@@ -86,16 +87,16 @@ import Structure from '@/c/components/Structure.vue'
         </div>
         <table class="grades">
           <thead>
-          <tr>
-            <th>题号</th>
-            <th>一</th>
-            <th>二</th>
-            <th>三</th>
-            <th>四</th>
-            <th>五</th>
-            <th>六</th>
-            <th>合计</th>
-          </tr>
+            <tr>
+              <th>题号</th>
+              <th>一</th>
+              <th>二</th>
+              <th>三</th>
+              <th>四</th>
+              <th>五</th>
+              <th>六</th>
+              <th>合计</th>
+            </tr>
           </thead>
           <tbody>
             <tr>
@@ -169,9 +170,7 @@ import Structure from '@/c/components/Structure.vue'
         <p><em>答案写在下划线上</em></p>
         <ol class="multiple-choices">
           <li>
-            <span class="code"
-              >printf("<Underline />", 2024.0f);</span
-            >
+            <span class="code">printf("<Underline />", 2024.0f);</span>
           </li>
           <Choices :choices="['%f', '%a', '%z', '%j']"> </Choices>
 
@@ -193,31 +192,22 @@ import Structure from '@/c/components/Structure.vue'
           </li>
           <Choices :choices="['if', 'for', 'while', 'offset']"> </Choices>
           <PageBreak />
-          <li>
-            <span class="code">double b=</span><Underline />;
-          </li>
+          <li><span class="code">double b=</span><Underline />;</li>
           <Choices :choices="['1.5U', '1.5R', '1.5', '1.5L']"> </Choices>
 
-
           <li>
-            <Underline /><span class="code"
-              >huge_number=2147483647;</span
-            >
+            <Underline /><span class="code">huge_number=2147483647;</span>
           </li>
           <Choices :choices="['long', 'short', 'char', 'unsigned']"> </Choices>
 
           <li>
-            <span class="code">float c; c=3/2;</span>那么<span
-              class="code"
+            <span class="code">float c; c=3/2;</span>那么<span class="code"
               >c==</span
             ><Underline />;
           </li>
           <Choices :choices="['0.0f', '1.5f', '1.0f', '2.0f']"> </Choices>
 
-          <li>
-            <span class="code">int n=-3;</span
-            >那么<Underline />==1
-          </li>
+          <li><span class="code">int n=-3;</span>那么<Underline />==1</li>
           <Choices
             :choices="[
               '-5<=n<=-1',
@@ -228,7 +218,7 @@ import Structure from '@/c/components/Structure.vue'
           >
           </Choices>
 
-          <li>运行结果是<Underline/></li>
+          <li>运行结果是<Underline /></li>
           <div class="code">
             <div>int item_id=257;</div>
             <div>switch (item_id)</div>
@@ -254,9 +244,7 @@ import Structure from '@/c/components/Structure.vue'
           <Choices :choices="['i<=99', 'i<=100', 'i=<101', 'i==102']">
           </Choices>
           <li>
-            <span class="code"
-              >int array<Underline />={5,4,3,2,1};</span
-            >
+            <span class="code">int array<Underline />={5,4,3,2,1};</span>
           </li>
           <Choices :choices="['(5)', '[5]', '{5}', '<5>']"> </Choices>
 
@@ -276,8 +264,7 @@ import Structure from '@/c/components/Structure.vue'
           <Choices :choices="['15', '9', '11', '8']"> </Choices>
 
           <li>
-            执行<span class="code">triple(1)</span
-            >，运行结果为<Underline />
+            执行<span class="code">triple(1)</span>，运行结果为<Underline />
           </li>
           <div class="code">
             <div>void triple(int n)</div>
@@ -291,7 +278,6 @@ import Structure from '@/c/components/Structure.vue'
             <Function function-name="add" parameters="int x" return-type="int">
               return x+1;
             </Function>
-
 
             <Function function-name="main" parameters="" return-type="int">
               <PageBreak />
@@ -322,7 +308,9 @@ import Structure from '@/c/components/Structure.vue'
             /></span>
           </li>
           <li>
-            <span class="code">int a[][2]=&lbrace;{ 1,3 },{2,4}&rbrace; a[1][1]==</span><Underline />
+            <span class="code"
+              >int a[][2]=&lbrace;{ 1,3 },{2,4}&rbrace; a[1][1]==</span
+            ><Underline />
           </li>
           <li>
             <span class="code">char str[]="QWERT"; str[1]==</span><Underline />
@@ -389,12 +377,12 @@ import Structure from '@/c/components/Structure.vue'
             <div>printf("%d", lisi.mark);</div>
           </div>
           <li>下列程序的执行结果为<Underline /></li>
-<div class="code">
-  <div>struct student s={5, 90};</div>
-  <div>struct student *t=&amp;s;</div>
-  <div>t->mark=96;</div>
-  <div>printf("%d", s.mark);</div>
-</div>
+          <div class="code">
+            <div>struct student s={5, 90};</div>
+            <div>struct student *t=&amp;s;</div>
+            <div>t->mark=96;</div>
+            <div>printf("%d", s.mark);</div>
+          </div>
           <li>填入正确的表达式，使ph指向h</li>
           <div class="code">
             <div>double h=5.5;</div>
@@ -413,9 +401,9 @@ import Structure from '@/c/components/Structure.vue'
                 <Block>
                   for(j=1; j<=<Underline />;j++) //从1到9
                   <Block>
-                    printf("%d*%d=%d ", i, j, <Underline/>); //输出某个乘法
+                    printf("%d*%d=%d ", i, j, <Underline />); //输出某个乘法
                   </Block>
-                  printf("<Underline/>"); //换行
+                  printf("<Underline />"); //换行
                 </Block>
               </div>
               <div>return 0;</div>
@@ -496,10 +484,10 @@ h1 {
   font-size: larger;
   font-weight: bold;
 }
-.exam-paper {
+.exam {
   display: grid;
 }
-.exam-paper > * {
+.exam > * {
   grid-area: 1/1/2/2;
 }
 .questions {
@@ -568,8 +556,8 @@ th {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  > span {
-    margin-bottom: 2em;
+  span {
+    margin: 0.5ex;
   }
 }
 .seal {
@@ -589,11 +577,25 @@ th {
     display: grid;
   }
 }
-footer{
+footer {
   font-family: serif;
 }
-.indent{
+.indent {
   margin-left: 4ex;
 }
-
+.hewei {
+  font-family: '方正硬笔楷书简体', cursive;
+  font-size: x-large;
+  letter-spacing: 0.5ex;
+}
+.duliang0 {
+  font-family: '方正字迹-洪俊硬笔行草简体', cursive;
+  text-align: justify;
+  letter-spacing: 0.4ex;
+  font-size: x-large;
+}
+.duliang1 {
+  font-family: '方正舒体', cursive;
+  font-size: x-large;
+}
 </style>
